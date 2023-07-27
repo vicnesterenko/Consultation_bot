@@ -1,8 +1,7 @@
 import sys
 
 sys.path.append("../")
-from default_actions import default_action
-from print_options import print_options
+from tools.print_options import print_options
 
 
 def anal():

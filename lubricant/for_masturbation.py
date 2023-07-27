@@ -1,11 +1,9 @@
 import sys
 
 sys.path.append("../")
-from default_actions import default_action
+from tools.default_actions import default_action
 from for_toys import choice_material
-from print_options import print_options
-
-# comment
+from tools.print_options import print_options
 
 
 def masturbation():
