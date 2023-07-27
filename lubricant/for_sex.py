@@ -2,7 +2,7 @@
 import sys
 
 sys.path.append("../")
-from print_options import print_options
+from tools.print_options import print_options
 from type_sex.for_oral import oral
 from type_sex.for_anal import anal
 from type_sex.for_vaginal import vaginal

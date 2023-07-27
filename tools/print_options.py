@@ -1,4 +1,4 @@
-def print_options(header: list, actions: list) -> list:
+def print_options(header: list, actions: list) -> None:
     header = header
     actions = actions
     menu = "\n".join([*header, *actions])
