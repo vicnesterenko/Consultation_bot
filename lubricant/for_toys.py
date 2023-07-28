@@ -7,38 +7,38 @@ from tools.default_actions import default_action
 
 def choice_material():
     # materials = int(input("З якого матеріалу твоя іграшка? 1: Метал, 2: Скло, 3: Силікон, 4: ТПЕ, 5: ПВХ"))
-    print_options(
-        ["З якого матеріалу твоя іграшка?"],
-        ["1: Метал", "2: Скло", "3: Силікон", "4: ТПЕ", "5: ПВХ"],
-    )
-    materials = int(input("> "))
+    q = ["З якого матеріалу твоя іграшка?"]
+    options = ["1: Метал", "2: Скло", "3: Силікон", "4: ТПЕ", "5: ПВХ"]
+
+    materials = print_options(q, options)
+    # materials = int(input("> "))
 
     def type_of_sex_choice():
-        print_options(["Тобі для якого сексу?"], ["1: Вагінальний", "2: Анальний"])
-        type_of_sex = int(input("> "))
-        # type_of_sex = int(input("Тобі для якого сексу? 1: Вагінальний, 2: Анальний"))
-        if type_of_sex == 1:
+        options = ["1: Вагінальний", "2: Анальний"]
+        type_of_sex = print_options(["Тобі для якого сексу?"], options)
+        # type_of_sex = int(input("> "))
+        if type_of_sex == options[0]:
             pass
         else:
             pass
 
-    if materials == 1:
+    if materials == options[0]:
         print("З металом сумісні лубриканти на будь-якій основі!")
         type_of_sex_choice()
-    elif materials == 2:
+    elif materials == options[1]:
         print(
             "Скло гіпоалергенний і абсолютно не пористий матеріал, що не вимагає особливого догляду"
         )
         type_of_sex_choice()
-    elif materials == 3:
+    elif materials == options[2]:
         print(
             "З силіконом сумісні усі лубриканти на водній основі і деякі на гібридній"
         )
         type_of_sex_choice()
-    elif materials == 4:
+    elif materials == options[3]:
         print("З ТПЕ сумісні усі лубриканти на водній основі і деякі на змішаній")
         type_of_sex_choice()
-    elif materials == 5:
+    elif materials == options[4]:
         print("З ПВХ сумісні усі лубриканти на водній основі і деякі на змішаній")
     else:
         default_action()

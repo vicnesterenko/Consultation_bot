@@ -1,35 +1,27 @@
 from lubricant import for_sex
+from lubricant import for_toys
 from tools.print_options import print_options
 
 
 def choose_lub():
-    print_options(
-        ["Для чого потрібен?:"],
-        [
-            "1: Для сексу",
-            "2: Для іграшки",
-            "3: Для чутливої міклофлори",
-            "4: Для фістінгу",
-            "5: Для мастурбації",
-        ],
-    )
-    # header = "Для чого потрібен?:"
-    # actions = [
-    #   "1: Для сексу", "2: Для іграшки", "3: Для чутливої міклофлори", "4: Для фістінгу", "5: Для мастурбації",
-    # ]
-    # menu = "\n".join([header, *actions])
-    # print(menu)
-    action = int(input("> "))
-    if action == 1:
+    q = ["Для чого потрібен?:"]
+    options = [
+        "1: Для сексу",
+        "2: Для іграшки",
+        "3: Для чутливої міклофлори",
+        "4: Для фістінгу",
+        "5: Для мастурбації",
+    ]
+    action = print_options(q, options)
+
+    if action == options[0]:
         for_sex.choose_sex_type()
-    if action == 2:
+    if action == options[1]:
+        for_toys.choice_material()
+    if action == options[2]:
         pass
-    if action == 3:
+    if action == options[3]:
         pass
-    if action == 4:
-        pass
-    if action == 5:
-        pass
-    if action == 6:
+    if action == options[4]:
         pass
     pass

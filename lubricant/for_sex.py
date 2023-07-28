@@ -9,14 +9,16 @@ from type_sex.for_vaginal import vaginal
 
 
 def choose_sex_type():
-    print_options(
-        ["Обери вид сексу:"],
-        ["1: Для вагінального", "2: Для орального", "3: Для анального"],
-    )
-    action = int(input("> "))
-    if action == 1:
+    q = ["Обери вид сексу:"]
+    options = [
+        "1: Для вагінального",
+        "2: Для орального",
+        "3: Для анального",
+    ]
+    action = print_options(q, options)
+    if action == options[0]:
         vaginal()
-    if action == 2:
+    if action == options[1]:
         oral()
-    if action == 3:
+    if action == options[2]:
         anal()
