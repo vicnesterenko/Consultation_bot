@@ -1,4 +1,6 @@
 from lubricant import run
+
+# from tools.print_options import print_options
 from tools.print_options import print_options
 
 
@@ -7,79 +9,80 @@ def manager_contact():
 
 
 def choose_category():
-    print_options(
-        ["Обери:"],
-        [
-            "1: БДСМ, Фетиш",
-            "2: Сек-іграшки",
-            "3: Лубрикант",
-            "4: Білизна",
-            "5: Прелюдія",
-            "6: Подарунки",
-        ],
-    )
-    action = int(input("> "))
-    if action == 1:
+    q = ["Обери:"]
+    options = [
+        "1: БДСМ, Фетиш",
+        "2: Сек-іграшки",
+        "3: Лубрикант",
+        "4: Білизна",
+        "5: Прелюдія",
+        "6: Подарунки",
+    ]
+
+    action = print_options(q, options)
+
+    if action == options[0]:
         pass
-    if action == 2:
+    if action == options[1]:
         pass
-    if action == 3:
+    if action == options[2]:
         run.choose_lub()
-    if action == 4:
+    if action == options[3]:
         pass
-    if action == 5:
+    if action == options[4]:
         pass
-    if action == 6:
+    if action == options[5]:
         pass
 
 
 def choice_product():
-    print_options(["Ти знаєш хто ти?"], ["1: Так 😈", "2: Ні 🤭"])
-    action = int(input("> "))
-    if action == 1:
+    q = ["Ти знаєш хто ти?"]
+    options = ["1: Так 😈", "2: Ні 🤭"]
+
+    action = print_options(q, options)
+
+    if action == options[0]:
         choose_category()
-    if action == 2:
+    if action == options[1]:
         pass
 
 
 def first_choice():
-    print_options(
-        ["Обери дію:"],
-        [
-            "1: Зв'язатись з менеджером",
-            "2: Підібрати подарунок",
-            "3: Повернення товару",
-            "4: Підібрати товар",
-        ],
-    )
+    q = ["Обери дію:"]
+    options = [
+        "1: Зв'язатись з менеджером",
+        "2: Підібрати подарунок",
+        "3: Повернення товару",
+        "4: Підібрати товар",
+    ]
 
-    # action = input("> ")
-    # перевірка .isdigit in range(1, 5)
-    """
-  if action == "1":
-    pass
-  if action == "2":
-    pass
-  if action == "3":
-    pass
-  if action == "4":
-    choice_product()
-  """
+    action = print_options(q, options)
+
+    if action == options[0]:
+        manager_contact()
+    if action == options[1]:
+        pass
+    if action == options[2]:
+        pass
+    if action == options[3]:
+        choice_product()
 
 
 def main():
     first_choice()
-    action = int(input("> "))
-    if action == 1:
-        manager_contact()
-    if action == 2:
+    """
+    # action = int(input("> "))
+    if action == "1: Зв'язатись з менеджером":
         pass
-    if action == 3:
+    if action == "2: Підібрати подарунок":
         pass
-    if action == 4:
+    if action == "3: Повернення товару":
+        pass
+    if action == "4: Підібрати товар":
         choice_product()
     else:
-        print("ERROR")
+        print("Input Error")
+    """
 
 
 if __name__ == "__main__":

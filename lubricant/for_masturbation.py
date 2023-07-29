@@ -1,5 +1,7 @@
 import sys
 
+# from ..tools.default_actions import default_action
+
 sys.path.append("../")
 from tools.default_actions import default_action
 from for_toys import choice_material
@@ -7,16 +9,19 @@ from tools.print_options import print_options
 
 
 def masturbation():
-    print_options(
-        ["Вам потрібен лубрикант для чоловічої чи жіночої мастурбації?"],
-        ["1: Для чоловічої", "2: Для жіночої"],
-    )
-    sex = int(input("> "))
+    q_sex = ["Вам потрібен лубрикант для чоловічої чи жіночої мастурбації?"]
+    sex_options = [
+        "1: Для чоловічої",
+        "2: Для жіночої",
+    ]
 
-    print_options(["Чи будете використовувати іграшки?"], ["1: Так 😈", "2: Ні 🤭"])
-    toys = int(input("> "))
+    sex = print_options(q_sex, sex_options)
 
-    if sex == 1 and toys == 1:
+    q_toy = ["Чи будете використовувати іграшки?"]
+    toy_options = ["1: Так 😈", "2: Ні 🤭"]
+    toys = print_options(q_toy, toy_options)
+
+    if sex == sex_options[0] and toys == toy_options[0]:
         print(
             "Для мастурбації з мастурбатором рекомендуємо брендовані лубриканти від виробників мастурбаторів\n"
         )
@@ -31,7 +36,7 @@ def masturbation():
         )
         default_action()
 
-    if sex == 1 and toys == 2:
+    if sex == sex_options[0] and toys == toy_options[1]:
         print(
             "Крем для мастурбації чудово ковзає і зволожує, не залишає липкості і доглядає за шкірою геніталій\n"
         )
@@ -43,10 +48,10 @@ def masturbation():
         )
         default_action()
 
-    if sex == 2 and toys == 1:
+    if sex == sex_options[1] and toys == toy_options[0]:
         choice_material()
 
-    if sex == 2 and toys == 2:
+    if sex == sex_options[1] and toys == toy_options[1]:
         print("Тоді рекомендуємо спробувати ці лубриканти\n")
         print(
             "- Класичний силіконовий лубрикант, ідеальний для мастурбації\nhttps://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203?utm_source=t_bot\n"
@@ -57,4 +62,4 @@ def masturbation():
         default_action()
 
 
-masturbation()
+# masturbation()

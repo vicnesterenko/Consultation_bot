@@ -13,10 +13,14 @@ def anal():
         print(
             "А перед зміною анального сексу на вагінальний, презерватив треба замінити"
         )
-        print_options(["Обери дію:"], ["1: Я знаю", "2: Чому?"])
-        USER_CHOICE = int(input("> "))
 
-        if USER_CHOICE == 1:
+        q = ["Обери дію:"]
+        options = ["1: Я знаю", "2: Чому?"]
+
+        USER_CHOICE = print_options(q, options)
+        # USER_CHOICE = int(input("> "))
+
+        if USER_CHOICE == options[0]:
             if user_knows:
                 print("Ви вже знаєте, оберіть лубрикант:")
             else:
@@ -40,31 +44,39 @@ def anal():
             print(
                 "5. Лубрикант на силіконовій основі з маслом гвоздики https://lovespace.ua/uk/products/analnyj-lubrikant-na-silikonovoj-osnove-swiss-navy"
             )
+            break
 
-        elif USER_CHOICE == 2:
+        elif USER_CHOICE == options[1]:
             print(
                 "Тому що мікрофлора прямої кишки не повинна потрапляти у вагіну та уретру"
             )
             print("Адже це може спричинити різноманітні порушення і хвороби")
             if user_knows:
-                print_options(
-                    ["Зрозуміло?", "3: Назад"],
-                    ["1: Зрозуміло", "2: Повернутися до вибору лубриканта"],
-                )
+                q = ["Зрозуміло?"]
+                options = [
+                    "1: Зрозуміло",
+                    "2: Повернутися до вибору лубриканта",
+                    "3: Назад",
+                ]
+
                 while True:
-                    USER_CHOICE = int(input("> "))
-                    if USER_CHOICE == 1:
+                    USER_CHOICE = print_options(q, options)
+                    if USER_CHOICE == options[0]:
                         return "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml?utm_source=t_bot"
-                    elif USER_CHOICE == 2:
+                    elif USER_CHOICE == options[1]:
                         break
-                    elif USER_CHOICE == 3:
+                    elif USER_CHOICE == options[2]:
                         break
-                    else:
-                        print("Невірний вибір. Спробуйте ще раз.")
+                    # else:
+                    #     print("Невірний вибір. Спробуйте ще раз.")
             else:
-                print_options(["Зрозуміло?"], ["1: Зрозуміло"])
-                USER_CHOICE = int(input("> "))
-                if USER_CHOICE == 1:
+                q = ["Зрозуміло?"]
+                options = [
+                    "1: Зрозуміло",
+                ]
+                USER_CHOICE = print_options(["Зрозуміло?"], ["1: Зрозуміло"])
+                if USER_CHOICE == options[0]:
                     print(
                         "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml?utm_source=t_bot"
                     )
+                break
