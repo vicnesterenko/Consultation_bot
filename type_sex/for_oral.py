@@ -27,7 +27,7 @@ DATA = {
         ),
     },
     2: {
-        "label": "Набори",
+        "label": "Спробувати набори",
         "texts": "\n".join(
             [
                 "1. Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
@@ -39,30 +39,42 @@ DATA = {
 
 
 def oral(cb):
+    print("Бажаєте підібрати конкретний смак чи взяти набір різних?")
     q = ["Обери дію:"]
     options = ["Підібрати смак", "Спробувати набори", "Назад↩️"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         q = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
-        options = [*(d["label"] for d in DATA.values())]
+        options = [DATA[0]["label"], DATA[1]["label"], "Назад"]
         USER_CHOICE = print_options(q, options)
-        for obj in DATA:
-            if USER_CHOICE == DATA[obj]["label"]:
-                texts = DATA.get(obj, {}).get("texts")
-                print(texts)
-        back_option()
-        cb()
-    elif USER_CHOICE == options[1]:
-        options = [*(d["label"] for d in DATA.values())]
-        USER_CHOICE = print_options(q, options)
-        for obj in DATA:
-            if USER_CHOICE == DATA[obj]["label"]:
-                texts = DATA.get(obj, {}).get("texts")
-                print(texts)
+        if USER_CHOICE == options[2]:
             back_option()
             cb()
-    elif USER_CHOICE == options[0]:
+        else:
+            for obj in DATA.keys():
+                if USER_CHOICE == DATA[obj]["label"]:
+                    texts = DATA.get(obj, {}).get("texts")
+                    print(texts)
+                    break
+            back_option()
+            cb()
+    elif USER_CHOICE == options[1]:
+        for obj in DATA.keys():
+            if USER_CHOICE == DATA[obj]["label"]:
+                texts = DATA.get(obj, {}).get("texts")
+                print(texts)
+                break
         back_option()
         cb()
+
+    elif USER_CHOICE == options[2]:
+        for obj in DATA.keys:
+            if USER_CHOICE == DATA[obj]["label"]:
+                texts = DATA.get(obj, {}).get("texts")
+                print(texts)
+                break
+
+            back_option()
+            cb()
     else:
-        default_action()
+        cb()
