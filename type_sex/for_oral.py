@@ -68,7 +68,7 @@ def oral(cb):
         cb()
 
     elif USER_CHOICE == options[2]:
-        for obj in DATA.keys:
+        for obj in DATA.keys():
             if USER_CHOICE == DATA[obj]["label"]:
                 texts = DATA.get(obj, {}).get("texts")
                 print(texts)
