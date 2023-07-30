@@ -4,7 +4,7 @@ sys.path.append("../")
 from tools.default_actions import default_action
 from tools.print_options import print_options
 
-from for_toys import choice_material
+from . import for_toys as ft
 
 
 def masturbation():
