@@ -48,7 +48,7 @@ def masturbation():
         default_action()
 
     if sex == sex_options[1] and toys == toy_options[0]:
-        choice_material()
+        ft.choice_material()
 
     if sex == sex_options[1] and toys == toy_options[1]:
         print("Тоді рекомендуємо спробувати ці лубриканти\n")
