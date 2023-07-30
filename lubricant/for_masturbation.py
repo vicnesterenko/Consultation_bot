@@ -1,11 +1,10 @@
 import sys
 
-# from ..tools.default_actions import default_action
-
 sys.path.append("../")
 from tools.default_actions import default_action
-from for_toys import choice_material
 from tools.print_options import print_options
+
+from . import for_toys as ft
 
 
 def masturbation():
@@ -49,7 +48,7 @@ def masturbation():
         default_action()
 
     if sex == sex_options[1] and toys == toy_options[0]:
-        choice_material()
+        ft.choice_material()
 
     if sex == sex_options[1] and toys == toy_options[1]:
         print("Тоді рекомендуємо спробувати ці лубриканти\n")

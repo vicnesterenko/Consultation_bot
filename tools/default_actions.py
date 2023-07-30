@@ -9,7 +9,7 @@ def default_action():
         "manager: Зв'язатись з менеджером",
     ]
 
-    action = print_options.print_options(q, options)
+    action = print_options(q, options)
 
     # action = input("> ")
     if action == options[0]:
