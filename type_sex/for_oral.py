@@ -40,7 +40,7 @@ DATA = {
 
 def oral(cb):
     q = ["Обери дію:"]
-    options = ["Підібрати смак", "Спробувати набори"]
+    options = ["Підібрати смак", "Спробувати набори", "Назад↩️"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         q = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
@@ -53,11 +53,16 @@ def oral(cb):
         back_option()
         cb()
     elif USER_CHOICE == options[1]:
-        if USER_CHOICE == DATA[obj]["label"]:
-            texts = DATA.get(obj, {}).get("texts")
-            print(texts)
+        options = [*(d["label"] for d in DATA.values())]
+        USER_CHOICE = print_options(q, options)
+        for obj in DATA:
+            if USER_CHOICE == DATA[obj]["label"]:
+                texts = DATA.get(obj, {}).get("texts")
+                print(texts)
+            back_option()
+            cb()
+    elif USER_CHOICE == options[0]:
         back_option()
         cb()
-
     else:
         default_action()
