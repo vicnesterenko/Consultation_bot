@@ -17,7 +17,7 @@ def choose_sex_type():
     ]
     action = print_options(q, options)
     if action == options[0]:
-        vaginal(choose_sex_type)
+        vaginal()
     if action == options[1]:
         oral(choose_sex_type)
     if action == options[2]:
