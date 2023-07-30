@@ -4,7 +4,6 @@ sys.path.append("../")
 from tools.default_actions import default_action
 from tools.print_options import print_options
 
-import json
 
 DATA = {
     0: {
@@ -28,11 +27,6 @@ DATA = {
         ),
     },
 }
-
-
-def get_questions():
-    data = json.loads("data/questions_data.json")
-    pass
 
 
 def oral():
