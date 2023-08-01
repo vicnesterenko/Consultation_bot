@@ -1,74 +1,50 @@
-from tools.print_options import print_options
-from tools.default_actions import default_action
 import json
-
-
-def print_options(question, options):
-    print(question[0])
-    for option in options:
-        print(f"{option['id']}: {option['label']}")
-    print("0: Назад")
-
-    while True:
-        choice = input("Ваш вибір: ")
-        if choice.lower() == "назад" or choice == "0":
-            return None
-        elif choice.isdigit() and int(choice) in [option["id"] for option in options]:
-            return next(
-                option["label"] for option in options if option["id"] == int(choice)
-            )
-        else:
-            print("Будь ласка, виберіть дійсний варіант або 'назад'.")
+from tools.default_actions import default_action
+from tools.print_options import print_options
 
 
 def choice_material():
     with open("materials.json", "r", encoding="utf-8") as file:
-        materials_data = json.load(file)
+        materials = json.load(file)
 
-    while True:
-        q = ["З якого матеріалу твоя іграшка?"]
-        options = materials_data["materials"]
+    materials_question = [materials["materials"]["question"]]
+    materials_options = [
+        f"{option['id']}: {option['label']}"
+        for option in materials["materials"]["options"]
+    ]
 
-        materials = print_options(q, options)
+    materials_choice = print_options(materials_question, materials_options)
 
-        if materials is None:
-            # The user chose "Назад," break out of the loop and exit the function.
-            break
+    def type_of_sex_choice():
+        sex_question = [materials["type_of_sex"]["question"]]
+        sex_options = [
+            f"{option['id']}: {option['label']}"
+            for option in materials["type_of_sex"]["options"]
+        ]
+        type_of_sex = print_options(sex_question, sex_options)
 
-        def type_of_sex_choice():
-            options = materials_data["types_of_sex"]
-            type_of_sex = print_options(["Тобі для якого сексу?"], options)
-
-            if type_of_sex is None:
-                # The user chose "Назад," break out of the loop and return to the previous menu.
-                return
-
-            if type_of_sex == options[0]["label"]:
-                pass
-            else:
-                pass
-
-        if materials == options[0]["label"]:
-            print("З металом сумісні лубриканти на будь-якій основі!")
-            type_of_sex_choice()
-        elif materials == options[1]["label"]:
-            print(
-                "Скло гіпоалергенний і абсолютно не пористий матеріал, що не вимагає особливого догляду"
-            )
-            type_of_sex_choice()
-        elif materials == options[2]["label"]:
-            print(
-                "З силіконом сумісні усі лубриканти на водній основі і деякі на гібридній"
-            )
-            type_of_sex_choice()
-        elif materials == options[3]["label"]:
-            print("З ТПЕ сумісні усі лубриканти на водній основі і деякі на змішаній")
-            type_of_sex_choice()
-        elif materials == options[4]["label"]:
-            print("З ПВХ сумісні усі лубриканти на водній основі і деякі на змішаній")
+        if type_of_sex == sex_options[0]:
+            pass
         else:
-            default_action()
+            pass
+
+    if materials_choice == materials_options[0]:
+        print(materials["materials"]["metal_message"])
+        type_of_sex_choice()
+    elif materials_choice == materials_options[1]:
+        print(materials["materials"]["glass_message"])
+        type_of_sex_choice()
+    elif materials_choice == materials_options[2]:
+        print(materials["materials"]["silicone_message"])
+        type_of_sex_choice()
+    elif materials_choice == materials_options[3]:
+        print(materials["materials"]["tpe_message"])
+        type_of_sex_choice()
+    elif materials_choice == materials_options[4]:
+        print(materials["materials"]["pvc_message"])
+    else:
+        default_action()
 
 
-# Call the function to start the process
-choice_material()
+if __name__ == "__main__":
+    choice_material()
