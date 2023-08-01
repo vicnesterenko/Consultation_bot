@@ -6,7 +6,7 @@ from tools.print_options import print_options
 from tools.back_option import back_option
 
 DATA = {
-    0: {
+    1: {
         "label": "Десерт",
         "texts": "\n".join(
             [
@@ -16,7 +16,7 @@ DATA = {
             ]
         ),
     },
-    1: {
+    2: {
         "label": "Фруктово-ягідні",
         "texts": "\n".join(
             [
@@ -35,20 +35,20 @@ DATA = {
             ]
         ),
     },
+    3: "\n".join(["Бажаєте підібрати конкретний смак чи взяти набір різних?"]),
 }
 
 
 def oral(cb):
-    print("Бажаєте підібрати конкретний смак чи взяти набір різних?")
+    print(DATA[3])
     q = ["Обери дію:"]
     options = ["Підібрати смак", "Спробувати набори", "Назад↩️"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         q = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
-        options = [DATA[0]["label"], DATA[1]["label"], "Назад"]
+        options = [DATA[0]["label"], DATA[1]["label"], "Назад↩️"]
         USER_CHOICE = print_options(q, options)
         if USER_CHOICE == options[2]:
-            back_option()
             cb()
         else:
             for obj in DATA.keys():
@@ -73,8 +73,4 @@ def oral(cb):
                 texts = DATA.get(obj, {}).get("texts")
                 print(texts)
                 break
-
-            back_option()
             cb()
-    else:
-        cb()

@@ -64,6 +64,7 @@ def anal(cb):
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         print(DATA[1])
+        back_option()
         cb()
     if USER_CHOICE == options[1]:
         print(DATA[2])
@@ -71,6 +72,5 @@ def anal(cb):
         options1 = ["1: Зрозуміло"]
         USER_CHOICE = print_options(q, options1)
         if USER_CHOICE == options1[0]:
-            print(DATA[3])
-            print(back_option())
+            print(DATA[3], back_option(), sep="\n")
             cb()

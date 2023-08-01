@@ -11,12 +11,12 @@ def choose_lub():
         "3: Для чутливої міклофлори",
         "4: Для фістінгу",
         "5: Для мастурбації",
-        "0: Назад",
+        "0: Назад ↩️",
     ]
     action = print_options(q, options)
 
     if action == options[0]:
-        for_sex.choose_sex_type()
+        for_sex.choose_sex_type(choose_lub)
     if action == options[1]:
         for_toys.choice_material()
     if action == options[2]:

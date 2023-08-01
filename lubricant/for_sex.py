@@ -8,12 +8,13 @@ from type_sex.for_anal import anal
 from type_sex.for_vaginal import vaginal
 
 
-def choose_sex_type():
+def choose_sex_type(cb):
     q = ["Обери вид сексу:"]
     options = [
         "1: Для вагінального",
         "2: Для орального",
         "3: Для анального",
+        "Назад↩️",
     ]
     action = print_options(q, options)
     if action == options[0]:
@@ -22,3 +23,5 @@ def choose_sex_type():
         oral(choose_sex_type)
     if action == options[2]:
         anal(choose_sex_type)
+    if action == options[3]:
+        cb()
