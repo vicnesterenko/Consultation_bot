@@ -1,7 +1,7 @@
 import sys
 sys.path.append("../")
 from tools.print_options import print_options
-from lubricant.run import choose_lub
+from lubricant import run
 
 def user_dont_know():
     q = ["Давай знайомитись з категоріями ближче. Вибери ту, яка підходить тобі найбільше:"]
@@ -37,7 +37,7 @@ def detailed_info_about_lubricants():
     user_choice = print_options(q, options)
 
     if user_choice == options[0]:
-        choose_lub()
+        run.choose_lub()
         user_dont_know()
     elif user_choice == options[1]:
         make_intimate_comfortable()
@@ -122,4 +122,3 @@ def detailed_info_about_bdsm():
         unleash_your_fantasy()
 
 
-user_dont_know()

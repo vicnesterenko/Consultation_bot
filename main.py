@@ -2,7 +2,7 @@ from lubricant import run
 
 # from tools.print_options import print_options
 from tools.print_options import print_options
-
+from user_dont_know import user_dont_know
 
 def manager_contact():
     return ()
@@ -47,7 +47,7 @@ def choice_product():
     if action == options[0]:
         choose_category()
     if action == options[1]:
-        pass
+        user_dont_know()
 
 
 def first_choice():
