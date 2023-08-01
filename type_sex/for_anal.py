@@ -57,14 +57,15 @@ DATA = {
 }
 
 
-def anal(cb):
+def anal(cb, cb1):
     print(DATA[0])
     q = ["Обери дію:"]
     options = ["1: Я знаю", "2: Чому?"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         print(DATA[1])
-        cb()
+        back_option()
+        cb(cb1)
     if USER_CHOICE == options[1]:
         print(DATA[2])
         q = ["Зрозуміло?"]
@@ -73,4 +74,4 @@ def anal(cb):
         if USER_CHOICE == options1[0]:
             print(DATA[3])
             print(back_option())
-            cb()
+            cb(cb1)
