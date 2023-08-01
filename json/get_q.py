@@ -1,7 +1,7 @@
 import json
 import questionary
 
-with open("some_package/data/questions_data.json", encoding="utf-8") as user_file:
+with open("questions_data.json", encoding="utf-8") as user_file:
     data = json.load(user_file)
 
 
