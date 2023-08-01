@@ -2,7 +2,7 @@ from lubricant import run
 
 # from tools.print_options import print_options
 from tools.print_options import print_options
-from user_dont_know import user_dont_know
+
 
 def manager_contact():
     return ()
@@ -12,12 +12,11 @@ def choose_category():
     q = ["Обери:"]
     options = [
         "1: БДСМ, Фетиш",
-        "2: Секс-іграшки",
+        "2: Сек-іграшки",
         "3: Лубрикант",
         "4: Білизна",
         "5: Прелюдія",
         "6: Подарунки",
-        "7: Назад ↩️",
     ]
 
     action = print_options(q, options)
@@ -34,8 +33,6 @@ def choose_category():
         pass
     if action == options[5]:
         pass
-    if action == options[6]:
-        first_choice()
 
 
 def choice_product():
@@ -47,7 +44,7 @@ def choice_product():
     if action == options[0]:
         choose_category()
     if action == options[1]:
-        user_dont_know()
+        pass
 
 
 def first_choice():
@@ -73,6 +70,19 @@ def first_choice():
 
 def main():
     first_choice()
+    """
+    # action = int(input("> "))
+    if action == "1: Зв'язатись з менеджером":
+        pass
+    if action == "2: Підібрати подарунок":
+        pass
+    if action == "3: Повернення товару":
+        pass
+    if action == "4: Підібрати товар":
+        choice_product()
+    else:
+        print("Input Error")
+    """
 
 
 if __name__ == "__main__":
