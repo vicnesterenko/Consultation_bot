@@ -1,6 +1,9 @@
 from lubricant import for_sex
 from lubricant import for_toys
 from tools.print_options import print_options
+import sys
+
+from main import choose_category
 
 
 def choose_lub():
@@ -26,4 +29,4 @@ def choose_lub():
     if action == options[4]:
         pass
     if action == options[5]:
-        pass
+        choose_category()

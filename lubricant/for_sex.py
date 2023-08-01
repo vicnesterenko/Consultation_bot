@@ -6,9 +6,10 @@ from tools.print_options import print_options
 from type_sex.for_oral import oral
 from type_sex.for_anal import anal
 from type_sex.for_vaginal import vaginal
+from lubricant.run import choose_lub
 
 
-def choose_sex_type(cb):
+def choose_sex_type(choose_lub):
     q = ["Обери вид сексу:"]
     options = [
         "1: Для вагінального",
@@ -20,8 +21,8 @@ def choose_sex_type(cb):
     if action == options[0]:
         vaginal()
     if action == options[1]:
-        oral(choose_sex_type)
+        oral(choose_sex_type, choose_lub)
     if action == options[2]:
-        anal(choose_sex_type)
+        anal(choose_sex_type, choose_lub)
     if action == options[3]:
-        cb()
+        choose_lub()
