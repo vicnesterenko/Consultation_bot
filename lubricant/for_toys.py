@@ -1,6 +1,4 @@
-import sys
-
-sys.path.append("../")
+import json
 from tools.print_options import print_options
 from tools.default_actions import default_action
 

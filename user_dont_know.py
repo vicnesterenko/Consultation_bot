@@ -120,5 +120,3 @@ def detailed_info_about_bdsm():
         user_dont_know()
     elif user_choice == options[1]:
         unleash_your_fantasy()
-
-
