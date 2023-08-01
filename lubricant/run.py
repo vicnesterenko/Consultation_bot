@@ -25,4 +25,5 @@ def choose_lub():
         pass
     if action == options[4]:
         pass
-    pass
+    if action == options[5]:
+        pass
