@@ -1,6 +1,6 @@
 import json
-from tools.default_actions import default_action
 from tools.print_options import print_options
+from tools.default_actions import default_action
 
 
 def choice_material():
@@ -31,19 +31,29 @@ def choice_material():
     if materials_choice == materials_options[0]:
         print(materials["materials"]["metal_message"])
         type_of_sex_choice()
+        back_option()
     elif materials_choice == materials_options[1]:
         print(materials["materials"]["glass_message"])
         type_of_sex_choice()
+        back_option()
     elif materials_choice == materials_options[2]:
         print(materials["materials"]["silicone_message"])
         type_of_sex_choice()
+        back_option()
     elif materials_choice == materials_options[3]:
         print(materials["materials"]["tpe_message"])
         type_of_sex_choice()
+        back_option()
     elif materials_choice == materials_options[4]:
         print(materials["materials"]["pvc_message"])
     else:
         default_action()
+
+
+def back_option():
+    back_choice = print_options(["Назад ↩️"], ["Назад ↩️"])
+    if back_choice == "Назад ↩️":
+        choice_material()
 
 
 if __name__ == "__main__":
