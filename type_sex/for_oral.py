@@ -3,7 +3,8 @@ import sys
 sys.path.append("../")
 from tools.default_actions import default_action
 from tools.print_options import print_options
-from tools.back_option import back_option
+
+# from tools.back_option import back_option
 
 DATA = {
     0: {
@@ -39,38 +40,55 @@ DATA = {
 }
 
 
-def oral(cb, cb1):
+def oral(choose_sex_type, choose_lub):
     print(DATA[3])
     q = ["Обери дію:"]
-    options = ["Підібрати смак", "Спробувати набори", "Назад↩️"]
+    options = [
+        "Підібрати смак",
+        "Спробувати набори",
+        "ІНШЕ↩️",
+    ]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
-        q = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
-        options = [DATA[0]["label"], DATA[1]["label"], "Назад↩️"]
-        USER_CHOICE = print_options(q, options)
-        if USER_CHOICE == options[2]:
-            cb(cb1)
+        q_1 = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
+        options_1 = [
+            DATA[0]["label"],
+            DATA[1]["label"],
+            "ІНШЕ↩️",
+        ]
+        USER_CHOICE = print_options(q_1, options_1)
+
+        if USER_CHOICE == options_1[2]:
+            # "ІНШЕ↩️"
+            return default_action(
+                oral, *(choose_sex_type, choose_lub)
+            )  # повертає у oral(choose_sex_type, choose_lub)
         else:
+            # Десерт / Фруктово-ягідні
             for obj in DATA.keys():
                 if USER_CHOICE == DATA[obj]["label"]:
                     texts = DATA.get(obj, {}).get("texts")
                     print(texts)
                     break
-            back_option()
-            cb(cb1)
+            return default_action(
+                oral, *(choose_sex_type, choose_lub)
+            )  # повертає у oral(choose_sex_type, choose_lub)
+
     elif USER_CHOICE == options[1]:
+        # Спробувати набори
         for obj in DATA.keys():
             if USER_CHOICE == DATA[obj]["label"]:
                 texts = DATA.get(obj, {}).get("texts")
                 print(texts)
                 break
-        back_option()
-        cb(cb1)
+        return default_action(oral, *(choose_sex_type, choose_lub))
 
     elif USER_CHOICE == options[2]:
-        for obj in DATA.keys():
-            if USER_CHOICE == DATA[obj]["label"]:
-                texts = DATA.get(obj, {}).get("texts")
-                print(texts)
-                break
-            cb(cb1)
+        # Інше
+
+        # for obj in DATA.keys():
+        #     if USER_CHOICE == DATA[obj]["label"]:
+        #         texts = DATA.get(obj, {}).get("texts")
+        #         print(texts)
+        #         # break
+        return default_action(choose_sex_type, choose_lub)
