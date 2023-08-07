@@ -23,4 +23,4 @@ def choose_sex_type(choose_lub):
     if action == options[2]:
         return anal(choose_sex_type, choose_lub)
     if action == options[3]:
-        choose_lub()
+        return choose_lub()
