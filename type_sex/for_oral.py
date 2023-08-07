@@ -4,6 +4,7 @@ sys.path.append("../")
 from tools.default_actions import default_action
 from tools.print_options import print_options
 
+# from tools.back_option import back_option
 
 DATA = {
     0: {
@@ -47,26 +48,8 @@ def oral(choose_sex_type, choose_lub):
         "Спробувати набори",
         "ІНШЕ↩️",
     ]
-    options = [
-        "Підібрати смак",
-        "Спробувати набори",
-        "ІНШЕ↩️",
-    ]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
-        q_1 = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
-        options_1 = [
-            DATA[0]["label"],
-            DATA[1]["label"],
-            "ІНШЕ↩️",
-        ]
-        USER_CHOICE = print_options(q_1, options_1)
-
-        if USER_CHOICE == options_1[2]:
-            # "ІНШЕ↩️"
-            return default_action(
-                oral, *(choose_sex_type, choose_lub)
-            )  # повертає у oral(choose_sex_type, choose_lub)
         q_1 = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
         options_1 = [
             DATA[0]["label"],
