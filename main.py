@@ -1,12 +1,7 @@
 from lubricant import run
 from praktyka import praktyka_category, praktyka_main
-
-# from tools.print_options import print_options
+from contact_manager import contact
 from tools.print_options import print_options
-
-
-def manager_contact():
-    return ()
 
 
 def choose_category():
@@ -64,7 +59,7 @@ def first_choice():
     action = print_options(q, options)
 
     if action == options[0]:
-        manager_contact()
+        return contact()
     if action == options[1]:
         pass
     if action == options[2]:
