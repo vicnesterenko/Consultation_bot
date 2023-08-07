@@ -1,10 +1,8 @@
 from lubricant import run
-
+from praktyka import praktyka_main, praktyka_category
 from tools.print_options import print_options
-
-
-def manager_contact():
-    return ()
+from user_dont_know import user_dont_know
+from contact_manager import contact
 
 
 def choose_category():
@@ -52,10 +50,11 @@ def choice_product():
 def first_choice():
     q = ["Обери дію:"]
     options = [
-        "1: Зв'язатись з менеджером",
-        "2: Підібрати подарунок",
-        "3: Повернення товару",
-        "4: Підібрати товар",
+        "Зв'язатись з менеджером",
+        "Підібрати подарунок",
+        "Повернення товару",
+        "Підібрати товар",
+        "Нормальна практика",
     ]
 
     action = print_options(q, options)
@@ -68,6 +67,8 @@ def first_choice():
         pass
     if action == options[3]:
         choice_product()
+    if action == options[4]:
+        praktyka_main.praktyka(main)
 
 
 def main():

@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("../")
 from tools.print_options import print_options
-from tools.back_option import back_option
+from tools.default_actions import default_action
 
 DATA = {
     0: "\n".join(
@@ -60,12 +60,11 @@ DATA = {
 def anal(choose_sex_type, choose_lub):
     print(DATA[0])
     q = ["Обери дію:"]
-    options = ["1: Я знаю", "2: Чому?"]
+    options = ["1: Я знаю", "2: Чому?", "ІНШЕ↩️"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         print(DATA[1])
-        back_option()
-        cb(cb1)
+        return default_action(anal, *(choose_sex_type, choose_lub))
     if USER_CHOICE == options[1]:
         print(DATA[2])
         q = ["Зрозуміло?"]
@@ -73,5 +72,6 @@ def anal(choose_sex_type, choose_lub):
         USER_CHOICE = print_options(q, options1)
         if USER_CHOICE == options1[0]:
             print(DATA[3])
-            print(back_option())
-            cb(cb1)
+            return default_action(anal, *(choose_sex_type, choose_lub))
+    if USER_CHOICE == options[2]:
+        return default_action(choose_sex_type, choose_lub)
