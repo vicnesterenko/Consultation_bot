@@ -40,7 +40,6 @@ DATA = {
 
 
 def oral(choose_sex_type, choose_lub):
-def oral(choose_sex_type, choose_lub):
     print(DATA[3])
     q = ["Обери дію:"]
     options = [

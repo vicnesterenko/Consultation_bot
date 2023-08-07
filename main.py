@@ -1,6 +1,5 @@
 from lubricant import run
 
-# from tools.print_options import print_options
 from tools.print_options import print_options
 
 
