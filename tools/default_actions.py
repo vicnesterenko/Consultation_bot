@@ -1,4 +1,6 @@
-from tools.print_options import print_options
+from . import print_options
+from main import main
+from contact_manager import contact
 
 
 def default_action():

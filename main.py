@@ -1,4 +1,5 @@
 from lubricant import run
+from praktyka import praktyka_category, praktyka_main
 
 # from tools.print_options import print_options
 from tools.print_options import print_options
@@ -23,17 +24,17 @@ def choose_category():
     action = print_options(q, options)
 
     if action == options[0]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[1]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[2]:
         run.choose_lub()
     if action == options[3]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[4]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[5]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[6]:
         first_choice()
 
@@ -53,10 +54,11 @@ def choice_product():
 def first_choice():
     q = ["Обери дію:"]
     options = [
-        "1: Зв'язатись з менеджером",
-        "2: Підібрати подарунок",
-        "3: Повернення товару",
-        "4: Підібрати товар",
+        "Зв'язатись з менеджером",
+        "Підібрати подарунок",
+        "Повернення товару",
+        "Підібрати товар",
+        "Нормальна практика",
     ]
 
     action = print_options(q, options)
@@ -68,7 +70,9 @@ def first_choice():
     if action == options[2]:
         pass
     if action == options[3]:
-        choice_product()
+        return choice_product()
+    if action == options[4]:
+        return praktyka_main.praktyka(main)
 
 
 def main():
