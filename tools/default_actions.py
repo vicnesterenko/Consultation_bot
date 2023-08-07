@@ -2,8 +2,6 @@ from . import print_options
 from main import main
 from contact_manager import contact
 
-# from tools.default_actions import default_action
-
 
 def default_action(previous, *args):
     q = ["Обери:"]

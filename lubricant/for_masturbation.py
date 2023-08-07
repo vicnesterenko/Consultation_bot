@@ -1,7 +1,5 @@
 import sys
 
-# from ..tools.default_actions import default_action
-
 sys.path.append("../")
 from tools.default_actions import default_action
 from for_toys import choice_material

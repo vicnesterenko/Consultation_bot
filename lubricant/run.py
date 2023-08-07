@@ -2,8 +2,6 @@ from lubricant import for_sex
 from lubricant import for_toys
 from . import for_fisting
 from tools.print_options import print_options
-import sys
-
 from main import choose_category
 
 
