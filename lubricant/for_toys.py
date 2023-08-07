@@ -1,22 +1,16 @@
-import sys
-
-sys.path.append("../")
+import json
 from tools.print_options import print_options
 from tools.default_actions import default_action
 
 
 def choice_material():
-    # materials = int(input("З якого матеріалу твоя іграшка? 1: Метал, 2: Скло, 3: Силікон, 4: ТПЕ, 5: ПВХ"))
     q = ["З якого матеріалу твоя іграшка?"]
     options = ["1: Метал", "2: Скло", "3: Силікон", "4: ТПЕ", "5: ПВХ"]
-
     materials = print_options(q, options)
-    # materials = int(input("> "))
 
     def type_of_sex_choice():
         options = ["1: Вагінальний", "2: Анальний"]
         type_of_sex = print_options(["Тобі для якого сексу?"], options)
-        # type_of_sex = int(input("> "))
         if type_of_sex == options[0]:
             pass
         else:
