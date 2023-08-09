@@ -1,7 +1,9 @@
 import json
 import random
 import os
-from bot.tools.back_option import back_option
+from bot.tools import default_actions
+
+# from bot.tools.back_option import back_option
 
 
 def praktyka(main_menu):
@@ -20,5 +22,6 @@ def praktyka(main_menu):
         intro_messages = item["1"]["intro_message2"]
     print(("\n".join(intro_messages)), label, random.choice(links), sep="\n")
 
-    back_option()
-    main_menu()
+    # back_option()
+    # main_menu()
+    default_actions.default_action(main_menu)

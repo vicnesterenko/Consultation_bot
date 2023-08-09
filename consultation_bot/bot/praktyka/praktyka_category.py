@@ -1,7 +1,9 @@
 import json
 import random
 import os
-from bot.tools.back_option import back_option
+from bot.tools import default_actions
+
+# from bot.tools.back_option import back_option
 
 
 def praktyka(choose_category):
@@ -20,5 +22,6 @@ def praktyka(choose_category):
         intro_messages = item["1"]["intro_message1"]
     print(("\n".join(intro_messages)), label, random.choice(links), sep="\n")
 
-    back_option()
-    choose_category()
+    # back_option()
+    # choose_category()
+    default_actions.default_action(choose_category)
