@@ -1,8 +1,8 @@
-from lubricant import run
-from praktyka import praktyka_main, praktyka_category
-from tools.print_options import print_options
-from user_dont_know import user_dont_know
-from contact_manager import contact
+from bot.praktyka import praktyka_main, praktyka_category
+from bot.lubricant_for.run import choose_lub
+from bot.tools.print_options import print_options
+from bot.user_dont_know import user_dont_know
+from bot.contact_manager import contact
 
 
 def choose_category():
@@ -24,7 +24,7 @@ def choose_category():
     if action == options[1]:
         return praktyka_category.praktyka(choose_category)
     if action == options[2]:
-        return run.choose_lub()
+        return choose_lub()
     if action == options[3]:
         return praktyka_category.praktyka(choose_category)
     if action == options[4]:
@@ -62,18 +62,14 @@ def first_choice():
     if action == options[0]:
         return contact()
     if action == options[1]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[2]:
-        pass
+        return praktyka_category.praktyka(choose_category)
     if action == options[3]:
-        choice_product()
+        return choice_product()
     if action == options[4]:
-        praktyka_main.praktyka(main)
+        return praktyka_main.praktyka(first_choice)
 
 
-def main():
-    return first_choice()
-
-
-if __name__ == "__main__":
-    main()
+def start():
+    first_choice()

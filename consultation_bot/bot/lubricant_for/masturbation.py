@@ -1,12 +1,9 @@
-import sys
-
-sys.path.append("../")
-from tools.default_actions import default_action
-from for_toys import choice_material
-from tools.print_options import print_options
+from bot.lubricant_for.toys import choice_material
+from bot.tools.default_actions import default_action
+from bot.tools.print_options import print_options
 
 
-def masturbation():
+def masturbation(choose_lub):
     q_sex = ["Вам потрібен лубрикант для чоловічої чи жіночої мастурбації?"]
     sex_options = [
         "1: Для чоловічої",
@@ -32,7 +29,7 @@ def masturbation():
             "- Лубрикант Tenga Hole Lotion Wild (з охолоджуючим ефектом)\nhttps://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-wild?utm_source=t_bot\n"
             "- Лубрикант Tenga Hole Lotion Solid (супергустий)\nhttps://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-solid?utm_source=t_bot\n"
         )
-        default_action()
+        default_action(choose_lub)
 
     if sex == sex_options[0] and toys == toy_options[1]:
         print(
@@ -44,10 +41,10 @@ def masturbation():
             "- Крем для мастурбації Swiss Navy Premium\nhttps://lovespace.ua/uk/products/krem-dlya-masturbaciyi-swiss-navy-premium\n"
             "- Гель для мастурбації з різноманітними смаками\nhttps://lovespace.ua/uk/877-kremy-i-geli-dlya-masturbacii/s-3/virobnik-sensuva\n"
         )
-        default_action()
+        default_action(choose_lub)
 
     if sex == sex_options[1] and toys == toy_options[0]:
-        choice_material()
+        choice_material(choose_lub)
 
     if sex == sex_options[1] and toys == toy_options[1]:
         print("Тоді рекомендуємо спробувати ці лубриканти\n")
@@ -57,7 +54,7 @@ def masturbation():
             "- Класичний лубрикант на водній основі. Підійде для чутливої мікрофлори\nhttps://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601?search_query=nude&results=2?utm_source=t_bot\n"
             "- Лубрикант на змішаній основі\nhttps://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula#/504-ob_yem-125_ml?utm_source=t_bot\n"
         )
-        default_action()
+        default_action(choose_lub)
 
 
 # masturbation()

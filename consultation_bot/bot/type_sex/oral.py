@@ -1,11 +1,8 @@
-import sys
-
-sys.path.append("../")
-from tools.default_actions import default_action
-from tools.print_options import print_options
+from bot.tools.default_actions import default_action
+from bot.tools.print_options import print_options
 
 
-DATA = {
+DATA: dict = {
     0: {
         "label": "Десерт",
         "texts": "\n".join(

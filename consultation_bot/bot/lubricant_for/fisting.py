@@ -1,7 +1,4 @@
-import sys
-
-sys.path.append("../")
-from tools.default_actions import default_action
+from bot.tools.default_actions import default_action
 
 
 def fisting(choose_lub):

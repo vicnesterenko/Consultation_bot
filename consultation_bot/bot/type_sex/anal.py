@@ -1,10 +1,7 @@
-import sys
+from bot.tools.print_options import print_options
+from bot.tools.default_actions import default_action
 
-sys.path.append("../")
-from tools.print_options import print_options
-from tools.default_actions import default_action
-
-DATA = {
+DATA: dict = {
     0: "\n".join(
         [
             "Варто зауважити, що безпечний анальний секс можливий тільки в презервативі",

@@ -1,8 +1,5 @@
-import sys
-
-sys.path.append("../")
-from tools.print_options import print_options
-from lubricant import run
+from bot.tools.print_options import print_options
+from bot.lubricant_for import run
 
 
 def user_dont_know():
@@ -17,7 +14,7 @@ def user_dont_know():
     user_choice = print_options(q, options)
 
     if user_choice == options[0]:
-        make_intimate_comfortable()
+        make_intimate_comfortable()  # !
     elif user_choice == options[1]:
         set_intimate_mood()
     elif user_choice == options[2]:
@@ -32,7 +29,7 @@ def make_intimate_comfortable():
     user_choice = print_options(q, options)
 
     if user_choice == options[0]:
-        detailed_info_about_lubricants()
+        detailed_info_about_lubricants()  # !
     elif user_choice == options[1]:
         detailed_info_about_health()
     elif user_choice == options[2]:
@@ -45,8 +42,8 @@ def detailed_info_about_lubricants():
     user_choice = print_options(q, options)
 
     if user_choice == options[0]:
-        run.choose_lub()
-        user_dont_know()
+        run.choose_lub()  # !
+        user_dont_know()  # !
     elif user_choice == options[1]:
         make_intimate_comfortable()
 
