@@ -1,9 +1,7 @@
 import json
 import random
 import os
-from bot.tools import default_actions
-
-# from bot.tools.back_option import back_option
+from bot.tools import default_action
 
 
 def praktyka(main_menu):
@@ -24,4 +22,4 @@ def praktyka(main_menu):
 
     # back_option()
     # main_menu()
-    default_actions.default_action(main_menu)
+    default_action(main_menu)

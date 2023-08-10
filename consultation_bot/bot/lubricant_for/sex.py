@@ -1,12 +1,11 @@
-from bot.tools.print_options import print_options
+from bot.tools import print_options, default_action
 from bot.type_sex.oral import oral
 from bot.type_sex.anal import anal
 from bot.type_sex.vaginal import vaginal
-from bot.tools.default_actions import default_action
 
 
 def choose_sex_type(choose_lub):
-    q = ["Обери вид сексу:"]
+    q = "Обери вид сексу:"
     options = [
         "Для вагінального",
         "Для орального",
