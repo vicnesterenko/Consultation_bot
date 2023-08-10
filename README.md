@@ -7,4 +7,3 @@
 [![vicnesterenko](https://img.shields.io/badge/GitHub-vicnesterenko-blue?logo=github)](https://github.com/vicnesterenko)
 [![Alina Repka](https://img.shields.io/badge/GitHub-arepka-blue?logo=github)](https://github.com/cannelle13/)
 
-

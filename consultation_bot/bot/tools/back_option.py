@@ -1,4 +1,4 @@
-from tools.print_options import print_options
+from bot.tools.print_options import print_options
 
 
 def back_option():

@@ -1,9 +1,8 @@
-import json
-from tools.print_options import print_options
-from tools.default_actions import default_action
+from bot.tools.print_options import print_options
+from bot.tools.default_actions import default_action
 
 
-def choice_material():
+def choice_material(choose_lub):
     q = ["З якого матеріалу твоя іграшка?"]
     options = ["1: Метал", "2: Скло", "3: Силікон", "4: ТПЕ", "5: ПВХ"]
     materials = print_options(q, options)
@@ -12,9 +11,9 @@ def choice_material():
         options = ["1: Вагінальний", "2: Анальний"]
         type_of_sex = print_options(["Тобі для якого сексу?"], options)
         if type_of_sex == options[0]:
-            pass
+            print("--ТУТ ПОСИЛАННЯ НА САЙТ--")
         else:
-            pass
+            print("--ТУТ ПОСИЛАННЯ НА САЙТ--")
 
     if materials == options[0]:
         print("З металом сумісні лубриканти на будь-якій основі!")
@@ -34,5 +33,5 @@ def choice_material():
         type_of_sex_choice()
     elif materials == options[4]:
         print("З ПВХ сумісні усі лубриканти на водній основі і деякі на змішаній")
-    else:
-        default_action()
+
+    default_action(choose_lub)  # TODO check

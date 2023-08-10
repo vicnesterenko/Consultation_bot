@@ -1,11 +1,7 @@
-import sys
+from bot.tools.print_options import print_options
+from bot.tools.default_actions import default_action
 
-sys.path.append("../")
-from tools.print_options import print_options
-from tools.back_option import back_option
-from tools.default_actions import default_action
-
-DATA = {
+DATA: dict = {
     0: "\n".join(
         [
             "Варто зауважити, що безпечний анальний секс можливий тільки в презервативі",
@@ -58,15 +54,14 @@ DATA = {
 }
 
 
-def anal(cb, cb1):
+def anal(choose_sex_type, choose_lub):
     print(DATA[0])
     q = ["Обери дію:"]
-    options = ["Я знаю", "Чому?"]
+    options = ["1: Я знаю", "2: Чому?", "ІНШЕ↩️"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
         print(DATA[1])
-        return default_action(cb, cb1)
-
+        return default_action(anal, *(choose_sex_type, choose_lub))
     if USER_CHOICE == options[1]:
         print(DATA[2])
         q = ["Зрозуміло?"]
@@ -74,4 +69,6 @@ def anal(cb, cb1):
         USER_CHOICE = print_options(q, options1)
         if USER_CHOICE == options1[0]:
             print(DATA[3])
-            return default_action(cb, cb1)
+            return default_action(anal, *(choose_sex_type, choose_lub))
+    if USER_CHOICE == options[2]:
+        return default_action(choose_sex_type, choose_lub)

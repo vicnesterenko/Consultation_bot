@@ -1,10 +1,6 @@
-from lubricant import for_sex
-from lubricant import for_toys
-from . import for_fisting
-from tools.print_options import print_options
-import sys
-
-from main import choose_category
+from bot import app
+from bot.lubricant_for import masturbation, microflora, sex, toys, fisting
+from bot.tools.print_options import print_options
 
 
 def choose_lub():
@@ -20,14 +16,14 @@ def choose_lub():
     action = print_options(q, options)
 
     if action == options[0]:
-        return for_sex.choose_sex_type(choose_lub)
+        return sex.choose_sex_type(choose_lub)
     if action == options[1]:
-        return for_toys.choice_material()
+        return toys.choice_material(choose_lub)
     if action == options[2]:
-        pass
+        return microflora.microflora(choose_lub)
     if action == options[3]:
-        return for_fisting.fisting(choose_lub)
+        return fisting.fisting(choose_lub)
     if action == options[4]:
-        pass
+        return masturbation.masturbation(choose_lub)
     if action == options[5]:
-        return choose_category()
+        return app.choose_category()
