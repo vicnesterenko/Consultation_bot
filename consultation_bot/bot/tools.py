@@ -1,10 +1,14 @@
+import questionary
 from bot import app
 from bot.contact_manager import contact
-from bot.tools.print_options import print_options
+
+
+def print_options(header: str, actions: list) -> None:
+    return questionary.select(header, choices=[*actions]).ask()
 
 
 def default_action(previous, *args):
-    q = ["Обери:"]
+    q = "Обери:"
     options = [
         "Назад",
         "На початок",
@@ -24,3 +28,7 @@ def default_action(previous, *args):
     if action == options[2]:
         print("Зв'язатись з менеджером")
         return contact()
+
+
+def back_option():
+    return print_options("Назад ↩️", ["Назад ↩️"])

@@ -1,10 +1,9 @@
 from bot.lubricant_for.toys import choice_material
-from bot.tools.default_actions import default_action
-from bot.tools.print_options import print_options
+from bot.tools import default_action, print_options
 
 
 def masturbation(choose_lub):
-    q_sex = ["Вам потрібен лубрикант для чоловічої чи жіночої мастурбації?"]
+    q_sex = "Вам потрібен лубрикант для чоловічої чи жіночої мастурбації?"
     sex_options = [
         "1: Для чоловічої",
         "2: Для жіночої",
@@ -12,7 +11,7 @@ def masturbation(choose_lub):
 
     sex = print_options(q_sex, sex_options)
 
-    q_toy = ["Чи будете використовувати іграшки?"]
+    q_toy = "Чи будете використовувати іграшки?"
     toy_options = ["1: Так 😈", "2: Ні 🤭"]
     toys = print_options(q_toy, toy_options)
 

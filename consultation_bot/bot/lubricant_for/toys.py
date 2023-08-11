@@ -1,15 +1,14 @@
-from bot.tools.print_options import print_options
-from bot.tools.default_actions import default_action
+from bot.tools import print_options, default_action
 
 
 def choice_material(choose_lub):
-    q = ["З якого матеріалу твоя іграшка?"]
+    q = "З якого матеріалу твоя іграшка?"
     options = ["1: Метал", "2: Скло", "3: Силікон", "4: ТПЕ", "5: ПВХ"]
     materials = print_options(q, options)
 
     def type_of_sex_choice():
         options = ["1: Вагінальний", "2: Анальний"]
-        type_of_sex = print_options(["Тобі для якого сексу?"], options)
+        type_of_sex = print_options("Тобі для якого сексу?", options)
         if type_of_sex == options[0]:
             print("--ТУТ ПОСИЛАННЯ НА САЙТ--")
         else:

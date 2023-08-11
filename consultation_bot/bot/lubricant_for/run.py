@@ -1,10 +1,10 @@
 from bot import app
 from bot.lubricant_for import masturbation, microflora, sex, toys, fisting
-from bot.tools.print_options import print_options
+from bot.tools import print_options
 
 
 def choose_lub():
-    q = ["Для чого потрібен?:"]
+    q = "Для чого потрібен?:"
     options = [
         "Для сексу",
         "Для іграшки",
