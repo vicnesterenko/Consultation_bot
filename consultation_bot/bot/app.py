@@ -1,12 +1,12 @@
 from bot.praktyka import praktyka_main, praktyka_category
 from bot.lubricant_for.run import choose_lub
-from bot.tools.print_options import print_options
+from bot.tools import print_options
 from bot.user_dont_know import user_dont_know
 from bot.contact_manager import contact
 
 
 def choose_category():
-    q = ["Обери:"]
+    q = "Обери:"
     options = [
         "БДСМ, Фетиш",
         "Секс-іграшки",
@@ -36,7 +36,7 @@ def choose_category():
 
 
 def choice_product():
-    q = ["Ти знаєш хто ти?"]
+    q = "Ти знаєш хто ти?"
     options = ["Так 😈", "Ні 🤭"]
 
     action = print_options(q, options)
@@ -48,7 +48,7 @@ def choice_product():
 
 
 def first_choice():
-    q = ["Обери дію:"]
+    q = "Обери дію:"
     options = [
         "Зв'язатись з менеджером",
         "Підібрати подарунок",

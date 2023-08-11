@@ -1,5 +1,4 @@
-from bot.tools.print_options import print_options
-from bot.tools.default_actions import default_action
+from bot.tools import print_options, default_action
 
 DATA: dict = {
     0: "\n".join(
@@ -56,7 +55,7 @@ DATA: dict = {
 
 def anal(choose_sex_type, choose_lub):
     print(DATA[0])
-    q = ["Обери дію:"]
+    q = "Обери дію:"
     options = ["1: Я знаю", "2: Чому?", "ІНШЕ↩️"]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
@@ -64,7 +63,7 @@ def anal(choose_sex_type, choose_lub):
         return default_action(anal, *(choose_sex_type, choose_lub))
     if USER_CHOICE == options[1]:
         print(DATA[2])
-        q = ["Зрозуміло?"]
+        q = "Зрозуміло?"
         options1 = ["1: Зрозуміло"]
         USER_CHOICE = print_options(q, options1)
         if USER_CHOICE == options1[0]:

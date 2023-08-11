@@ -1,5 +1,4 @@
-from bot.tools.default_actions import default_action
-from bot.tools.print_options import print_options
+from bot.tools import default_action, print_options
 
 
 DATA: dict = {
@@ -38,7 +37,7 @@ DATA: dict = {
 
 def oral(choose_sex_type, choose_lub):
     print(DATA[3])
-    q = ["Обери дію:"]
+    q = "Обери дію:"
     options = [
         "Підібрати смак",
         "Спробувати набори",
@@ -46,7 +45,7 @@ def oral(choose_sex_type, choose_lub):
     ]
     USER_CHOICE = print_options(q, options)
     if USER_CHOICE == options[0]:
-        q_1 = ["Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"]
+        q_1 = "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"
         options_1 = [
             DATA[0]["label"],
             DATA[1]["label"],
