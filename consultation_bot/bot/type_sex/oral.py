@@ -1,6 +1,8 @@
-from bot.tools import default_action, print_options
+# from bot.tools import default_action, print_options
+from .parse_json import parse, get_data
 
 
+"""
 DATA: dict = {
     0: {
         "label": "Десерт",
@@ -33,9 +35,24 @@ DATA: dict = {
     },
     3: "\n".join(["Бажаєте підібрати конкретний смак чи взяти набір різних?"]),
 }
+"""
 
 
 def oral(choose_sex_type, choose_lub):
+    msg_part = "oral"
+    msg_id = "oral.1"
+    path = "consultation_bot/bot/type_sex/data_oral.json"
+
+    DEFAULT_ACTIONS = {
+        "default-1": (choose_sex_type, choose_lub),
+        "default-2": (oral, *(choose_sex_type, choose_lub)),
+    }
+
+    data = get_data(path)
+    parse(data, msg_part, msg_id, DEFAULT_ACTIONS)
+
+
+"""
     print(DATA[3])
     q = "Обери дію:"
     options = [
@@ -87,3 +104,4 @@ def oral(choose_sex_type, choose_lub):
         #         print(texts)
         #         # break
         return default_action(choose_sex_type, choose_lub)
+    """
