@@ -1,5 +1,8 @@
-from bot.tools import print_options, default_action
+# from bot.tools import print_options, default_action
 
+from .parse_json import parse
+
+"""
 DATA: dict = {
     0: "\n".join(
         [
@@ -51,13 +54,27 @@ DATA: dict = {
         ]
     ),
 }
+"""
 
 
 def anal(choose_sex_type, choose_lub):
+    msg_id = "anal.1"
+    path = "consultation_bot/bot/type_sex/data_anal.json"
+
+    DEFAULT_ACTIONS = {
+        "default-1": (choose_sex_type, choose_lub),
+        "default-2": (anal, *(choose_sex_type, choose_lub)),
+    }
+
+    parse(path, msg_id, DEFAULT_ACTIONS)
+
+    """
     print(DATA[0])
     q = "Обери дію:"
     options = ["1: Я знаю", "2: Чому?", "ІНШЕ↩️"]
+
     USER_CHOICE = print_options(q, options)
+
     if USER_CHOICE == options[0]:
         print(DATA[1])
         return default_action(anal, *(choose_sex_type, choose_lub))
@@ -71,3 +88,4 @@ def anal(choose_sex_type, choose_lub):
             return default_action(anal, *(choose_sex_type, choose_lub))
     if USER_CHOICE == options[2]:
         return default_action(choose_sex_type, choose_lub)
+    """

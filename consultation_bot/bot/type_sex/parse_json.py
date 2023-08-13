@@ -8,35 +8,23 @@ def get_data(path):
     return data
 
 
-def get_q_options(data, msg_part, msg_id) -> list:
+def get_q_options(data, id) -> list:
     q = []
     options = []
     option_data = []
 
-    for obj in data:
-        for part in obj:
-            if part == msg_part:
-                needed_part = obj[part]
-                for thing in needed_part:
-                    if thing == msg_id:
-                        my_questions = needed_part[msg_id]
-                        q = my_questions["q"]
-                        for dict in my_questions["options"]:
-                            options.append(dict["label"])
-                            option_data.append(dict)
-                        break
+    my_object = data[0].get(id)
+    q = my_object["q"]
+    for dict in my_object["options"]:
+        options.append(dict["label"])
+        option_data.append(dict)
 
     return [q, options, option_data]
 
 
-def show_links(data, msg_part, q_id):
-    for obj in data:
-        for part in obj[msg_part]:
-            if part == q_id:
-                needed_part = obj[msg_part][part]
-                print("\n".join(needed_part["texts"]))
-            else:
-                continue
+def show_links(data, id):
+    my_object = data[0].get(id)
+    print("\n".join(my_object["texts"]))
 
 
 def find_id(choice, option_data):
@@ -49,31 +37,19 @@ def find_id(choice, option_data):
     return next_id
 
 
-def next_questions(data, msg_part, q_id):
-    option_data = get_q_options(data, msg_part, q_id)
+def next_questions(data, id):
+    option_data = get_q_options(data, id)
     answer = option_data[:2]
     choice = print_options(*answer)
     return choice, option_data
 
 
-def check_type(data, msg_part, next_id):
+def check_type(data, next_id):
     my_type = ""
-    result_object = {}
 
-    for obj in data:
-        for part in obj:
-            if part == msg_part:
-                needed_part = obj[part]
-                for thing in needed_part:
-                    if thing == next_id:
-                        my_object = needed_part[next_id]
-
-                        my_type = my_object["type"]
-                        result_object = my_object
-                    else:
-                        continue
-
-    return my_type, result_object
+    my_object = data[0].get(next_id)
+    my_type = my_object["type"]
+    return my_type, my_object
 
 
 def get_default_links(link_obj):
@@ -81,29 +57,35 @@ def get_default_links(link_obj):
     return default_id
 
 
-def parse(data, msg_part, msg_id, default_actions: dict):
-    data = data
+def parse(path, msg_id, default_actions: dict):
+    data = get_data(path)
 
-    my_type, obj = check_type(data, msg_part, msg_id)
+    my_type, obj = check_type(data, msg_id)
 
     if my_type == "question":
-        choice, option_data = next_questions(data, msg_part, msg_id)
+        choice, option_data = next_questions(data, msg_id)
         next_id: str = find_id(choice, option_data)
 
         if "default" in next_id:
             return default_action(*default_actions[next_id])
         else:
-            return parse(data, msg_part, next_id, default_actions)
+            return parse(path, next_id, default_actions)
     elif my_type == "link":
-        show_links(data, msg_part, msg_id)
-        default_id = get_default_links(obj)
-        return default_action(*default_actions[default_id])
+        show_links(data, msg_id)
+        next_id = get_default_links(obj)
+        if "default" in next_id:
+            return default_action(*default_actions[next_id])
+        else:
+            return parse(path, next_id, default_actions)
 
 
-# def main():
-#     msg_part = "oral"
-#     msg_id = "oral.1"
-#     path = "consultation_bot/bot/type_sex/data_oral.json"
+def main():
+    msg_part = "oral"
+    msg_id = "oral.1"
+    path = "bot/type_sex/data_oral.json"
+
+    data = get_data(path)
+    my_type, obj = check_type(data, msg_id)
 
 
 # main()

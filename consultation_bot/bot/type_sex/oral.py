@@ -1,5 +1,5 @@
 # from bot.tools import default_action, print_options
-from .parse_json import parse, get_data
+from .parse_json import parse
 
 
 """
@@ -39,7 +39,6 @@ DATA: dict = {
 
 
 def oral(choose_sex_type, choose_lub):
-    msg_part = "oral"
     msg_id = "oral.1"
     path = "consultation_bot/bot/type_sex/data_oral.json"
 
@@ -48,8 +47,7 @@ def oral(choose_sex_type, choose_lub):
         "default-2": (oral, *(choose_sex_type, choose_lub)),
     }
 
-    data = get_data(path)
-    parse(data, msg_part, msg_id, DEFAULT_ACTIONS)
+    parse(path, msg_id, DEFAULT_ACTIONS)
 
 
 """
