@@ -1,6 +1,11 @@
 import json
 from bot.tools import default_action, print_options
 
+# Use this to add full_path as a function
+# import os
+# def full_path(relative_path):
+#     return os.path.join(os.getcwd(), relative_path)
+
 
 def get_data(path):
     with open(path, encoding="utf-8") as user_file:
@@ -79,13 +84,13 @@ def parse(path, msg_id, default_actions: dict):
             return parse(path, next_id, default_actions)
 
 
-def main():
-    msg_part = "oral"
-    msg_id = "oral.1"
-    path = "bot/type_sex/data_oral.json"
+# def main():
+#     msg_part = "oral"
+#     msg_id = "oral.1"
+#     path = "bot/type_sex/data_oral.json"
 
-    data = get_data(path)
-    my_type, obj = check_type(data, msg_id)
+#     data = get_data(path)
+#     my_type, obj = check_type(data, msg_id)
 
 
 # main()

@@ -1,6 +1,7 @@
 # from bot.tools import print_options, default_action
-
 from .parse_json import parse
+import os
+
 
 """
 DATA: dict = {
@@ -59,7 +60,7 @@ DATA: dict = {
 
 def anal(choose_sex_type, choose_lub):
     msg_id = "anal.1"
-    path = "consultation_bot/bot/type_sex/data_anal.json"
+    path = os.path.join(os.getcwd(), "bot/type_sex/data_anal.json")
 
     DEFAULT_ACTIONS = {
         "default-1": (choose_sex_type, choose_lub),
