@@ -1,0 +1,76 @@
+[
+    {
+        "anal.1": {
+            "type": "question",
+            "q": "Варто зауважити, що безпечний анальний секс можливий тільки в презервативі, \n А перед зміною анального сексу на вагінальний, презерватив треба замінити\n Обери дію:",
+            "options": [
+                {
+                    "label": "Я знаю",
+                    "next_id": "anal.1.1"
+                },
+                {
+                    "label": "Чому?",
+                    "next_id": "anal.1.2"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "anal.2": {
+            "type": "question",
+            "q": "Зрозуміло?",
+            "options": [
+                {
+                    "label": "Зрозуміло",
+                    "next_id": "anal.2.1"
+                }
+            ]
+        },
+        "anal.1.1": {
+            "type": "link",
+            "label": "Я знаю",
+            "texts": [
+                "Ви вже знаєте, оберіть лубрикант:",
+                "1. Анальний лубрикант Pjur Back Door Water",
+                "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml?utm_source=t_bot",
+                "2. Анальний лубрикант Pjur Back Door",
+                "https://lovespace.ua/uk/products/analny-lubrikant-pjur-back-door-glide-pjurbd-100?utm_source=t_bot",
+                "3. Лубрикант на гібридній основі YESforLOV Comfort Performance",
+                "https://lovespace.ua/uk/products/lubrikant-na-gibridnoj-osnove-yesforlov",
+                "4. Густий лубрикант Sensuva Ultra-Thick Hybrid Formula Cotton Candy з ароматом солодкої вати",
+                "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-cotton-candy",
+                "5. Лубрикант на силіконовій основі з маслом гвоздики",
+                "https://lovespace.ua/uk/products/analnyj-lubrikant-na-silikonovoj-osnove-swiss-navy"
+            ],
+            "next_id": "default-2"
+        },
+        "anal.1.2": {
+            "type": "link",
+            "label": "Чому?",
+            "texts": [
+                "Тому що мікрофлора прямої кишки не повинна потрапляти у вагіну та уретру",
+                "Адже це може спричинити різноманітні порушення і хвороби"
+            ],
+            "next_id": "anal.2"
+        },
+        "anal.2.1": {
+            "type": "link",
+            "label": "Зрозуміло",
+            "texts": [
+                "1. Анальний лубрикант Pjur Back Door Water",
+                "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml?utm_source=t_bot",
+                "2. Анальний лубрикант Pjur Back Door",
+                "https://lovespace.ua/uk/products/analny-lubrikant-pjur-back-door-glide-pjurbd-100?utm_source=t_bot",
+                "3. Лубрикант на гібридній основі YESforLOV Comfort Performance",
+                "https://lovespace.ua/uk/products/lubrikant-na-gibridnoj-osnove-yesforlov",
+                "4. Густий лубрикант Sensuva Ultra-Thick Hybrid Formula Cotton Candy з ароматом солодкої вати",
+                "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-cotton-candy",
+                "5. Лубрикант на силіконовій основі з маслом гвоздики",
+                "https://lovespace.ua/uk/products/analnyj-lubrikant-na-silikonovoj-osnove-swiss-navy"
+            ],
+            "next_id": "default-2"
+        }
+    }
+]

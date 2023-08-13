@@ -1,70 +1,69 @@
 [
     {
-        "oral": {
-            "questions": {
-                "1.1": {
-                    "q": [
-                        "Бажаєте підібрати конкретний смак чи взяти набір різних?\n Обери дію:"
-                    ],
-                    "options": [
-                        {
-                            "label": "Підібрати смак",
-                            "question_id": "1.2",
-                            "links_id": ""
-                        },
-                        {
-                            "label": "Спробувати набори",
-                            "question_id": "",
-                            "links_id": ""
-                        },
-                        {
-                            "label": "ІНШЕ↩️",
-                            "question_id": "",
-                            "links_id": ""
-                        }
-                    ]
+        "oral.1": {
+            "type": "question",
+            "q": "Бажаєте підібрати конкретний смак чи взяти набір різних?\n Обери дію:",
+            "options": [
+                {
+                    "label": "Підібрати смак",
+                    "next_id": "oral.2"
                 },
-                "1.2": {
-                    "q": [
-                        "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:"
-                    ],
-                    "options": [
-                        {
-                            "label": "Десерт",
-                            "question_id": "",
-                            "links_id": "1.2.1"
-                        },
-                        {
-                            "label": "Фруктово-ягідні",
-                            "question_id": "",
-                            "links_id": "1.2.2"
-                        },
-                        {
-                            "label": "ІНШЕ↩️",
-                            "question_id": "",
-                            "links_id": ""
-                        }
-                    ]
+                {
+                    "label": "Спробувати набори",
+                    "next_id": "oral.1.2"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-1"
                 }
-            },
-            "links": {
-                "1.2.1": {
+            ]
+        },
+        "oral.2": {
+            "type": "question",
+            "q": "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:",
+            "options": [
+                {
                     "label": "Десерт",
-                    "texts": [
-                        "1. Зі смаком солоної карамелі ☺https://lovespace.ua/uk/products/sedobnyj-lubrikant-system-jo-gelato-salted-caramel",
-                        "2. Зі смаком чорничного мафіну https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-hybrid-formula-blueberry-muffin?utm_source=t_bot",
-                        "3. З ароматом ванілі https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal?utm_source=t_bot?utm_source=t_bot"
-                    ]
+                    "next_id": "oral.2.1"
                 },
-                "1.2.2": {
+                {
                     "label": "Фруктово-ягідні",
-                    "texts": [
-                        "1. Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
-                        "2. Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
-                        "3. Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
-                    ]
+                    "next_id": "oral.2.2"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-2"
                 }
-            }
+            ]
+        },
+        "oral.2.1": {
+            "type": "link",
+            "label": "Десерт",
+            "texts": [
+                "1. Зі смаком солоної карамелі ☺https://lovespace.ua/uk/products/sedobnyj-lubrikant-system-jo-gelato-salted-caramel",
+                "2. Зі смаком чорничного мафіну https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-hybrid-formula-blueberry-muffin?utm_source=t_bot",
+                "3. З ароматом ванілі https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal?utm_source=t_bot?utm_source=t_bot"
+            ],
+            "next_id": "default-2"
+        },
+        "oral.2.2": {
+            "type": "link",
+            "label": "Фруктово-ягідні",
+            "texts": [
+                "1. Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
+                "2. Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
+                "3. Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
+            ],
+            "next_id": "default-2"
+        },
+        "oral.1.2": {
+            "type": "link",
+            "label": "Спробувати набори",
+            "texts": [
+                "1. Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
+                "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors?utm_source=t_bot"
+            ],
+            "next_id": "default-2"
         }
     }
 ]
