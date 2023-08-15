@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Page</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <ul>
+        {% for option, action in menu.items %}
+        <li><a href="{% url 'app/contact' %}">{{ option }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

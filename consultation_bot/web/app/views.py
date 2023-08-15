@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
+from django.shortcuts import render
 
 
 menu = {
@@ -12,6 +14,23 @@ menu = {
 }
 
 
+def contact(request):
+    return render(request, "app/contact.html")
+
+
+def index(request):
+    menu = {
+        "Зв'язатись з менеджером": "manager",
+        "Підібрати подарунок": "praktyka",
+        "Повернення товару": "praktyka",
+        "Підібрати товар": "product",
+        "Нормальна практика": "praktyka",
+    }
+
+    return render(request, "app/app.html", {"menu": menu})
+
+
+"""
 def index(request):
     list_items = ""
     options = list(menu.keys())
@@ -21,6 +40,7 @@ def index(request):
         list_items += f'<li><a href="{option_path}">{capitalised_action}</a></li>'
     response_data = f"<ul>{list_items}</ul>"
     return HttpResponse(response_data)
+"""
 
 
 def web_by_num(request, option):
@@ -35,7 +55,7 @@ def web_by_num(request, option):
 def web(request, option):
     try:
         text = menu[option]
-        response_data = f"<h1>{text}</h1>"
+        response_data = render_to_string("app/app.html")
     except:
         return HttpResponseNotFound("<h1>This option is not supported</h1>")
     return HttpResponse(response_data)
