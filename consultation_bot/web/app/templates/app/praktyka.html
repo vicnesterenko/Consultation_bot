@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Praktyka Page</title>
+</head>
+<body>
+    {% for item in data %}
+    <h2>{{ item.id }}</h2>
+    <p>{{ item.1.label }}</p>
+    <ul>
+        {% for message in item.1.intro_message1 %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for message in item.1.intro_message2 %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for link in item.1.links %}
+        <li><a href="{{ link }}">{{ link }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>

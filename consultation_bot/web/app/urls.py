@@ -5,5 +5,6 @@ urlpatterns = [
     path("", views.index),
     path("<int:option>", views.web_by_num),
     path("<str:option>", views.web, name="menu-firstchoice"),
-    path("contact/", views.contact, name="contact"),
+    # path("contact/", views.contact, name="contact"),
+    # path("praktyka/", views.praktyka, name="praktyka"),
 ]

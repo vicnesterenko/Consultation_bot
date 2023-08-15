@@ -1,10 +1,24 @@
+import os
+import json
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from django.template.loader import render_to_string
 from django.shortcuts import render
 
+"""
+def praktyka(request):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(script_dir, "data_praktyka.json")
+    with open(json_path, "r", encoding="utf-8") as json_file:
+        data = json.load(json_file)
 
+    context = {
+        "data": data,
+    }
+
+    return render(request, "app/praktyka.html", context)
+"""
 menu = {
     "Зв'язатись з менеджером": "manager",
     "Підібрати подарунок": "praktyka",
@@ -12,10 +26,13 @@ menu = {
     "Підібрати товар": "product",
     "Нормальна практика": "praktyka",
 }
+"""
 
 
 def contact(request):
     return render(request, "app/contact.html")
+
+"""
 
 
 def index(request):
@@ -30,7 +47,6 @@ def index(request):
     return render(request, "app/app.html", {"menu": menu})
 
 
-"""
 def index(request):
     list_items = ""
     options = list(menu.keys())
@@ -40,7 +56,6 @@ def index(request):
         list_items += f'<li><a href="{option_path}">{capitalised_action}</a></li>'
     response_data = f"<ul>{list_items}</ul>"
     return HttpResponse(response_data)
-"""
 
 
 def web_by_num(request, option):
