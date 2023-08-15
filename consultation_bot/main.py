@@ -1,4 +1,4 @@
-from bot import app
+from consultation_bot.bot import app1
 
 if __name__ == "__main__":
-    app.start()
+    app1.start()

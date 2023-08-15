@@ -1,5 +1,5 @@
 import questionary
-from bot import app
+from consultation_bot.bot import app1
 from bot.contact_manager import contact
 
 
@@ -24,7 +24,7 @@ def default_action(previous, *args):
         return previous()
     if action == options[1]:
         print("На початок")
-        return app.start()
+        return app1.start()
     if action == options[2]:
         print("Зв'язатись з менеджером")
         return contact()

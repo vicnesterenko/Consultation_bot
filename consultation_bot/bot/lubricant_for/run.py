@@ -1,4 +1,4 @@
-from bot import app
+from consultation_bot.bot import app1
 from bot.lubricant_for import masturbation, microflora, sex, toys, fisting
 from bot.tools import print_options
 
@@ -26,4 +26,4 @@ def choose_lub():
     if action == options[4]:
         return masturbation.masturbation(choose_lub)
     if action == options[5]:
-        return app.choose_category()
+        return app1.choose_category()
