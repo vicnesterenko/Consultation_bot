@@ -1,9 +1,13 @@
-from bot.tools import default_action
+from ..parse_json import parse
+from pathlib import Path
 
 
 def fisting(choose_lub):
-    print("Можу  порекомендувати лубрикант для фістинга Pjur Power")
-    print(
-        "https://lovespace.ua/uk/products/lubrikant-dlya-fistinga-pjur-power-pjurpw-150?utm_source=t_bot \n"
-    )
-    default_action(choose_lub)
+    msg_id = "fisting.1"
+
+    # path = os.path.join(os.getcwd(), "bot/type_sex/data_oral.json")
+    path = Path("consultation_bot/bot/lubricant_for/data/") / "fisting_data.json"
+
+    DEFAULT_ACTIONS = {"default-1": (choose_lub,)}
+
+    parse(path, msg_id, DEFAULT_ACTIONS)
