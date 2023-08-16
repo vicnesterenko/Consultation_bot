@@ -62,7 +62,17 @@ def get_default_links(link_obj):
     return default_id
 
 
-def parse(path, msg_id, default_actions: dict):
+def check_func(next_id, func_data, path):
+    if "default" in next_id:
+        return default_action(*func_data[next_id])
+    elif "function" in next_id:
+        return (func_data[next_id][0])(*func_data[next_id][1:])
+    else:
+        return parse(path, next_id, func_data)
+
+
+# main function
+def parse(path, msg_id, func_data: dict):
     data = get_data(path)
 
     my_type, obj = check_type(data, msg_id)
@@ -71,17 +81,13 @@ def parse(path, msg_id, default_actions: dict):
         choice, option_data = next_questions(data, msg_id)
         next_id: str = find_id(choice, option_data)
 
-        if "default" in next_id:
-            return default_action(*default_actions[next_id])
-        else:
-            return parse(path, next_id, default_actions)
+        return check_func(next_id, func_data, path)
+
     elif my_type == "link":
         show_links(data, msg_id)
         next_id = get_default_links(obj)
-        if "default" in next_id:
-            return default_action(*default_actions[next_id])
-        else:
-            return parse(path, next_id, default_actions)
+
+        return check_func(next_id, func_data, path)
 
 
 # def main():
