@@ -1,12 +1,13 @@
-from bot.tools import default_action
+from ..parse_json import parse
+from pathlib import Path
 
 
 def microflora(choose_lub):
-    print("Для чутливої мікрофлори підійдуть такі лубриканти:\n")
-    print(
-        "1. Лубрикант на водній основі Pjur Woman Nude\n https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601?utm_source=t_bot\n"
-        "2. Жіночий лубрикант Pjur Woman\n https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203?utm_source=t_bot\n"
-        "3. Лубрикант System JO Agape Original\n https://lovespace.ua/uk/products/lubrikant-system-jo-agape-original?utm_source=t_bot\n"
-        "4. Лубрикант з легким розігріваючим ефектом\n https://lovespace.ua/uk/products/lubrikant-system-jo-agape-warming\n"
-    )
-    default_action(choose_lub)
+    msg_id = "microflora.1"
+
+    # path = os.path.join(os.getcwd(), "bot/type_sex/data_oral.json")
+    path = Path("consultation_bot/bot/lubricant_for/data/") / "microflora.json"
+
+    DEFAULT_ACTIONS = {"default-1": (choose_lub,)}
+
+    parse(path, msg_id, DEFAULT_ACTIONS)
