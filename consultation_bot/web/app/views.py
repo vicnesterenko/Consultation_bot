@@ -1,61 +1,63 @@
 import os
 import json
+import random
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
-from django.template.loader import render_to_string
 from django.shortcuts import render
 
-"""
+
+menu = [
+    "Зв'язатись з менеджером",
+    "Підібрати подарунок",
+    "Повернення товару",
+    "Підібрати товар",
+    "Нормальна практика",
+]
+
+
+def choice_product(request):
+    q = "Ти знаєш хто ти?"
+    options = ["Так 😈", "Ні 🤭"]
+
+    context = {
+        "question": q,
+        "options": options,
+    }
+
+    return render(request, "app/choice_product.html", context)
+
+
 def praktyka(request):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     json_path = os.path.join(script_dir, "data_praktyka.json")
     with open(json_path, "r", encoding="utf-8") as json_file:
         data = json.load(json_file)
 
+    selected_links = []
+
+    for item in data:
+        links = item.get("1", {}).get("links", [])
+        if links:
+            selected_link = random.choice(links)
+            selected_links.append(selected_link)
+
     context = {
         "data": data,
+        "selected_links": selected_links,
     }
 
     return render(request, "app/praktyka.html", context)
-"""
-menu = {
-    "Зв'язатись з менеджером": "manager",
-    "Підібрати подарунок": "praktyka",
-    "Повернення товару": "praktyka",
-    "Підібрати товар": "product",
-    "Нормальна практика": "praktyka",
-}
-"""
 
 
 def contact(request):
-    return render(request, "app/contact.html")
-
-"""
-
-
-def index(request):
-    menu = {
-        "Зв'язатись з менеджером": "manager",
-        "Підібрати подарунок": "praktyka",
-        "Повернення товару": "praktyka",
-        "Підібрати товар": "product",
-        "Нормальна практика": "praktyka",
-    }
-
-    return render(request, "app/app.html", {"menu": menu})
+    option_type = menu[0]
+    return render(request, "app/contact.html", {"contact": option_type})
 
 
 def index(request):
-    list_items = ""
-    options = list(menu.keys())
-    for option in options:
-        capitalised_action = option.capitalize()
-        option_path = reverse("menu-firstchoice", args=[option])
-        list_items += f'<li><a href="{option_path}">{capitalised_action}</a></li>'
-    response_data = f"<ul>{list_items}</ul>"
-    return HttpResponse(response_data)
+    options = menu
+    return render(request, "app/index.html", {"options": options})
 
 
 def web_by_num(request, option):
@@ -70,7 +72,8 @@ def web_by_num(request, option):
 def web(request, option):
     try:
         text = menu[option]
-        response_data = render_to_string("app/app.html")
+        return render(
+            request, "app/app.html", {"text": text, "option_name": option}
+        )  # option.capitalized()
     except:
         return HttpResponseNotFound("<h1>This option is not supported</h1>")
-    return HttpResponse(response_data)

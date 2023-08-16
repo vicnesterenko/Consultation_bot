@@ -5,8 +5,6 @@
 </head>
 <body>
     {% for item in data %}
-    <h2>{{ item.id }}</h2>
-    <p>{{ item.1.label }}</p>
     <ul>
         {% for message in item.1.intro_message1 %}
         <li>{{ message }}</li>
@@ -17,8 +15,9 @@
         <li>{{ message }}</li>
         {% endfor %}
     </ul>
+    <p>{{ item.1.label }}</p>
     <ul>
-        {% for link in item.1.links %}
+        {% for link in selected_links %}
         <li><a href="{{ link }}">{{ link }}</a></li>
         {% endfor %}
     </ul>

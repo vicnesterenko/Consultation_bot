@@ -4,12 +4,7 @@
     <title>Menu Page</title>
 </head>
 <body>
-    <h1>Menu</h1>
-    <ul>
-        {% for option, action in menu.items %}
-        <li><a href="{% url 'contact' %}">{{ option }}</a></li>
-        <li><a href="{% url 'praktyka' %}">{{ option }}</a></li>
-        {% endfor %}
-    </ul>
+    <h1>{{ option_name|title }}</h1>
+    <h2>{{ text }}</h2>
 </body>
 </html>
