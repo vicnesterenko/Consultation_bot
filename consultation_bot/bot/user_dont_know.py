@@ -1,5 +1,6 @@
 from bot.tools import print_options
 from bot.lubricant_for import run
+from bot.more_about_health import more_about_health
 
 
 def user_dont_know():
@@ -46,13 +47,12 @@ def detailed_info_about_lubricants():
 
 
 def detailed_info_about_health():
-    q = "\nКороткий текст про здоров'я та його важливість..."
-    options = ["Обрати цей товар", "Назад ↩️"]
+    q = "\nЗахист - це не лише фізична безпека, а й турбота про своє здоров'я. Поговоримо про презервативи і їх важливість?"
+    options = ["Так, розкажіть детальніше", "Назад ↩️"]
     user_choice = print_options(q, options)
 
     if user_choice == options[0]:
-        print("Товар обраний! Ви можете продовжити інтерактив з іншими категоріями.")
-        user_dont_know()
+        return more_about_health(make_intimate_comfortable, user_dont_know)
     elif user_choice == options[1]:
         make_intimate_comfortable()
 
