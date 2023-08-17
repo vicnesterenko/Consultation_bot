@@ -1,0 +1,102 @@
+[
+    {
+        "masturbation.1": {
+            "type": "question",
+            "q": "Вам потрібен лубрикант для чоловічої чи жіночої мастурбації?",
+            "options": [
+                {
+                    "label": "Для чоловічої",
+                    "next_id": "masturbation.2.man"
+                },
+                {
+                    "label": "Для жіночої",
+                    "next_id": "masturbation.2.woman"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "masturbation.2.man": {
+            "type": "question",
+            "q": "Чи будете використовувати іграшки?",
+            "options": [
+                {
+                    "label": "Так 😈",
+                    "next_id": "masturbation.2.man.toys"
+                },
+                {
+                    "label": "Ні 🤭",
+                    "next_id": "masturbation.2.man.no_toys"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "masturbation.2.woman": {
+            "type": "question",
+            "q": "Чи будете використовувати іграшки?",
+            "options": [
+                {
+                    "label": "Так 😈",
+                    "next_id": "masturbation.2.woman.toys"
+                },
+                {
+                    "label": "Ні 🤭",
+                    "next_id": "masturbation.2.woman.no_toys"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "masturbation.2.man.toys": {
+            "type": "link",
+            "label": "Так 😈",
+            "texts": [
+                "Для мастурбації з мастурбатором рекомендуємо брендовані лубриканти від виробників мастурбаторів\n",
+                "Вони протестили їх і підібрали оптимальні властивості для мастурбації з іграшками\n",
+                "- Лубрикант для мастурбаторів Fleshlube Water\nhttps://lovespace.ua/uk/products/lubrikant-dlya-masturbatorov-fleshlube-water?utm_source=t_bot\n",
+                "- Лубрикант Tenga Hole Lotion Real\nhttps://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-real?utm_source=t_bot\n",
+                "- Лубрикант Tenga Hole Lotion Wild (з охолоджуючим ефектом)\nhttps://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-wild?utm_source=t_bot\n",
+                "- Лубрикант Tenga Hole Lotion Solid (супергустий)\nhttps://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-solid?utm_source=t_bot\n"
+            ],
+            "next_id": "default-2"
+        },
+        "masturbation.2.man.no_toys": {
+            "type": "link",
+            "label": "Ні 🤭",
+            "texts": [
+                "Крем для мастурбації чудово ковзає і зволожує, не залишає липкості і доглядає за шкірою геніталій\n",
+                "Можемо порекомендувати такі лубриканти\n",
+                "- Крем для мастурбації із запахом шкіри Bucked Smokey Wrangler\nhttps://lovespace.ua/uk/products/krem-dlya-masturbacii-s-zapakhom-kozhi-system-jo-bucked-smokey-wrangler?utm_source=t_bot\n",
+                "- Крем для мастурбації Swiss Navy Premium\nhttps://lovespace.ua/uk/products/krem-dlya-masturbaciyi-swiss-navy-premium\n",
+                "- Гель для мастурбації з різноманітними смаками\nhttps://lovespace.ua/uk/877-kremy-i-geli-dlya-masturbacii/s-3/virobnik-sensuva\n"
+            ],
+            "next_id": "default-2"
+        },
+        "masturbation.2.woman.toys": {
+            "type": "link",
+            "label": "Так 😈",
+            "texts": [
+                "Тоді оберіть іграшку:"
+            ],
+            "next_id": "function-1"
+        },
+        "masturbation.2.woman.no_toys": {
+            "type": "link",
+            "label": "Ні 🤭",
+            "texts": [
+                "- Класичний силіконовий лубрикант, ідеальний для мастурбації\nhttps://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203?utm_source=t_bot\n",
+                "- Збуджуючий гель-лубрикант. Дозволяє отримувати подвійне задоволення, оскільки, має збуджувальну дію і посилює відчуття оргазму\nhttps://lovespace.ua/uk/products/krem-viamax-warm-cream-50ml-1101-viamax?utm_source=t_bot\n",
+                "- Класичний лубрикант на водній основі. Підійде для чутливої мікрофлори\nhttps://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601?search_query=nude&results=2?utm_source=t_bot\n",
+                "- Лубрикант на змішаній основі\nhttps://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula#/504-ob_yem-125_ml?utm_source=t_bot\n"
+            ],
+            "next_id": "default-2"
+        }
+    }
+]

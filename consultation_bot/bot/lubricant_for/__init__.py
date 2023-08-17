@@ -4,3 +4,4 @@ from . import fisting
 from . import masturbation
 from . import microflora
 from . import sex
+from . import data
