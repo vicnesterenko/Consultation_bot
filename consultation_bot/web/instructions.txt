@@ -1,0 +1,6 @@
+1. path: cd consultation_bot\web
+2. Make venv
+3. Acivate venv
+4. pip install -r requirements.txt(which in this path)
+5. Run Django project: python manage.py runserver
+
