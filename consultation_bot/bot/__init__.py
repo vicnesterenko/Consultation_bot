@@ -4,4 +4,3 @@ from . import praktyka
 from . import tools
 from . import type_sex
 from . import contact_manager
-from . import user_dont_know
