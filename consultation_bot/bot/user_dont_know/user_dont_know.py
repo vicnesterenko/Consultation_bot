@@ -1,6 +1,6 @@
 from bot.tools import print_options
 from bot.lubricant_for import run
-from bot.more_about_health import more_about_health
+from bot.user_dont_know.more_about_health import more_about_health
 
 
 def user_dont_know():
