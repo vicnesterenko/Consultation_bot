@@ -5,8 +5,14 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render
+from django.http import JsonResponse
 
 
+def index(request):
+    return render(request, "app/index1.html")
+
+
+"""
 menu = [
     "Зв'язатись з менеджером",
     "Підібрати подарунок",
@@ -59,7 +65,9 @@ def index(request):
     options = menu
     return render(request, "app/index.html", {"options": options})
 
+"""
 
+"""
 def web_by_num(request, option):
     options = list(menu.keys())
     if option > len(options):
@@ -77,3 +85,4 @@ def web(request, option):
         )  # option.capitalized()
     except:
         return HttpResponseNotFound("<h1>This option is not supported</h1>")
+"""

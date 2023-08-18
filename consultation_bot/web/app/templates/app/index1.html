@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="body ">
+
+    <main>
+        <div class="container">
+            <ul class="menu">
+                <div id="chatModal">
+                    <div class="wrapper_modal">
+                        <div class="modal">
+                            <header class="header">
+                                <div></div>
+                                <img src="{% static 'img/logo.png' %}" class="header_title" />
+                                <p class="header_text">Чат-бот</p>
+                            </header>
+                            <div class="wrapper_modal-content">
+                                <div class="modal-content">
+                                    <div class="grreetings">
+                                        <div class="greetings_image">
+                                            <img src="{% static 'img/hand-wave.png' %}" />
+                                        </div>
+                                        <p class="greetings_text">Привіт! Скористайся нашим чат-ботом, щоб підібрати
+                                            щось
+                                            особливе!</p>
+                                    </div>
+                                    <div class="to-do-buttons">
+                                        <section class="sreviews">
+                                            <div class="clear"></div>
+                                            <div class="clear"></div>
+                                            <div class="from-them">
+                                                <p>Обери дію:</p>
+                                            </div>
+                                        </section>
+                                        <div class="buttons">
+                                            <button class="button button-manager">Зв’язатись з менеджером</button>
+                                            <button class="button">Підібрати подарунок</button>
+                                            <button class="button">Повернення товару</button>
+                                            <button class="button">Підібрати товар</button>
+                                            <button class="button">Нормальна практика</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-answers">
+                                        <section class="answer">
+                                            <div class="clear2"></div>
+                                            <div class="clear2"></div>
+                                            <div class="from-them2">
+                                                <p>Підібрати товар</p>
+                                            </div>
+                                        </section>
+                                        <div class="both"></div>
+                                    </div>
+                                    <div class="to-do-buttons">
+                                        <section class="sreviews">
+                                            <div class="clear"></div>
+                                            <div class="clear"></div>
+                                            <div class="from-them">
+                                                <p>Ти знаєш хто ти?</p>
+                                            </div>
+                                        </section>
+                                        <div class="buttons">
+                                            <button class="button">Так</button>
+                                            <button class="button">Ні</button>
+
+                                        </div>
+                                    </div>
+                                    <div class="user-answers">
+                                        <section class="answer">
+                                            <div class="clear2"></div>
+                                            <div class="clear2"></div>
+                                            <div class="from-them2">
+                                                <p>Так</p>
+                                            </div>
+                                        </section>
+                                        <div class="both"></div>
+                                    </div>
+                                    <div class="to-do-buttons">
+                                        <section class="sreviews">
+                                            <div class="clear"></div>
+                                            <div class="clear"></div>
+                                            <div class="from-them">
+                                                <p>Обери:</p>
+                                            </div>
+                                        </section>
+                                        <div class="buttons">
+                                            <button class="button">БДСМ</button>
+                                            <button class="button">Фетіш</button>
+                                            <button class="button">Секс-Іграшки</button>
+                                            <button class="button">Лубриканти</button>
+                                            <button class="button">Білизна</button>
+                                            <button class="button">Прелюдія</button>
+                                            <button class="button">Подарунки</button>
+                                            <button class="button button-prev">Назад</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-answers">
+                                        <section class="answer">
+                                            <div class="clear2"></div>
+                                            <div class="clear2"></div>
+                                            <div class="from-them2">
+                                                <p>Лубриканти</p>
+                                            </div>
+                                        </section>
+                                        <div class="both"></div>
+                                    </div>
+                                    <div class="to-do-buttons">
+                                        <section class="sreviews">
+                                            <div class="clear"></div>
+                                            <div class="clear"></div>
+                                            <div class="from-them">
+                                                <p>Ось що ми маємо для тебе:</p>
+                                            </div>
+                                        </section>
+                                        <div class="buttons">
+                                            <div class="products">
+                                                <div class="product-item_wrap">
+                                                    <a href="#">
+                                                        <article class="product-item">
+                                                            <img src="{% static 'img/item1.png' %}" width="73" height="60">
+                                                            <p class="product-item_text">Лубрикант Pjur Woman Nude</p>
+                                                            <p class="product-item_text">390 грн</p>
+
+                                                        </article>
+                                                    </a>
+                                                </div>
+                                                <div class="product-item_wrap"> <a href="#">
+                                                        <article class="product-item">
+                                                            <img src="{% static 'img/item2.png' %}" width="73" height="60">
+                                                            <p class="product-item_text">Лубрикант Pjur Woman Nude</p>
+                                                            <p class="product-item_text">190 грн</p>
+
+                                                        </article>
+                                                    </a></div>
+                                                <div class="product-item_wrap"> <a href="#">
+                                                        <article class="product-item">
+                                                            <img src="{% static 'img/item3.png' %}" width="73" height="60">
+                                                            <p class="product-item_text">Лубрикант Pjur Woman Nude</p>
+                                                            <p class="product-item_text">430 грн</p>
+
+                                                        </article>
+                                                    </a></div>
+                                                <div class="product-item_wrap"> <a href="#">
+                                                        <article class="product-item">
+                                                            <img src="{% static 'img/item4.png' %}" width="73" height="60">
+                                                            <p class="product-item_text">Лубрикант Pjur Woman Nude</p>
+                                                            <p class="product-item_text">890 грн</p>
+
+                                                        </article>
+                                                    </a></div>
+                                                <div class="product-item_wrap"> <a href="#">
+                                                        <article class="product-item">
+                                                            <img src="{% static 'img/item5.png' %}" width="73" height="60">
+                                                            <p class="product-item_text">Лубрикант Pjur Woman Nude</p>
+                                                            <p class="product-item_text">470 грн</p>
+
+                                                        </article>
+                                                    </a></div>
+                                            </div>
+                                            <button class="button button-prev">Назад</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chatting">
+                                <div class="chatting_emoji_wrapper">
+                                    <div class="chatting_emoji">
+                                        <img class="chatting-emoji_img" src="{% static 'img/happy_1023656 1.png' %}">
+                                    </div>
+                                </div>
+                                <input class="chatting_input" placeholder="Введіть ваше повідомлення" />
+                                <button class="chatting_button"><img src="{% static 'img/Send_fill.png' %}" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </ul>
+
+        <button class="hamburger">
+            <i class="menuIcon material-icons"><img src="{% static 'img/icon-chat.png' %}"></i>
+            <i class="closeIcon material-icons"><img src="{% static 'img/Close_round.png' %}"></i>
+        </button>
+        </div>
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
