@@ -1,0 +1,27 @@
+{
+  "question1": {
+    "label": "This is question number 1. What do you think?",
+    "answers": [
+      { "label": "Go to question 2", "next": "question2" },
+      { "label": "Go to question 3", "next": "question3" }
+    ]
+  },
+  "question2": {
+    "label": "This is question number 2. What do you think?",
+    "answers": [
+      { "label": "Go to question 3", "next": "question3" },
+      { "label": "Go to question 4", "next": "question4" }
+    ]
+  },
+  "question3": {
+    "label": "This is question number 3. What do you think?",
+    "answers": [
+      { "label": "Go to question 4", "next": "question4" },
+      { "label": "Ok thanks, go back", "next": "question1" }
+    ]
+  },
+  "question4": {
+    "label": "This is question number 4. What do you think?",
+    "answers": [{ "label": "Ok thanks, go back", "next": "question1" }]
+  }
+}

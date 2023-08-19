@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.conf import settings
 
 
 def index(request):
@@ -86,3 +87,34 @@ def web(request, option):
     except:
         return HttpResponseNotFound("<h1>This option is not supported</h1>")
 """
+
+import uuid
+
+
+def read_data():
+    import pathlib
+
+    path = pathlib.Path(settings.BASE_DIR / "app/data/data.json")
+    with path.open() as f:
+        return json.load(f)
+
+
+DATA = read_data()
+
+
+def question(request, question_id: str):
+    if question_id not in DATA:
+        return HttpResponseNotFound("Question not found")
+
+    ANON_KEY = "anonymous_id"
+    if request.session.get(ANON_KEY):
+        print("we know you!", request.session[ANON_KEY])
+    else:
+        request.session[ANON_KEY] = str(uuid.uuid4())
+        print("we will know you as", request.session[ANON_KEY])
+
+    context = {
+        "question": DATA[question_id],
+    }
+
+    return render(request, "app/question.html", context)
