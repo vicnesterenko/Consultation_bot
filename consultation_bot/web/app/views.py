@@ -4,11 +4,11 @@ import random
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
-from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
 
 
+# Previous function
 def index(request):
     return render(request, "app/index1.html")
 
@@ -87,15 +87,15 @@ def web(request, option):
     except:
         return HttpResponseNotFound("<h1>This option is not supported</h1>")
 """
-
+# Added by Oleksandr
 import uuid
 
 
 def read_data():
     import pathlib
 
-    path = pathlib.Path(settings.BASE_DIR / "app/data/data.json")
-    with path.open() as f:
+    path = pathlib.Path(settings.BASE_DIR / "app/data/maria.json")
+    with path.open(encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -118,3 +118,12 @@ def question(request, question_id: str):
     }
 
     return render(request, "app/question.html", context)
+
+
+# my function to render index1.html
+def my_index(request):
+    context = {
+        "question": DATA[0],
+    }
+
+    return render(request, "app/index1.html", context)

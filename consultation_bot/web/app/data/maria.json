@@ -1,0 +1,58 @@
+[
+    {
+        "main_1": {
+            "type": "question",
+            "q": "Обери дію:",
+            "options": [
+                {
+                    "label": "Зв’язатись з менеджером",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Підібрати подарунок",
+                    "next_id": "gift"
+                },
+                {
+                    "label": "Повернення товару",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Підібрати товар",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Нормальна практика",
+                    "next_id": "somewhere"
+                }
+            ]
+        },
+        "manager": {
+            "type": "link",
+            "label": "Зв’язатись з менеджером",
+            "texts": [
+                "Telegram бот для контакту менеджерів @LOVESPACE_support_bot",
+                "Номер: +38(044) 5-999-666",
+                "Instagram: https://www.instagram.com/lovespace.ua/"
+            ],
+            "next_id": "somewhere"
+        },
+        "gift": {
+            "type": "link",
+            "label": "Фруктово-ягідні",
+            "texts": [
+                "1. Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
+                "2. Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
+                "3. Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
+            ],
+            "next_id": "default-2"
+        },
+        "somewhere": {
+            "type": "link",
+            "label": "Кудись",
+            "texts": [
+                "Куди?"
+            ],
+            "next_id": ""
+        }
+    }
+]

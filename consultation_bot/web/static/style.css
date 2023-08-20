@@ -9,7 +9,7 @@
     height: 860px;
     max-width: 1440px;
     padding: 0 16px;
-    background-image: url(static/img/screen.png);
+    background-image: url(img/screen.png);
 }
 
 body,
@@ -107,11 +107,11 @@ a {
     clear: both;
 }
 
-.clear {
+.clear, .clear2 {
     clear: both
 }
 
-.from-them {
+.from-bot {
     position: relative;
     padding: 8px 12px;
     background: #CFD8DC;
@@ -120,7 +120,7 @@ a {
     float: left;
 }
 
-.from-them:before {
+.from-bot:before {
     content: "";
     position: absolute;
     z-index: 2;
@@ -132,7 +132,7 @@ a {
     transform: translate(0, -2px) rotate(-25deg);
 }
 
-.from-them:after {
+.from-bot:after {
     content: "";
     position: absolute;
     z-index: 3;
@@ -165,11 +165,8 @@ a {
     clear: both;
 }
 
-.clear2 {
-    clear: both;
-}
 
-.from-them2 {
+.from-user {
     position: relative;
     padding: 8px 12px;
     background: #BDE6F9;
@@ -178,7 +175,7 @@ a {
     float: right;
 }
 
-.from-them2:before {
+.from-user:before {
     content: "";
     position: absolute;
     z-index: 2;
@@ -190,7 +187,7 @@ a {
     transform: translate(0, -2px) rotate(25deg);
 }
 
-.from-them2:after {
+.from-user:after {
     content: "";
     position: absolute;
     z-index: 3;
@@ -326,8 +323,8 @@ a {
 .hamburger {
     position: fixed;
     z-index: 100;
-    bottom: 17%;
-    right: 14%;
+    bottom: 2%;
+    right: 5%;
     padding: 4px;
     border: none;
     background: white;

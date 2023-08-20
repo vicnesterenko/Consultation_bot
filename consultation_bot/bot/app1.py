@@ -1,7 +1,7 @@
 from bot.praktyka import praktyka_main, praktyka_category
 from bot.lubricant_for.run import choose_lub
 from bot.tools import print_options
-from bot.user_dont_know import user_dont_know
+from bot.user_dont_know import user_dont_know as dont_know
 from bot.contact_manager import contact
 
 
@@ -44,7 +44,7 @@ def choice_product():
     if action == options[0]:
         return choose_category()
     if action == options[1]:
-        return user_dont_know()
+        return dont_know.user_dont_know()
 
 
 def first_choice():

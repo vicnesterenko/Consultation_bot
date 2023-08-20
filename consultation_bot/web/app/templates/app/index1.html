@@ -14,7 +14,6 @@
 </head>
 
 <body class="body ">
-
     <main>
         <div class="container">
             <ul class="menu">
@@ -35,12 +34,27 @@
                                         <p class="greetings_text">Привіт! Скористайся нашим чат-ботом, щоб підібрати
                                             щось
                                             особливе!</p>
+                                    
                                     </div>
+                                    
                                     <div class="to-do-buttons">
                                         <section class="sreviews">
-                                            <div class="clear"></div>
-                                            <div class="clear"></div>
-                                            <div class="from-them">
+                                            <div class="from-bot">
+                                                <p>{{ question.main_1.q }}</p>
+                                            </div>
+                                        </section>
+                                        <div class="buttons">
+                                            {% for option in question.main_1.options %}
+                                                    <button class="button">{{ option.label }}</button>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    
+                                    {% comment %} 
+
+                                    <div class="to-do-buttons">
+                                        <section class="sreviews">
+                                            <div class="from-bot">
                                                 <p>Обери дію:</p>
                                             </div>
                                         </section>
@@ -52,21 +66,24 @@
                                             <button class="button">Нормальна практика</button>
                                         </div>
                                     </div>
+
+                                    
+                                    {% comment %} 
+                            
                                     <div class="user-answers">
                                         <section class="answer">
                                             <div class="clear2"></div>
                                             <div class="clear2"></div>
-                                            <div class="from-them2">
+                                            <div class="from-user">
                                                 <p>Підібрати товар</p>
                                             </div>
                                         </section>
                                         <div class="both"></div>
                                     </div>
+
                                     <div class="to-do-buttons">
                                         <section class="sreviews">
-                                            <div class="clear"></div>
-                                            <div class="clear"></div>
-                                            <div class="from-them">
+                                            <div class="from-bot">
                                                 <p>Ти знаєш хто ти?</p>
                                             </div>
                                         </section>
@@ -76,21 +93,23 @@
 
                                         </div>
                                     </div>
+
                                     <div class="user-answers">
                                         <section class="answer">
                                             <div class="clear2"></div>
                                             <div class="clear2"></div>
-                                            <div class="from-them2">
+                                            <div class="from-user">
                                                 <p>Так</p>
                                             </div>
                                         </section>
                                         <div class="both"></div>
                                     </div>
+
                                     <div class="to-do-buttons">
                                         <section class="sreviews">
                                             <div class="clear"></div>
                                             <div class="clear"></div>
-                                            <div class="from-them">
+                                            <div class="from-bot">
                                                 <p>Обери:</p>
                                             </div>
                                         </section>
@@ -105,21 +124,23 @@
                                             <button class="button button-prev">Назад</button>
                                         </div>
                                     </div>
+
                                     <div class="user-answers">
                                         <section class="answer">
                                             <div class="clear2"></div>
                                             <div class="clear2"></div>
-                                            <div class="from-them2">
+                                            <div class="from-user">
                                                 <p>Лубриканти</p>
                                             </div>
                                         </section>
                                         <div class="both"></div>
                                     </div>
+                                    
                                     <div class="to-do-buttons">
                                         <section class="sreviews">
                                             <div class="clear"></div>
                                             <div class="clear"></div>
-                                            <div class="from-them">
+                                            <div class="from-bot">
                                                 <p>Ось що ми маємо для тебе:</p>
                                             </div>
                                         </section>
@@ -171,6 +192,7 @@
                                             <button class="button button-prev">Назад</button>
                                         </div>
                                     </div>
+                                    {% endcomment %}
                                 </div>
                             </div>
                             <div class="chatting">
@@ -195,6 +217,68 @@
         </div>
     </main>
     <script src="{% static 'js/main.js' %}"></script>
-</body>
+    
+    {% comment %} <script>
+    
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+        
+        function toggleMenu() {
+          if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+          } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+          }
+        }
+        
+        hamburger.addEventListener("click", toggleMenu);
+        
+        menuItems.forEach( 
+          function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+          }
+        )
+        
+        /////////////////////////////////////////////////////
+        
 
+        function showUserChoise(text) {
+            //var buttonText = button.textContent;
+
+            var contentBlock = document.querySelector('.modal-content'); 
+
+            // Create a new chat message element
+            var userAnswers = document.createElement("div");
+            userAnswers.className = "user-answers";
+            var answerSection = document.createElement("section");
+            answerSection.className = "answer";
+            var fromUserDiv = document.createElement("div");
+            fromUserDiv.className = "from-user";
+            var messageParagraph = document.createElement("p");
+            messageParagraph.textContent = text; // Set the text to the button text
+            fromUserDiv.appendChild(messageParagraph);
+            answerSection.appendChild(fromUserDiv);
+            userAnswers.appendChild(answerSection);
+
+            contentBlock.appendChild(userAnswers);
+        }
+
+        // Add an event listener to each button
+        document.querySelectorAll(".button").forEach(function (button) {
+            button.addEventListener("click", function () {
+                showUserChoise(button.textContent);
+                /////////////////////////////////////////////////////
+
+        });
+    });
+
+    </script>  {% endcomment %}
+</body>
 </html>
