@@ -18,7 +18,7 @@
                 },
                 {
                     "label": "Підібрати товар",
-                    "next_id": "somewhere"
+                    "next_id": "choose_product"
                 },
                 {
                     "label": "Нормальна практика",
@@ -34,17 +34,21 @@
                 "Номер: +38(044) 5-999-666",
                 "Instagram: https://www.instagram.com/lovespace.ua/"
             ],
-            "next_id": "somewhere"
+            "next_id": "main_1"
         },
-        "gift": {
-            "type": "link",
-            "label": "Фруктово-ягідні",
-            "texts": [
-                "1. Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
-                "2. Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
-                "3. Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
-            ],
-            "next_id": "default-2"
+        "choose_product": {
+            "type": "question",
+            "q": "Ти знаєш хто ти?",
+            "options": [
+                {
+                    "label": "Так",
+                    "next_id": "..."
+                },
+                {
+                    "label": "Ні",
+                    "next_id": "..."
+                }
+            ]
         },
         "somewhere": {
             "type": "link",

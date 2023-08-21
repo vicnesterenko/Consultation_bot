@@ -101,7 +101,8 @@ def read_data():
 
 DATA = read_data()
 
-
+# For question.html
+""" 
 def question(request, question_id: str):
     if question_id not in DATA:
         return HttpResponseNotFound("Question not found")
@@ -115,15 +116,20 @@ def question(request, question_id: str):
 
     context = {
         "question": DATA[question_id],
+        "data": DATA,
     }
 
     return render(request, "app/question.html", context)
+"""
 
 
 # my function to render index1.html
 def my_index(request):
     context = {
-        "question": DATA[0],
+        "data_for_main": DATA[0],
+        "data": json.dumps(
+            DATA[0]
+        ),  # Because was the problem with reading it in the javascript main.js
     }
 
     return render(request, "app/index1.html", context)
