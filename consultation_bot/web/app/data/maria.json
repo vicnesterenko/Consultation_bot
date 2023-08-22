@@ -280,7 +280,7 @@
                 }
             ]
         },
-        "uah500_gift.2": {
+        "uah1000_gift": {
             "type": "question_link",
             "q": "Або такі варіанти 👇",
             "links": [
@@ -316,7 +316,7 @@
                 }
             ]
         },
-        "uah500_gift.4": {
+        "unlim_gift": {
             "type": "question_link",
             "q": "І на останок 👇",
             "links": [

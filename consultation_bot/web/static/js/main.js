@@ -107,12 +107,10 @@ function createLinks(obj){
         fromBotDiv.setAttribute("class", "from-bot");
         fromBotDiv.appendChild(linkElement);
         i = i+1;
-        contentBlock.appendChild(fromBotDiv);
+        toDoButtonsDiv.appendChild(fromBotDiv)
       });
-
-    
+      contentBlock.appendChild(toDoButtonsDiv);
 }
-
 
 function scrollToBottomSmoothly(duration) {
     const element = document.querySelector(".wrapper_modal-content");
