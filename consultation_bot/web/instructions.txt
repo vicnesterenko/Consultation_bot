@@ -1,6 +1,0 @@
-1. Path: cd consultation_bot\web
-2. Make venv
-3. Acivate venv
-4. pip install -r requirements.txt(which in this path)
-5. Command to run Django project: python manage.py runserver
-6. After running project, write this in your browser: http://localhost:8000/app/
