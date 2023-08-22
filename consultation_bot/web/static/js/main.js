@@ -92,11 +92,8 @@ function createToDoButtons(obj) {
 }
   
 
-
-// Add an event listener to each button
-document.querySelectorAll(".button").forEach(function (button) {
-    button.addEventListener("click", function () {
-        showUserChoise(button.textContent);
+function buttonEventListener(){
+    showUserChoise(button.textContent);
 
         obj = findNextInfo(data, button.getAttribute("id"))
         console.log(obj) //TODO testing
@@ -107,6 +104,15 @@ document.querySelectorAll(".button").forEach(function (button) {
         }else if (obj["type"] == "question"){
             console.log("It`s a question"); //TODO testing
             createToDoButtons(obj);
+            
+            document.querySelectorAll(".button").forEach(function (button) {
+                button.addEventListener("click", buttonEventListener())
+            });
         }
-    });
+}
+
+// Add an event listener to each button
+document.querySelectorAll(".button").forEach(function (button) {
+    button.addEventListener("click", buttonEventListener())
 });
+
