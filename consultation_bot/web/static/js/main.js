@@ -92,27 +92,51 @@ function createToDoButtons(obj) {
 }
   
 
-function buttonEventListener(){
-    showUserChoise(button.textContent);
+function buttonEventListener(all_buttons, button_obj){
+    showUserChoise(button_obj.textContent);
 
-        obj = findNextInfo(data, button.getAttribute("id"))
-        console.log(obj) //TODO testing
+    obj = findNextInfo(data, button_obj.getAttribute("id"))
+    console.log(obj) //TODO testing
 
-        if(obj["type"] == "link"){
-            console.log("It`s a link"); //TODO testing
+    if(obj["type"] == "link"){
+        console.log("It`s a link"); //TODO testing
 
-        }else if (obj["type"] == "question"){
-            console.log("It`s a question"); //TODO testing
-            createToDoButtons(obj);
-            
-            document.querySelectorAll(".button").forEach(function (button) {
-                button.addEventListener("click", buttonEventListener())
-            });
-        }
+    }else if (obj["type"] == "question"){
+        console.log("It`s a question"); //TODO testing
+        createToDoButtons(obj);
+        
+        all_buttons.forEach(function (button) {
+            button.addEventListener("click", buttonEventListener(button))
+        });
+    }
 }
 
-// Add an event listener to each button
-document.querySelectorAll(".button").forEach(function (button) {
-    button.addEventListener("click", buttonEventListener())
+
+function my_function(){
+    const buttons = document.querySelectorAll(".button");
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function() {
+
+            showUserChoise(button.textContent);
+
+            obj = findNextInfo(data, button.getAttribute("id"))
+            console.log(obj) //TODO testing
+
+            if(obj["type"] == "link"){
+                console.log("It`s a link"); //TODO testing
+                //Continue here -- add function to render links
+
+            }else if (obj["type"] == "question"){
+                console.log("It`s a question"); //TODO testing
+                createToDoButtons(obj);
+                
+                my_function() // restart the function to add eventlistener for new buttons
+            }
+    });
 });
+}
+
+my_function()
+
 
