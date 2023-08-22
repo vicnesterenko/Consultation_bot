@@ -90,7 +90,49 @@ function createToDoButtons(obj) {
   
     contentBlock.appendChild(toDoButtonsDiv);
 }
-  
+
+function createLinks(obj){
+    var contentBlock = document.querySelector('.modal-content'); 
+
+    var toDoButtonsDiv = document.createElement("div");
+    toDoButtonsDiv.className = "to-do-buttons";
+
+    var i = 0;
+    obj.texts.forEach(function (text) {
+        var linkElement = document.createElement("a");
+        linkElement.setAttribute("class", "");
+        linkElement.setAttribute("href", text["url"]);
+        linkElement.textContent = `${i + 1}. ${text["name"]}`;
+        const fromBotDiv = document.createElement("div");
+        fromBotDiv.setAttribute("class", "from-bot");
+        fromBotDiv.appendChild(linkElement);
+        i = i+1;
+        contentBlock.appendChild(fromBotDiv);
+      });
+
+    
+}
+
+
+function scrollToBottomSmoothly(duration) {
+    const element = document.querySelector(".wrapper_modal-content");
+    const scrollHeight = element.scrollHeight;
+    const startPosition = element.scrollTop;
+    const startTime = performance.now();
+
+    function scrollAnimation(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        if (elapsedTime < duration) {
+            const progress = elapsedTime / duration;
+            element.scrollTop = startPosition + progress * (scrollHeight - startPosition);
+            requestAnimationFrame(scrollAnimation);
+        } else {
+            element.scrollTop = scrollHeight;
+        }
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}
 
 
 function my_function(){
@@ -106,14 +148,16 @@ function my_function(){
 
             if(obj["type"] == "link"){
                 console.log("It`s a link"); //TODO testing
-                //Continue here -- add function to render links
+                createLinks(obj);
 
             }else if (obj["type"] == "question"){
                 console.log("It`s a question"); //TODO testing
                 createToDoButtons(obj);
-                
-                my_function() // restart the function to add eventlistener for new buttons
             }
+            // Add condition for question-link here
+
+            scrollToBottomSmoothly(1000);
+            my_function()// restart the function to add eventlistener for new buttons
     });
 });
 }

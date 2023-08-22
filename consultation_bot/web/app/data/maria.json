@@ -9,7 +9,7 @@
                     "next_id": "manager"
                 },
                 {
-                    "label": "Підібрати подарунок",
+                    "label": "🎁 Підібрати подарунок",
                     "next_id": "gift"
                 },
                 {
@@ -90,7 +90,7 @@
             "options": [
                 {
                     "label": "❤️‍🔥Для сексу",
-                    "next_id": "somewhere"
+                    "next_id": "choose_sex"
                 },
                 {
                     "label": "Для іграшки",
@@ -114,6 +114,28 @@
                 }
             ]
         },
+        "choose_sex": {
+            "type": "question",
+            "q": "Для чого потрібен?:",
+            "options": [
+                {
+                    "label": "Для вагінального",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "🍓Для орального",
+                    "next_id": "oral.1"
+                },
+                {
+                    "label": "Для анального",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
+                }
+            ]
+        },
         "somewhere": {
             "type": "link",
             "label": "Кудись",
@@ -121,6 +143,210 @@
                 "Куди?"
             ],
             "next_id": ""
+        },
+        "oral.1": {
+            "type": "question",
+            "q": "Бажаєте підібрати конкретний смак чи взяти набір різних? Обери дію:",
+            "options": [
+                {
+                    "label": "Підібрати смак",
+                    "next_id": "oral.2"
+                },
+                {
+                    "label": "Спробувати набори",
+                    "next_id": "oral.1.2"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "oral.2": {
+            "type": "question",
+            "q": "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:",
+            "options": [
+                {
+                    "label": "Десерт",
+                    "next_id": "oral.2.1"
+                },
+                {
+                    "label": "Фруктово-ягідні",
+                    "next_id": "oral.2.2"
+                },
+                {
+                    "label": "ІНШЕ↩️",
+                    "next_id": "default-2"
+                }
+            ]
+        },
+        "oral.2.1": {
+            "type": "link",
+            "label": "Десерт",
+            "texts": [
+                {
+                    "name": "Зі смаком солоної карамелі",
+                    "url": "https://lovespace.ua/uk/products/sedobnyj-lubrikant-system-jo-gelato-salted-caramel"
+                },
+                {
+                    "name": "Зі смаком чорничного мафіну",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-hybrid-formula-blueberry-muffin"
+                },
+                {
+                    "name": "З ароматом ванілі",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal"
+                }
+            ],
+            "next_id": "default-2"
+        },
+        "oral.2.2": {
+            "type": "link",
+            "label": "Фруктово-ягідні",
+            "texts": [
+                "Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
+                "Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
+                "Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
+            ],
+            "next_id": "default-2"
+        },
+        "oral.1.2": {
+            "type": "link",
+            "label": "Спробувати набори",
+            "texts": [
+                "Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
+                "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors?utm_source=t_bot"
+            ],
+            "next_id": "default-2"
+        },
+        "gift": {
+            "type": "question",
+            "q": "На яку суму ви хочете підібрати подарунок?",
+            "options": [
+                {
+                    "label": "До 500 грн",
+                    "next_id": "uah500_gift.1"
+                },
+                {
+                    "label": "До 1000 грн",
+                    "next_id": "uah1000_gift"
+                },
+                {
+                    "label": "До 3000 грн",
+                    "next_id": "uah3000_gift"
+                },
+                {
+                    "label": "Безлім",
+                    "next_id": "unlim_gift"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
+                }
+            ]
+        },
+        "uah500_gift.1": {
+            "type": "question_link",
+            "q": "Можу порекомендувати таке 👇",
+            "links": [
+                {
+                    "name": "1. Подарунковий на 500 гривень",
+                    "url": "https://lovespace.ua/uk/products/podarochnye-sertifikaty-ss300"
+                },
+                {
+                    "name": "2. Набір антистрес-розмальовок",
+                    "url": "https://lovespace.ua/uk/products/seks-rozmalovka-penisi"
+                },
+                {
+                    "name": "3. Книга про жіночу анатомію",
+                    "url": "https://lovespace.ua/uk/products/kniga-prikhovane-divo-vsya-pravda-pro-anatomiyu-zhinki"
+                },
+                {
+                    "name": "4. Масажна свічка з трояндовим ароматом",
+                    "url": "https://lovespace.ua/uk/products/svecha-dlya-massaja-shunga-strawberry-shg4608"
+                },
+                {
+                    "name": "5. Набір анальних пробок, ідеальний, щоб розпочати експерименти",
+                    "url": "https://lovespace.ua/uk/products/nabor-analnykh-probok-satisfyer-plugs-set-of-3#/372-kolir-rozhevij"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Дивитись ще",
+                    "next_id": "uah500_gift.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
+                }
+            ]
+        },
+        "uah500_gift.2": {
+            "type": "question_link",
+            "q": "Або такі варіанти 👇",
+            "links": [
+                {
+                    "name": "6. Масажне масло від американського бренду Sensuva",
+                    "url": "https://lovespace.ua/uk/products/massazhnoe-maslo-sensuva-me-you-lemon-ginger-orange-vanilla-sugar"
+                },
+                {
+                    "name": "7. Мастурбатор з ніжного матеріалу",
+                    "url": "https://lovespace.ua/uk/products/masturbator-svakom-hedy#/373-kolir-svitlo_rozhevij"
+                },
+                {
+                    "name": "8. Мастурбатор з внутрішнім рельєфом",
+                    "url": "https://lovespace.ua/uk/products/masturbator-tenga-egg-spider-e21517#/353-kolir-bilij"
+                },
+                {
+                    "name": "9. Мастурбатор для чоловіків з відкритою голівкою",
+                    "url": "https://lovespace.ua/uk/products/masturbator-the-screaming-o-jackits-throttle-stroker-opaque#/410-kolir-prozorij"
+                },
+                {
+                    "name": "10. Їстівна пудра для прелюдії",
+                    "url": "https://lovespace.ua/uk/products/sedobnaya-pudra-dlya-tela-sensuva-love-luster-kissable-diamond-dust?search_query=sensuva&results=55"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Дивитись ще",
+                    "next_id": "uah500_gift.3"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
+                }
+            ]
+        },
+        "uah500_gift.4": {
+            "type": "question_link",
+            "q": "І на останок 👇",
+            "links": [
+                {
+                    "name": "16. Кондомниці",
+                    "url": "https://lovespace.ua/uk/products/kondomnicya-one-extra-condo-tin#/411-kolir-sriblyastij"
+                },
+                {
+                    "name": "17. Карамельна цукерка у формі члена",
+                    "url": "https://lovespace.ua/uk/products/sladky-malchik-lsb-sb01"
+                },
+                {
+                    "name": "18. Карамельна цукерка у формі вульви",
+                    "url": "https://lovespace.ua/uk/products/sladkaya-devochka-lsb-sb02"
+                },
+                {
+                    "name": "19. Набір лубрикантів",
+                    "url": "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors"
+                },
+                {
+                    "name": "20. Чокер з натуральної шкіри",
+                    "url": "https://lovespace.ua/uk/products/choker-iz-kozhi-s-kolcom?search_query=%D1%87%D0%BE%D0%BA%D0%B5%D1%80+&results=22#/371-kolir-chornij"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
+                }
+            ]
         }
     }
 ]

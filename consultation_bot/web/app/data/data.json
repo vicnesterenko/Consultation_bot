@@ -46,5 +46,79 @@
         "next": "question1"
       }
     ]
+  },
+  "oral.1": {
+    "type": "question",
+    "q": "Бажаєте підібрати конкретний смак чи взяти набір різних? Обери дію:",
+    "options": [
+      {
+        "label": "Підібрати смак",
+        "next_id": "oral.2"
+      },
+      {
+        "label": "Спробувати набори",
+        "next_id": "oral.1.2"
+      },
+      {
+        "label": "ІНШЕ↩️",
+        "next_id": "default-1"
+      }
+    ]
+  },
+  "oral.2": {
+    "type": "question",
+    "q": "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:",
+    "options": [
+      {
+        "label": "Десерт",
+        "next_id": "oral.2.1"
+      },
+      {
+        "label": "Фруктово-ягідні",
+        "next_id": "oral.2.2"
+      },
+      {
+        "label": "ІНШЕ↩️",
+        "next_id": "default-2"
+      }
+    ]
+  },
+  "oral.2.1": {
+    "type": "link",
+    "label": "Десерт",
+    "texts": [
+      {
+        "name": "1. Зі смаком солоної карамелі",
+        "url": "https://lovespace.ua/uk/products/sedobnyj-lubrikant-system-jo-gelato-salted-caramel"
+      },
+      {
+        "name": "2. Зі смаком чорничного мафіну",
+        "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-hybrid-formula-blueberry-muffin"
+      },
+      {
+        "name": "3. З ароматом ванілі",
+        "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal"
+      }
+    ],
+    "next_id": "default-2"
+  },
+  "oral.2.2": {
+    "type": "link",
+    "label": "Фруктово-ягідні",
+    "texts": [
+      "1. Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
+      "2. Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
+      "3. Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
+    ],
+    "next_id": "default-2"
+  },
+  "oral.1.2": {
+    "type": "link",
+    "label": "Спробувати набори",
+    "texts": [
+      "1. Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
+      "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors?utm_source=t_bot"
+    ],
+    "next_id": "default-2"
   }
 }
