@@ -118,6 +118,7 @@ a {
     border-radius: 25px;
     color: black;
     float: left;
+    margin: 5px;
 }
 
 .from-bot:before {
