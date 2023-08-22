@@ -177,6 +177,7 @@ function my_function() {
                 choiceStack.push(choiceId);
             }
 
+            showUserChoise(button.textContent);
             navigateToChoice(choiceId);
             scrollToBottomSmoothly(1000);
             my_function();
