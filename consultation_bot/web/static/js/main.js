@@ -89,10 +89,50 @@ function createToDoButtons(obj) {
     toDoButtonsDiv.appendChild(buttonsDiv);
 
     contentBlock.appendChild(toDoButtonsDiv);
+}
+
+function createLinks(obj) {
+    var contentBlock = document.querySelector('.modal-content');
+
+    var toDoButtonsDiv = document.createElement("div");
+    toDoButtonsDiv.className = "to-do-buttons";
+
+    var i = 0;
+    obj.texts.forEach(function (text) {
+        var linkElement = document.createElement("a");
+        linkElement.setAttribute("class", "");
+        linkElement.setAttribute("href", text["url"]);
+        linkElement.textContent = `${i + 1}. ${text["name"]}`;
+        const fromBotDiv = document.createElement("div");
+        fromBotDiv.setAttribute("class", "from-bot");
+        fromBotDiv.appendChild(linkElement);
+        i = i + 1;
+        contentBlock.appendChild(fromBotDiv);
+    });
+
 
 }
 
 
+function scrollToBottomSmoothly(duration) {
+    const element = document.querySelector(".wrapper_modal-content");
+    const scrollHeight = element.scrollHeight;
+    const startPosition = element.scrollTop;
+    const startTime = performance.now();
+
+    function scrollAnimation(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        if (elapsedTime < duration) {
+            const progress = elapsedTime / duration;
+            element.scrollTop = startPosition + progress * (scrollHeight - startPosition);
+            requestAnimationFrame(scrollAnimation);
+        } else {
+            element.scrollTop = scrollHeight;
+        }
+    }
+
+    requestAnimationFrame(scrollAnimation);
+}
 
 
 function my_function() {
@@ -106,20 +146,24 @@ function my_function() {
             obj = findNextInfo(data, button.getAttribute("id"))
             console.log(obj) //TODO testing
 
-            if (obj["type"] == "link") {
+            if (obj && obj["type"] == "link") {
                 console.log("It`s a link"); //TODO testing
                 createLinks(obj);
 
-            } else if (obj["type"] == "question") {
+            } else if (obj && obj["type"] == "question") {
                 console.log("It`s a question"); //TODO testing
                 createToDoButtons(obj);
 
-                my_function() // restart the function to add eventlistener for new buttons
+            } else if (obj && obj["type"] == "question_link") {
+                console.log("It`s a question"); //TODO testing
+                createToDoButtons(obj);
             }
+            // Add condition for question-link here
+
+            scrollToBottomSmoothly(1000);
+            my_function()// restart the function to add eventlistener for new buttons
         });
     });
 }
 
 my_function()
-
-
