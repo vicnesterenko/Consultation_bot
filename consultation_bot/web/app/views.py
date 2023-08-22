@@ -133,12 +133,3 @@ def my_index(request):
     }
 
     return render(request, "app/index1.html", context)
-
-
-def contact(request):
-    context = {
-        "data_for_main": DATA[1],
-        "data": json.dumps(DATA[1]),
-    }
-
-    return render(request, "app/index1.html", context)
