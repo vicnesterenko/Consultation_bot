@@ -92,25 +92,6 @@ function createToDoButtons(obj) {
 }
   
 
-function buttonEventListener(all_buttons, button_obj){
-    showUserChoise(button_obj.textContent);
-
-    obj = findNextInfo(data, button_obj.getAttribute("id"))
-    console.log(obj) //TODO testing
-
-    if(obj["type"] == "link"){
-        console.log("It`s a link"); //TODO testing
-
-    }else if (obj["type"] == "question"){
-        console.log("It`s a question"); //TODO testing
-        createToDoButtons(obj);
-        
-        all_buttons.forEach(function (button) {
-            button.addEventListener("click", buttonEventListener(button))
-        });
-    }
-}
-
 
 function my_function(){
     const buttons = document.querySelectorAll(".button");
