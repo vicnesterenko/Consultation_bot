@@ -2,7 +2,7 @@
     {
         "main_1": {
             "type": "question",
-            "q": "Обери дію:",
+            "q": "Обери дію:💙",
             "options": [
                 {
                     "label": "Зв’язатись з менеджером",
@@ -17,7 +17,7 @@
                     "next_id": "somewhere"
                 },
                 {
-                    "label": "Підібрати товар",
+                    "label": "🔎Підібрати товар",
                     "next_id": "choose_product"
                 },
                 {
@@ -41,12 +41,76 @@
             "q": "Ти знаєш хто ти?",
             "options": [
                 {
-                    "label": "Так",
-                    "next_id": "..."
+                    "label": "😈Так",
+                    "next_id": "choose_category"
                 },
                 {
                     "label": "Ні",
-                    "next_id": "..."
+                    "next_id": "somewhere"
+                }
+            ]
+        },
+        "choose_category": {
+            "type": "question",
+            "q": "Обери:",
+            "options": [
+                {
+                    "label": "БДСМ, Фетиш",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Секс-іграшки",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "💦Лубрикант",
+                    "next_id": "choose_lub"
+                },
+                {
+                    "label": "Білизна",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Прелюдія",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Подарунки",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
+                }
+            ]
+        },
+        "choose_lub": {
+            "type": "question",
+            "q": "Для чого потрібен?:",
+            "options": [
+                {
+                    "label": "❤️‍🔥Для сексу",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Для іграшки",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Для чутливої міклофлори",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Для фістінгу",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Для мастурбації",
+                    "next_id": "somewhere"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "somewhere"
                 }
             ]
         },

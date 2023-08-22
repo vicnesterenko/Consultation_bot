@@ -93,20 +93,31 @@ function createToDoButtons(obj) {
   
 
 
-// Add an event listener to each button
-document.querySelectorAll(".button").forEach(function (button) {
-    button.addEventListener("click", function () {
-        showUserChoise(button.textContent);
+function my_function(){
+    const buttons = document.querySelectorAll(".button");
 
-        obj = findNextInfo(data, button.getAttribute("id"))
-        console.log(obj) //TODO testing
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function() {
 
-        if(obj["type"] == "link"){
-            console.log("It`s a link"); //TODO testing
+            showUserChoise(button.textContent);
 
-        }else if (obj["type"] == "question"){
-            console.log("It`s a question"); //TODO testing
-            createToDoButtons(obj);
-        }
+            obj = findNextInfo(data, button.getAttribute("id"))
+            console.log(obj) //TODO testing
+
+            if(obj["type"] == "link"){
+                console.log("It`s a link"); //TODO testing
+                //Continue here -- add function to render links
+
+            }else if (obj["type"] == "question"){
+                console.log("It`s a question"); //TODO testing
+                createToDoButtons(obj);
+                
+                my_function() // restart the function to add eventlistener for new buttons
+            }
     });
 });
+}
+
+my_function()
+
+
