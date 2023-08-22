@@ -48,6 +48,13 @@
                                             {% endfor %}
                                         </div>
                                     </div>
+                                    <div class="to-do-buttons">
+                                        <div class="buttons">
+                                            {% for text in data_for_main.manager.texts %}
+                                                    <button id="{{text.next_id}}" class="button">{{ text.label }}</button>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
                                     
                                     {% comment %} 
 
