@@ -108,7 +108,7 @@ function my_function() {
 
             if (obj["type"] == "link") {
                 console.log("It`s a link"); //TODO testing
-                //Continue here -- add function to render links
+                createLinks(obj);
 
             } else if (obj["type"] == "question") {
                 console.log("It`s a question"); //TODO testing
