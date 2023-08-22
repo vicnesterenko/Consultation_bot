@@ -81,6 +81,7 @@ a {
 .user-answers,
 .to-do-buttons {
     padding: 20px 0 0 0;
+    margin: 20px 0 10px 0;
 }
 
 .both {
@@ -174,6 +175,7 @@ a {
     border-radius: 25px;
     color: #121212;
     float: right;
+    margin: 5px;
 }
 
 .from-user:before {
