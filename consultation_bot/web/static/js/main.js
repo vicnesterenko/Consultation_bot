@@ -112,6 +112,63 @@ function createLinks(obj) {
     contentBlock.appendChild(toDoButtonsDiv);
 }
 
+function createQuestionLink(obj){
+    var contentBlock = document.querySelector('.modal-content');
+
+    var toDoButtonsDiv = document.createElement("div");
+    toDoButtonsDiv.className = "to-do-buttons";
+    var sreviewsSection = document.createElement("section");
+    sreviewsSection.className = "sreviews";
+
+    // Create first message/messages
+    obj.q.forEach(function (que){
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+        
+        var fromBotDiv1 = document.createElement("div");
+        fromBotDiv1.className = "from-bot";
+
+        var questionParagraph = document.createElement("p");
+        questionParagraph.textContent = `${que}`;
+        console.log("que: "+que)//please don't delete, for testing
+
+        fromBotDiv1.appendChild(questionParagraph);
+        sreviewsSection.appendChild(fromBotDiv1);
+        toDoButtonsDiv.appendChild(sreviewsSection);
+    });
+    
+
+    // Create links
+    obj.links.forEach(function (link) {
+        var linkElement = document.createElement("a");
+        linkElement.setAttribute("class", "");
+        linkElement.setAttribute("href", link["url"]);
+        linkElement.textContent = `${link["name"]}`;
+
+        const fromBotDiv = document.createElement("div");
+        fromBotDiv.setAttribute("class", "from-bot");
+        fromBotDiv.appendChild(linkElement);
+
+        toDoButtonsDiv.appendChild(fromBotDiv)
+    });
+
+    // Create buttons
+    var buttonsDiv = document.createElement("div");
+    buttonsDiv.className = "buttons";
+    obj.options.forEach(function (option) {
+        var button = document.createElement("button");
+        button.id = option.next_id;
+        button.className = "button";
+        button.textContent = option.label;
+
+        buttonsDiv.appendChild(button);
+        toDoButtonsDiv.appendChild(buttonsDiv)
+    });
+
+    // Append result
+    contentBlock.appendChild(toDoButtonsDiv);
+}
+
 function scrollToBottomSmoothly(duration) {
     const element = document.querySelector(".wrapper_modal-content");
     const scrollHeight = element.scrollHeight;
@@ -148,24 +205,38 @@ function ButtonBack() {
 }
 
 function navigateToChoice(choiceId) {
+    console.log("navigate "+currentIndex)//please don't delete, for testing
+    console.log("navigate "+choiceStack)//please don't delete, for testing
+
     if (choiceId === "back") {
         ButtonBack();
-        return;
+        scrollToBottomSmoothly(1000);
     }
 
     const selectedChoice = data[choiceId];
 
     if (selectedChoice) {
-        if (selectedChoice.type === "link") {
+        if (selectedChoice.type == "link") {
             createLinks(selectedChoice);
-        } else if (selectedChoice.type === "question" || selectedChoice.type === "question_link") {
+        } else if (selectedChoice.type == "question") {
             createToDoButtons(selectedChoice);
+        } else if (selectedChoice.type == "question_link"){
+            createQuestionLink(selectedChoice);
         }
+        console.log(selectedChoice)//please don't delete, for testing
     }
 }
 
 function my_function() {
+    console.log("my_function "+currentIndex)//please don't delete, for testing
+    console.log("my_function "+choiceStack)//please don't delete, for testing
+
     const buttons = document.querySelectorAll(".button");
+
+    const buttonBack = document.getElementById('back');
+    if (buttonBack) {
+        buttonBack.addEventListener("click", ButtonBack);
+    }
 
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
@@ -178,21 +249,15 @@ function my_function() {
             }
 
             showUserChoise(button.textContent);
-            navigateToChoice(choiceId);
+
+            navigateToChoice(choiceId)
+
             scrollToBottomSmoothly(1000);
             my_function();
         });
     });
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const buttonBack = document.getElementById('back');
-    if (buttonBack) {
-        buttonBack.addEventListener("click", ButtonBack);
-    }
-
-    my_function();
-});
+my_function();
 
 /*
 Потуга №1
