@@ -50,6 +50,27 @@
                                     </div>
 {% comment %}
                                     <div class="to-do-buttons">
+                                        <section class="sreviews">
+                                            <div class="from-bot">
+                                                <p>Можу порекомендувати таке 👇:</p>
+                                            </div>
+                                        </section>
+                                        <div class="from-bot">
+                                            <a class="" href='https://lovespace.ua/uk/products/podarochnye-sertifikaty-ss300'>Подарунковий на 500 гривень</a>
+                                        </div>
+                                        <div class="from-bot">
+                                            <a class="" href='https://lovespace.ua/uk/products/seks-rozmalovka-penisi'>Набір антистрес-розмальовок</a>
+                                        </div>
+                                        <div class="from-bot">
+                                            <a class="" href='https://lovespace.ua/uk/products/kniga-prikhovane-divo-vsya-pravda-pro-anatomiyu-zhinki'>Книга про жіночу анатомію</a>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="button">Дивитись ще</button>
+                                            <button class="button">Назад ↩️</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="to-do-buttons">
                                         <div class="from-bot">
                                             <a class="" href='https://lovespace.ua/uk/products/sedobnyj-lubrikant-system-jo-gelato-salted-caramel'>1. Зі смаком солоної карамелі ☺</a>
                                         </div>
@@ -210,7 +231,8 @@
                                     </div>
                                     
                                 </div>
-                            </div>{% endcomment %}
+                            </div>
+{% endcomment %}
                             <div class="chatting">
                                 <div class="chatting_emoji_wrapper">
                                     <div class="chatting_emoji">
@@ -234,7 +256,7 @@
     <script>
         // Define JavaScript variables using Django template tags
         // Pass the data from views.py context
-        var data = JSON.parse('{{ data | safe }}'); 
+        var data = JSON.parse('{{ data | safe }}');
     </script>
     <script src="{% static 'js/main.js'%}"></script> 
 </body>
