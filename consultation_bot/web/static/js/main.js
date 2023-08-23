@@ -109,6 +109,20 @@ function createLinks(obj) {
         i = i + 1;
         toDoButtonsDiv.appendChild(fromBotDiv)
     });
+
+    // Create buttons
+    var buttonsDiv = document.createElement("div");
+    buttonsDiv.className = "buttons";
+    obj.options.forEach(function (option) {
+        var button = document.createElement("button");
+        button.id = option.next_id;
+        button.className = "button";
+        button.textContent = option.label;
+
+        buttonsDiv.appendChild(button);
+        toDoButtonsDiv.appendChild(buttonsDiv)
+    });
+
     contentBlock.appendChild(toDoButtonsDiv);
 }
 
@@ -124,7 +138,7 @@ function createQuestionLink(obj){
     obj.q.forEach(function (que){
         var sreviewsSection = document.createElement("section");
         sreviewsSection.className = "sreviews";
-        
+
         var fromBotDiv1 = document.createElement("div");
         fromBotDiv1.className = "from-bot";
 
@@ -205,8 +219,8 @@ function ButtonBack() {
 }
 
 function navigateToChoice(choiceId) {
-    console.log("navigate "+currentIndex)//please don't delete, for testing
-    console.log("navigate "+choiceStack)//please don't delete, for testing
+    console.log("navigate currentIndex: "+currentIndex)//please don't delete, for testing
+    console.log("navigate choiceStack: "+choiceStack)//please don't delete, for testing
 
     if (choiceId === "back") {
         ButtonBack();
@@ -227,9 +241,11 @@ function navigateToChoice(choiceId) {
     }
 }
 
+
+//// The main function
 function my_function() {
-    console.log("my_function "+currentIndex)//please don't delete, for testing
-    console.log("my_function "+choiceStack)//please don't delete, for testing
+    console.log("my_function currentIndex: "+currentIndex)//please don't delete, for testing
+    console.log("my_function choiceStack:"+choiceStack)//please don't delete, for testing
 
     const buttons = document.querySelectorAll(".button");
 
@@ -240,9 +256,11 @@ function my_function() {
 
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
+            console.log("clicked on  "+button.textContent)//please don't delete, for testing
+
             const choiceId = button.getAttribute("id");
 
-            if (choiceId !== "back") {
+            if (choiceId != "back") {
                 choiceStack = choiceStack.slice(0, currentIndex + 1);
                 currentIndex++;
                 choiceStack.push(choiceId);

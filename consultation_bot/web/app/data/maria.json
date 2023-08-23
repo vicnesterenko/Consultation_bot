@@ -14,7 +14,7 @@
                 },
                 {
                     "label": "Повернення товару",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "🔎Підібрати товар",
@@ -30,11 +30,25 @@
             "type": "link",
             "label": "Зв’язатись з менеджером",
             "texts": [
-                "Telegram бот для контакту менеджерів @LOVESPACE_support_bot",
-                "Номер: +38(044) 5-999-666",
-                "Instagram: https://www.instagram.com/lovespace.ua/"
+                {
+                    "name": "Telegram бот для контакту менеджерів",
+                    "url": "https://t.me/LOVESPACE_support_bot"
+                },
+                {
+                    "name": "Номер",
+                    "url": "+38(044) 5-999-666"
+                },
+                {
+                    "name": "Instagram:",
+                    "url": "https://www.instagram.com/lovespace.ua/"
+                }
             ],
-            "next_id": "main_1"
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
         },
         "choose_product": {
             "type": "question",
@@ -46,7 +60,11 @@
                 },
                 {
                     "label": "Ні",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -56,11 +74,11 @@
             "options": [
                 {
                     "label": "БДСМ, Фетиш",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Секс-іграшки",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "💦Лубрикант",
@@ -68,15 +86,15 @@
                 },
                 {
                     "label": "Білизна",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Прелюдія",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Подарунки",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Назад ↩️",
@@ -94,19 +112,19 @@
                 },
                 {
                     "label": "Для іграшки",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Для чутливої міклофлори",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Для фістінгу",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Для мастурбації",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Назад ↩️",
@@ -120,7 +138,7 @@
             "options": [
                 {
                     "label": "Для вагінального",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "🍓Для орального",
@@ -128,21 +146,13 @@
                 },
                 {
                     "label": "Для анального",
-                    "next_id": "somewhere"
+                    "next_id": "praktyka_category"
                 },
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
             ]
-        },
-        "somewhere": {
-            "type": "link",
-            "label": "Кудись",
-            "texts": [
-                "Куди?"
-            ],
-            "next_id": ""
         },
         "oral.1": {
             "type": "question",
@@ -157,7 +167,7 @@
                     "next_id": "oral.1.2"
                 },
                 {
-                    "label": "ІНШЕ↩️",
+                    "label": "Назад ↩️",
                     "next_id": "back"
                 }
             ]
@@ -175,8 +185,8 @@
                     "next_id": "oral.2.2"
                 },
                 {
-                    "label": "ІНШЕ↩️",
-                    "next_id": "default-2"
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -197,7 +207,12 @@
                     "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal"
                 }
             ],
-            "next_id": "default-2"
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
         },
         "oral.2.2": {
             "type": "link",
@@ -207,7 +222,12 @@
                 "Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
                 "Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
             ],
-            "next_id": "default-2"
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
         },
         "oral.1.2": {
             "type": "link",
@@ -216,7 +236,12 @@
                 "Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
                 "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors?utm_source=t_bot"
             ],
-            "next_id": "default-2"
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
         },
         "gift": {
             "type": "question",
