@@ -47,12 +47,14 @@ function showUserChoise(text) {
     contentBlock.appendChild(userAnswers);
 }
 
+/**
 function findNextInfo(data, next_id) {
     console.log(data)//TODO testing
     console.log(next_id)//TODO testing
     obj = data[next_id];
     return obj;
 }
+*/
 
 function createToDoButtons(obj) {
     var contentBlock = document.querySelector('.modal-content');
@@ -126,13 +128,12 @@ function createLinks(obj) {
     contentBlock.appendChild(toDoButtonsDiv);
 }
 
+
 function createQuestionLink(obj){
     var contentBlock = document.querySelector('.modal-content');
 
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
-    var sreviewsSection = document.createElement("section");
-    sreviewsSection.className = "sreviews";
 
     // Create first message/messages
     obj.q.forEach(function (que){
@@ -144,7 +145,7 @@ function createQuestionLink(obj){
 
         var questionParagraph = document.createElement("p");
         questionParagraph.textContent = `${que}`;
-        console.log("que: "+que)//please don't delete, for testing
+        // console.log("que: "+que)//please don't delete, for testing
 
         fromBotDiv1.appendChild(questionParagraph);
         sreviewsSection.appendChild(fromBotDiv1);
@@ -154,6 +155,9 @@ function createQuestionLink(obj){
 
     // Create links
     obj.links.forEach(function (link) {
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+
         var linkElement = document.createElement("a");
         linkElement.setAttribute("class", "");
         linkElement.setAttribute("href", link["url"]);
@@ -163,7 +167,8 @@ function createQuestionLink(obj){
         fromBotDiv.setAttribute("class", "from-bot");
         fromBotDiv.appendChild(linkElement);
 
-        toDoButtonsDiv.appendChild(fromBotDiv)
+        sreviewsSection.appendChild(fromBotDiv);
+        toDoButtonsDiv.appendChild(sreviewsSection)
     });
 
     // Create buttons
@@ -219,8 +224,8 @@ function ButtonBack() {
 }
 
 function navigateToChoice(choiceId) {
-    console.log("navigate currentIndex: "+currentIndex)//please don't delete, for testing
-    console.log("navigate choiceStack: "+choiceStack)//please don't delete, for testing
+    //console.log("navigate currentIndex: "+currentIndex)//please don't delete, for testing
+    //console.log("navigate choiceStack: "+choiceStack)//please don't delete, for testing
 
     if (choiceId === "back") {
         ButtonBack();
@@ -237,44 +242,47 @@ function navigateToChoice(choiceId) {
         } else if (selectedChoice.type == "question_link"){
             createQuestionLink(selectedChoice);
         }
-        console.log(selectedChoice)//please don't delete, for testing
+        //console.log(selectedChoice)//please don't delete, for testing
     }
 }
 
-
-//// The main function
+//// The main function ////
 function my_function() {
-    console.log("my_function currentIndex: "+currentIndex)//please don't delete, for testing
-    console.log("my_function choiceStack:"+choiceStack)//please don't delete, for testing
+    //console.log("my_function currentIndex: "+currentIndex)//please don't delete, for testing
+    //console.log("my_function choiceStack:"+choiceStack)//please don't delete, for testing
 
     const buttons = document.querySelectorAll(".button");
 
-    const buttonBack = document.getElementById('back');
-    if (buttonBack) {
-        buttonBack.addEventListener("click", ButtonBack);
-    }
-
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
-            console.log("clicked on  "+button.textContent)//please don't delete, for testing
+            //console.log("clicked on  "+button.textContent)//please don't delete, for testing
 
             const choiceId = button.getAttribute("id");
 
             if (choiceId != "back") {
+                // for every not back button
                 choiceStack = choiceStack.slice(0, currentIndex + 1);
                 currentIndex++;
                 choiceStack.push(choiceId);
+
+                showUserChoise(button.textContent);
+                navigateToChoice(choiceId)
+
+            }else{
+                //for every button back
+                showUserChoise(button.textContent);
+                ButtonBack()
             }
-
-            showUserChoise(button.textContent);
-
-            navigateToChoice(choiceId)
 
             scrollToBottomSmoothly(1000);
             my_function();
+
+            
         });
     });
 }
+
+
 my_function();
 
 /*

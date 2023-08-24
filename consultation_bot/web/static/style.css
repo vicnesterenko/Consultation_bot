@@ -92,7 +92,8 @@ a {
 .sreviews {
     display: flex;
     color: #FFF2F8;
-    max-width: 800px;
+    /* max-width: 800px; */
+    max-width: 70%;
 }
 
 .sreviews div {
@@ -176,6 +177,7 @@ a {
     color: #121212;
     float: right;
     margin: 5px;
+    max-width: 40%;
 }
 
 .from-user:before {
