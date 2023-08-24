@@ -134,8 +134,6 @@ function createQuestionLink(obj){
 
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
-    var sreviewsSection = document.createElement("section");
-    sreviewsSection.className = "sreviews";
 
     // Create first message/messages
     obj.q.forEach(function (que){
@@ -157,6 +155,9 @@ function createQuestionLink(obj){
 
     // Create links
     obj.links.forEach(function (link) {
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+
         var linkElement = document.createElement("a");
         linkElement.setAttribute("class", "");
         linkElement.setAttribute("href", link["url"]);
@@ -166,7 +167,8 @@ function createQuestionLink(obj){
         fromBotDiv.setAttribute("class", "from-bot");
         fromBotDiv.appendChild(linkElement);
 
-        toDoButtonsDiv.appendChild(fromBotDiv)
+        sreviewsSection.appendChild(fromBotDiv);
+        toDoButtonsDiv.appendChild(sreviewsSection)
     });
 
     // Create buttons
