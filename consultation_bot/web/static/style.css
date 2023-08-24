@@ -109,7 +109,8 @@ a {
     clear: both;
 }
 
-.clear, .clear2 {
+.clear,
+.clear2 {
     clear: both
 }
 
@@ -213,6 +214,8 @@ a {
     background-color: #F6C1BB;
     border: none;
     border-radius: 3px;
+    height: 40px;
+    line-height: 1px;
 }
 
 .button-manager {
