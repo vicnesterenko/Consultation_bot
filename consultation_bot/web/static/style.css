@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1440px;
+    height: 860px;
+    max-width: 1440px;
+    padding: 0 16px;
+    background-image: url(img/screen.png);
+}
+
+body,
+p {
+    font-family: Roboto !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+#openModalBtn {
+    border-radius: 50%;
+    background-color: #D23076;
+}
+
+#chatModal {
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #121212;
+    width: 350px;
+    height: 544px;
+    background-color: #FFF2F8;
+}
+
+.header {
+    padding: 10px 0 0;
+    text-align: center;
+    height: 54px;
+    background-color: #FFD6E7;
+}
+
+.header_text {
+    text-align: center;
+    color: #12121280;
+}
+
+.grreetings {
+    display: flex;
+    margin: 45px 0 70px;
+    align-items: center;
+}
+
+.greetings_text {
+    margin: 0 0 0 15px;
+    color: #121212;
+}
+
+.wrapper_modal {
+    height: 100%;
+}
+
+.modal {
+    height: inherit;
+    position: relative;
+}
+
+.wrapper_modal-content {
+    padding: 20px;
+    overflow: scroll;
+    height: 440px;
+}
+
+.user-answers,
+.to-do-buttons {
+    padding: 20px 0 0 0;
+    margin: 20px 0 10px 0;
+}
+
+.both {
+    height: 34px;
+}
+
+/* Здесь махинации с диалоговым облачком (вопрос бота)*/
+.sreviews {
+    display: flex;
+    color: #FFF2F8;
+    /* max-width: 800px; */
+    max-width: 70%;
+}
+
+.sreviews div {
+    max-width: 400px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+}
+
+.sreviews div:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clear,
+.clear2 {
+    clear: both
+}
+
+.from-bot {
+    position: relative;
+    padding: 8px 12px;
+    background: #CFD8DC;
+    border-radius: 25px;
+    color: black;
+    float: left;
+    margin: 5px;
+}
+
+.from-bot:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: -2px;
+    height: 5px;
+    border-left: 20px solid #CFD8DC;
+    border-bottom-right-radius: 33px 14px;
+    transform: translate(0, -2px) rotate(-25deg);
+}
+
+.from-bot:after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -3px;
+    left: 24px;
+    width: 13px;
+    height: 5px;
+    background: #FFF2F8;
+    border-bottom-right-radius: 10px;
+    transform: translate(-30px, -2px) rotate(307deg);
+}
+
+/*Здесь махинации с диалоговым облачком (ответ пользователя)*/
+.answers {
+    display: flex;
+    color: #FFF2F8;
+    max-width: 800px;
+}
+
+.answers div {
+    max-width: 400px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+}
+
+.answers div:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.from-user {
+    position: relative;
+    padding: 8px 12px;
+    background: #BDE6F9;
+    border-radius: 25px;
+    color: #121212;
+    float: right;
+    margin: 5px;
+    max-width: 40%;
+}
+
+.from-user:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: 1px;
+    right: 0px;
+    height: 5px;
+    border-right: 20px solid #BDE6F9;
+    border-bottom-left-radius: 33px 14px;
+    transform: translate(0, -2px) rotate(25deg);
+}
+
+.from-user:after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -4px;
+    right: -35px;
+    width: 12px;
+    height: 7px;
+    background: #FFF2F8;
+    border-bottom-left-radius: 10px;
+    transform: translate(-30px, -2px) rotate(48deg);
+}
+
+/* махинации закончились*/
+
+.button {
+    margin: 3px;
+    padding: 10px;
+    background-color: #F6C1BB;
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 1px;
+}
+
+.button-manager {
+    background-color: #C9E3E1;
+}
+
+.button-prev {
+    background-color: #DEE2E3;
+}
+
+.button:hover {
+    background-color: #E2847A;
+    color: #FDFCFC;
+}
+
+.button-prev:hover {
+    background-color: #97ACB6;
+}
+
+.button-manager:hover {
+    background-color: #90BBB7;
+    color: #FDFCFC;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+}
+
+.product-item_wrap {
+    padding: 6px;
+}
+
+.product-item {
+    padding: 5px;
+    border: 1px solid #E4CBE2;
+    background-color: #FDFCFC;
+    overflow: hidden;
+    width: 83px;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item:hover {
+    background-color: #F5E6E6;
+}
+
+.product-item_text {
+    white-space: nowrap;
+    padding: 3px 0 0 0;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #121212;
+}
+
+.chatting {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.chatting_input {
+    height: 100%;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    width: 60%;
+}
+
+.chatting_input:hover {
+    background-color: #C9E3E1;
+    outline: none;
+}
+
+.chatting_button {
+    border: none;
+    background-color: #F8D7E4;
+    padding: 5px 17px;
+    width: 25%;
+}
+
+.chatting_emoji_wrapper {
+    width: 15%;
+    position: relative;
+    background-color: white;
+}
+
+.chatting_emoji {
+    display: inline-block;
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.chatting-emoji_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Приколы с анимацией и позиционированием чата*/
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    bottom: 2%;
+    right: 5%;
+    padding: 4px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+    background-color: #D23076;
+    border-radius: 50%;
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    top: 66px;
+    right: 41px;
+    bottom: 0;
+    z-index: 99;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
