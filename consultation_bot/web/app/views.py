@@ -94,7 +94,7 @@ import uuid
 def read_data():
     import pathlib
 
-    path = pathlib.Path(settings.BASE_DIR / "app/data/maria.json")
+    path = pathlib.Path(settings.BASE_DIR / "app/data/data.json")
     with path.open(encoding="utf-8") as f:
         return json.load(f)
 
