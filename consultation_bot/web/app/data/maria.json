@@ -877,7 +877,7 @@
                 },
                 {
                     "label": "Для іграшки",
-                    "next_id": "praktyka_category"
+                    "next_id": "toys.1"
                 },
                 {
                     "label": "Для чутливої міклофлори",
@@ -896,6 +896,115 @@
                     "next_id": "back"
                 }
             ]
+        },
+        "toys.1": {
+            "type": "question",
+            "q": "З якого матеріалу твоя іграшка?",
+            "options": [
+                {
+                    "label": "Метал",
+                    "next_id": "materials.1"
+                },
+                {
+                    "label": "Скло",
+                    "next_id": "materials.2"
+                },
+                {
+                    "label": "Силікон",
+                    "next_id": "materials.3"
+                },
+                {
+                    "label": "ТПЕ",
+                    "next_id": "materials.4"
+                },
+                {
+                    "label": "ПВХ",
+                    "next_id": "materials.5"
+                },
+                {
+                    "label": "Не знаю",
+                    "next_id": "dont_know"
+                }
+            ]
+        },
+        "dont_know": {
+            "type": "question",
+            "q": "Цю інформацію можна знайти на упаковці або на сайті",
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "toys.2"
+                }
+            ]
+        },
+        "toys.2": {
+            "type": "question",
+            "q": "З якого матеріалу твоя іграшка?",
+            "options": [
+                {
+                    "label": "Метал",
+                    "next_id": "materials.1"
+                },
+                {
+                    "label": "Скло",
+                    "next_id": "materials.2"
+                },
+                {
+                    "label": "Силікон",
+                    "next_id": "materials.3"
+                },
+                {
+                    "label": "ТПЕ",
+                    "next_id": "materials.4"
+                },
+                {
+                    "label": "ПВХ",
+                    "next_id": "materials.5"
+                }
+            ]
+        },
+        "materials.1": {
+            "type": "question",
+            "q": "З металом сумісні лубриканти на будь-якій основі!",
+            "next_id": "type_of_sex"
+        },
+        "materials.2": {
+            "type": "message",
+            "message": "Скло гіпоалергенний і абсолютно не пористий матеріал, що не вимагає особливого догляду",
+            "next_id": "type_of_sex"
+        },
+        "materials.3": {
+            "type": "message",
+            "message": "З силіконом сумісні усі лубриканти на водній основі і деякі на гібридній",
+            "next_id": "type_of_sex"
+        },
+        "materials.4": {
+            "type": "message",
+            "message": "З ТПЕ сумісні усі лубриканти на водній основі і деякі на змішаній",
+            "next_id": "type_of_sex"
+        },
+        "materials.5": {
+            "type": "message",
+            "message": "З ПВХ сумісні усі лубриканти на водній основі і деякі на змішаній",
+            "next_id": "type_of_sex"
+        },
+        "type_of_sex": {
+            "type": "question",
+            "q": "Тобі для якого сексу?",
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "default-1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "default-1": {
+            "type": "message",
+            "message": "Назад"
         },
         "choose_sex": {
             "type": "question",
