@@ -877,7 +877,7 @@
                 },
                 {
                     "label": "Для іграшки",
-                    "next_id": "praktyka_category"
+                    "next_id": "toys.1"
                 },
                 {
                     "label": "Для чутливої міклофлори",
@@ -1092,6 +1092,268 @@
                     "next_id": "back"
                 }
             ]
+        },
+        
+        "toys.1": {
+            "type": "question",
+            "q": "З якого матеріалу твоя іграшка?",
+            "options": [
+                {
+                    "label": "Метал",
+                    "next_id": "materials.1"
+                },
+                {
+                    "label": "Скло",
+                    "next_id": "materials.2"
+                },
+                {
+                    "label": "Силікон",
+                    "next_id": "materials.3"
+                },
+                {
+                    "label": "ТПЕ",
+                    "next_id": "materials.4"
+                },
+                {
+                    "label": "ПВХ",
+                    "next_id": "materials.5"
+                },
+                {
+                    "label": "Не знаю",
+                    "next_id": "dont_know"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "dont_know": {
+            "type": "question",
+            "q": "Цю інформацію можна знайти на упаковці або на сайті",
+            "options": [
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "toys.2"
+                }
+            ]
+        },
+        "toys.2": {
+            "type": "question",
+            "q": "З якого матеріалу твоя іграшка?",
+            "options": [
+                {
+                    "label": "Метал",
+                    "next_id": "materials.1"
+                },
+                {
+                    "label": "Скло",
+                    "next_id": "materials.2"
+                },
+                {
+                    "label": "Силікон",
+                    "next_id": "materials.3"
+                },
+                {
+                    "label": "ТПЕ",
+                    "next_id": "materials.4"
+                },
+                {
+                    "label": "ПВХ",
+                    "next_id": "materials.5"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials.1": {
+            "type": "question",
+            "q": "З металом сумісні лубриканти на будь-якій основі! Але потрібно обрати, для якого сексу ви їх будете використовувати",
+            "options":[
+               {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+ 
+        },
+       "material_1.1": {
+            "type": "link",
+            "label": "Вагінал",
+            "texts": [
+                {
+                    "name": "Жіночий лубрикант Pjur Woman",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203?utm_source=t_bot"
+                },
+                {
+                    "name": "Лубрикант на водній основі Pjur Woman Nude",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601?utm_source=t_bot "
+                },
+                {
+                    "name": "Лубрикант System JO Agape Original",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-original?utm_source=t_bot "
+                },
+                {
+                    "name": "Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula?utm_source=t_bot "
+                },
+                {
+                    "name": "Гібриндий лубрикант на основі кокосової олії і води ",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-silicone-free-hybrid-original"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Aнальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]},
+
+            "material_1.2": {
+            "type": "link",
+            "label": "Вагінал",
+            "texts": [
+                {
+                    "name": "Анальний лубрикант Pjur Back Door Water",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml?utm_source=t_bot"
+                },
+                {
+                    "name": "Анальний лубрикант Pjur Back Door ",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-back-door-glide-pjurbd-100?utm_source=t_bot"
+                },
+                {
+                    "name": "Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula#/504-ob_yem-125_ml?utm_source=t_bot"
+                },
+                {
+                    "name": "Густий лубрикант Sensuva Ultra-Thick Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-ultra-thick-hybrid-formula?utm_source=t_bot"
+                },
+                {
+                    "name": "Гібриндий лубрикант на основі кокосової олії і води ",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-silicone-free-hybrid-original"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                 {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]},
+        
+          "materials.2": {
+            "type": "question",
+            "q": "Скло гіпоалергенний і абсолютно не пористий матеріал, що не вимагає особливого догляду,Тож під час вибору лубиканту орієнтуйся на власні вподобання.Але потрібно обрати, для якого сексу ви їх будете використовувати.",
+            "options":[
+               {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+ 
+        },
+       
+        "materials.3": {
+            "type": "question",
+            "q": "З силіконом сумісні усі лубриканти на водній основі і деякі на гібридній. Але потрібно обрати, для якого сексу ви їх будете використовувати.",
+            "options":[
+               {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+ 
+        },
+        "materials.4": {
+            "type": "question",
+            "q": "З ТПЕ сумісні усі лубриканти на водній основі і деякі на змішаній. Лубриканти на водній основі дають відчуття зволоженості, перешкоджають натиранню і мікротравмам геніталій під час використання іграшок.Також вони дозволять зберігати матеріал іграшки незмінним тривалий час (при правильній експлуатації). Отже, з правильним лубрикантом і геніталіям комфорнто і іграшка щоразу як щойно з коробки! Але потрібно обрати, для якого сексу ви їх будете використовувати",
+            "options":[
+               {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+ 
+        },
+        "materials.5": {
+            "type": "question",
+            "q": "З ПВХ сумісні лубриканти на будь-якій основі!Але потрібно обрати, для якого сексу ви їх будете використовувати.",
+            "options":[
+               {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+ 
+        },
+        "type_of_sex": {
+            "type": "question",
+            "q": "Тобі для якого сексу?",
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "default-1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "default-1"
+                }
+            ]
+        },
+        "default-1": {
+            "type": "message",
+            "message": "Назад"
         }
     }
+    
 ]
