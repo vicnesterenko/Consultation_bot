@@ -1134,40 +1134,11 @@
             "options": [
                 {
                     "label": "Назад ↩️",
-                    "next_id": "toys.2"
+                    "next_id": "toys.1"
                 }
             ]
         },
-        "toys.2": {
-            "type": "question",
-            "q": "З якого матеріалу твоя іграшка?",
-            "options": [
-                {
-                    "label": "Метал",
-                    "next_id": "materials.1"
-                },
-                {
-                    "label": "Скло",
-                    "next_id": "materials.2"
-                },
-                {
-                    "label": "Силікон",
-                    "next_id": "materials.3"
-                },
-                {
-                    "label": "ТПЕ",
-                    "next_id": "materials.4"
-                },
-                {
-                    "label": "ПВХ",
-                    "next_id": "materials.5"
-                },
-                {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                }
-            ]
-        },
+        
         "materials.1": {
             "type": "question",
             "q": "З металом сумісні лубриканти на будь-якій основі! Але потрібно обрати, для якого сексу ви їх будете використовувати",
