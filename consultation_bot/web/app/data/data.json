@@ -116,6 +116,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -154,6 +158,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -192,6 +200,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -226,6 +238,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -264,6 +280,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -302,6 +322,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -344,6 +368,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -378,6 +406,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -416,6 +448,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -454,6 +490,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -492,6 +532,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -526,6 +570,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -564,6 +612,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -602,6 +654,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -624,6 +680,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -642,6 +702,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -660,6 +724,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -678,6 +746,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -692,6 +764,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -706,6 +782,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -720,6 +800,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -752,6 +836,10 @@
                 {
                     "label": "НАЗАД ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -766,6 +854,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -802,6 +894,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -812,6 +908,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -830,6 +930,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -864,6 +968,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -894,6 +1002,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -916,6 +1028,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -934,6 +1050,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -952,6 +1072,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -976,6 +1100,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -983,14 +1111,27 @@
             "type": "link",
             "label": "Фруктово-ягідні",
             "texts": [
-                "Лубрикант для чутливої мікрофлори зі смаком полуниці https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields?utm_source=t_bot",
-                "Зі смаком апельсинового морозива https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle?utm_source=t_bot",
-                "Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry?utm_source=t_bot"
+                {
+                    "name": "Лубрикант для чутливої мікрофлори зі смаком полуниці",
+                    "url": "https://lovespace.ua/uk/products/lubrikantsystem-jo-naturalove-usda-strawberry-fields"
+                },
+                {
+                    "name": "Зі смаком апельсинового морозива",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle"
+                },
+                {
+                    "name": "Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry"
+                }
             ],
             "options": [
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -998,13 +1139,19 @@
             "type": "link",
             "label": "Спробувати набори",
             "texts": [
-                "Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
-                "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors?utm_source=t_bot"
+                {
+                    "name": "Їстівні лубриканти на водній основі з фруктово-ягідними смаками",
+                    "url": "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors"
+                }
             ],
             "options": [
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -1046,6 +1193,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
@@ -1090,6 +1241,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         }

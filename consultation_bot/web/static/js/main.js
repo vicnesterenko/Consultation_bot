@@ -24,10 +24,6 @@ menuItems.forEach(
     }
 )
 
-/////////////////////////////////////////////////////
-// paste all json here
-// var data = JSON.parse('{{ data | safe }}');
-
 function showUserChoise(text) {
     var contentBlock = document.querySelector('.modal-content');
 
@@ -69,15 +65,6 @@ function createButtons(obj){
     });
     return buttonsDiv;
 }
-
-/**
-function findNextInfo(data, next_id) {
-    console.log(data)//TODO testing
-    console.log(next_id)//TODO testing
-    obj = data[next_id];
-    return obj;
-}
-*/
 
 function createToDoButtons(obj) {
     var contentBlock = document.querySelector('.modal-content');
@@ -259,9 +246,9 @@ function navigateToChoice(choiceId) {
 }
 
 //// The main function ////
-function my_function() {
-    //console.log("my_function currentIndex: "+currentIndex)//please don't delete, for testing
-    //console.log("my_function choiceStack:"+choiceStack)//please don't delete, for testing
+function main() {
+    //console.log("main currentIndex: "+currentIndex)//please don't delete, for testing
+    //console.log("main choiceStack:"+choiceStack)//please don't delete, for testing
 
     const buttons = document.querySelectorAll(".button");
 
@@ -287,116 +274,11 @@ function my_function() {
             }
 
             scrollToBottomSmoothly(1000);
-            my_function();
+            main();
 
-            
         });
     });
 }
 
 
-my_function();
-
-/*
-Потуга №1
-
-function ButtonBack(previousId, previousOptions) {
-    // createToDoButtons(previousObj);
-    // var previousObj = findNextInfo(data, previousId);
-    // if (previousObj) {
-    //     if (previousObj["type"] == "link") {
-    //         createLinks(previousObj);
-    //     } else if (previousObj["type"] == "question"  previousObj["type"] == "question_link") {
-    //         createToDoButtons(previousObj);
-    //         if (previousObj["type"] == "question") {
-    //             // previousOptions.pop(); // Remove the last option from previousOptions
-    //         }
-    //     }
-    //     scrollToBottomSmoothly(1000);
-    //     my_function();
-    // }
-    var buttonBack = document.getElementById('back')
-
-
-    //var contentBlock = document.querySelector('.modal-content');
-
-    // var backButtonDiv = document.createElement("div");
-    // backButtonDiv.className = "back-button";
-
-    // var backButton = document.createElement("button");
-    // backButton.className = "button-back";
-    // backButton.textContent = "Назад ↩️";
-    buttonBack.addEventListener("click", function () {
-        // contentBlock.innerHTML = ""; // Clear the content
-        //console.log('ololo')
-
-        // showUserChoise("Назад ↩️");
-        var previousObj = findNextInfo(data, previousId);
-        if (previousObj) {
-            if (previousObj["type"] == "link") {
-                createLinks(previousObj);
-            } else if (previousObj["type"] == "question" || previousObj["type"] == "question_link") {
-                createToDoButtons(previousObj);
-                if (previousObj["type"] == "question") {
-                    // previousOptions.pop(); // Remove the last option from previousOptions
-                }
-            }
-            scrollToBottomSmoothly(1000);
-            my_function();
-        }
-    });
-
-    // backButtonDiv.appendChild(backButton);
-    // contentBlock.appendChild(backButtonDiv);
-}
-let previousOptions = [];
-
-function my_function() {
-    const buttons = document.querySelectorAll(".button");
-
-    buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            showUserChoise(button.textContent);
-            console.log(previousOptions)
-            obj = findNextInfo(data, button.getAttribute("id"));
-
-            debugger
-            if (previousOptions.length > 0) {
-                ButtonBack(previousOptions[previousOptions.length - 1], previousOptions);
-            } else {
-                previousOptions.push('main_1')
-            }
-
-            console.log(obj) //TODO testing
-            if (obj) {
-                if (obj["type"] == "link") {
-                    console.log("It's a link"); //TODO testing
-                    createLinks(obj);
-                    previousOptions.push(button.getAttribute("id")); // Store the current option ID
-                    const prev_id = previousOptions[0];
-                    ButtonBack(prev_id, previousOptions);
-
-                } else if (obj["type"] == "question") {
-                    console.log("It's a question"); //TODO testing
-                    createToDoButtons(obj);
-                    previousOptions.push(button.getAttribute("id")); // Store the current option ID
-                    const prev_id = previousOptions.length >= 2
-                        ? previousOptions[previousOptions.length - 2]
-                        : previousOptions[0];
-                    ButtonBack(prev_id, previousOptions);
-                } else if (obj["type"] == "question_link") {
-                    console.log("It's a question with links"); //TODO testing
-                    // function for this type
-                    previousOptions.push(button.getAttribute("id")); // Store the current option ID
-                    ButtonBack(button.getAttribute("id"), previousOptions);
-                }
-
-                scrollToBottomSmoothly(1000);
-                my_function(); // restart the function to add eventlistener for new buttons
-            }
-        });
-    });
-}
-
-my_function();
-*/
+main();
