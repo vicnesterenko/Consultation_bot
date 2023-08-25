@@ -75,11 +75,11 @@
                                     <div class="to-do-buttons">
                                         <section class="sreviews">
                                             <div class="from-bot">
-                                                <p>{{ data_for_main.main_1.q }}</p>
+                                                <p>{{ data.main_1.q }}</p>
                                             </div>
                                         </section>
                                         <div class="buttons">
-                                            {% for option in data_for_main.main_1.options %}
+                                            {% for option in data.main_1.options %}
                                                     <button id="{{option.next_id}}" class="button">{{ option.label }}</button>
                                             {% endfor %}
                                         </div>
@@ -292,7 +292,7 @@
     <script>
         // Define JavaScript variables using Django template tags
         // Pass the data from views.py context
-        var data = JSON.parse('{{ data | safe }}');
+        var data = ({{ data | safe }});
     </script>
     <script src="{% static 'js/main.js'%}"></script>
 

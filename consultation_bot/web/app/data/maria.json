@@ -41,6 +41,9 @@
                     "url": "https://www.instagram.com/lovespace.ua/"
                 }
             ],
+            "img": [
+                "<div style=\"width:200px;max-width:100%;\"><div style=\"height:0;padding-bottom:100%;position:relative;\"><iframe width=\"200\" height=\"200\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameBorder=\"0\" src=\"https://imgflip.com/embed/7wwofy\"></iframe></div><p><a href=\"https://imgflip.com/gif/7wwofy\"></a></p></div>"
+            ],
             "options": [
                 {
                     "label": "Назад ↩️",
@@ -1053,6 +1056,9 @@
                 "Вибач, друже 😔",
                 "Дані категорії знаходяться ще y розробці. Наша команда LOVESPACE підготувала для тебе навчальні матеріали на каналі Нормальна практика.",
                 "😏 Хтива рекомендація для тебе"
+            ],
+            "img": [
+                "<a href=\"https://imgflip.com/i/7wwtp1\"><img width=\"200px\", height=\"200px\", src=\"https://i.imgflip.com/7wwtp1.jpg\" title=\"made at imgflip.com\"/></a><div><a href=\"https://imgflip.com/memegenerator\"></a></div>"
             ],
             "links": [
                 {

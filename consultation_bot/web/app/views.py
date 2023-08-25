@@ -125,11 +125,6 @@ def question(request, question_id: str):
 
 # my function to render index1.html
 def my_index(request):
-    context = {
-        "data_for_main": DATA[0],
-        "data": json.dumps(
-            DATA[0]
-        ),  # Because was the problem with reading it in the javascript main.js
-    }
+    context = {"data": DATA[0]}
 
     return render(request, "app/index1.html", context)

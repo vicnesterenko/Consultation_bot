@@ -100,6 +100,13 @@ function createToDoButtons(obj) {
 
     buttonsDiv = createButtons(obj);
 
+    if (obj.img){
+        console.log(obj);
+        var imageDiv = document.createElement("div");
+        imageDiv.className = "img-div";
+        imageDiv.innerHTML = obj.img;
+        toDoButtonsDiv.appendChild(imageDiv);}
+
     toDoButtonsDiv.appendChild(sreviewsSection);
     toDoButtonsDiv.appendChild(buttonsDiv);
 
@@ -125,12 +132,18 @@ function createLinks(obj) {
         toDoButtonsDiv.appendChild(fromBotDiv)
     });
 
+    if (obj.img){
+        console.log(obj);
+        var imageDiv = document.createElement("div");
+        imageDiv.className = "img-div";
+        imageDiv.innerHTML = obj.img;
+        toDoButtonsDiv.appendChild(imageDiv);}
+
     buttonsDiv = createButtons(obj);
 
     toDoButtonsDiv.appendChild(buttonsDiv);
     contentBlock.appendChild(toDoButtonsDiv);
 }
-
 
 function createQuestionLink(obj){
     var contentBlock = document.querySelector('.modal-content');
@@ -155,6 +168,12 @@ function createQuestionLink(obj){
         toDoButtonsDiv.appendChild(sreviewsSection);
     });
     
+    if (obj.img){
+        console.log(obj);
+        var imageDiv = document.createElement("div");
+        imageDiv.className = "img-div";
+        imageDiv.innerHTML = obj.img;
+        toDoButtonsDiv.appendChild(imageDiv);}
 
     // Create links
     obj.links.forEach(function (link) {
