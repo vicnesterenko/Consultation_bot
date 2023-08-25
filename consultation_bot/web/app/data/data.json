@@ -72,12 +72,12 @@
                     "next_id": "unlim_gift.1"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -114,12 +114,12 @@
                     "next_id": "uah500_gift.2"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -156,12 +156,12 @@
                     "next_id": "uah500_gift.3"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -198,12 +198,12 @@
                     "next_id": "uah500_gift.4"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -236,12 +236,12 @@
             ],
             "options": [
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -278,12 +278,12 @@
                     "next_id": "uah1000_gift.2"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -320,12 +320,12 @@
                     "next_id": "uah1000_gift.3"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -366,12 +366,12 @@
                     "next_id": "uah1000_gift.4"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -404,12 +404,12 @@
             ],
             "options": [
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -446,12 +446,12 @@
                     "next_id": "uah3000_gift.2"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -488,12 +488,12 @@
                     "next_id": "uah3000_gift.3"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -530,12 +530,12 @@
                     "next_id": "uah3000_gift.4"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -610,12 +610,12 @@
                     "next_id": "unlim_gift.2"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -652,12 +652,12 @@
                     "next_id": "unlim_gift.3"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -700,12 +700,12 @@
                     "next_id": "didnt_fit"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -722,12 +722,12 @@
                     "next_id": "how_to_return"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -744,12 +744,12 @@
                     "next_id": "batteries"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -762,12 +762,12 @@
                     "next_id": "charging_done"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -780,12 +780,12 @@
                     "next_id": "charge_checking_done"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -798,12 +798,12 @@
                     "next_id": "lock_check_done"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -852,12 +852,12 @@
                     "next_id": "charge_checking_done"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -892,12 +892,12 @@
                     "next_id": "and_secondly"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -928,12 +928,12 @@
                     "next_id": "praktyka_category"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -966,56 +966,56 @@
                     "next_id": "praktyka_category"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
         "choose_lub": {
             "type": "question",
-            "q": "Для чого потрібен?:",
+            "q": "Підібрати лубрикант важливо! Від цього залежатиме якість сексу і досвід використання з іграшками! Для чого тобі потрібен лубрикант?",
             "options": [
                 {
-                    "label": "❤️‍🔥Для сексу",
+                    "label": "❤️‍🔥 Для сексу",
                     "next_id": "choose_sex"
                 },
                 {
-                    "label": "Для іграшки",
-                    "next_id": "praktyka_category"
+                    "label": "😊 Для іграшки",
+                    "next_id": "toys.1"
                 },
                 {
-                    "label": "Для чутливої міклофлори",
-                    "next_id": "praktyka_category"
+                    "label": "🌷 Для чутливої міклофлори",
+                    "next_id": "for_sensitive_microflora"
                 },
                 {
-                    "label": "Для фістінгу",
-                    "next_id": "praktyka_category"
+                    "label": "🤜 Для фістінгу",
+                    "next_id": "for_fisting"
                 },
                 {
-                    "label": "Для мастурбації",
-                    "next_id": "praktyka_category"
-                },
-                {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
+                    "label": "👌 Для мастурбації",
+                    "next_id": "for_masturbation"
                 },
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
         "choose_sex": {
             "type": "question",
-            "q": "Для чого потрібен?:",
+            "q": "Для якого виду сексу тобі потрібен лубрикант?:",
             "options": [
                 {
                     "label": "🌸 Для вагінального",
-                    "next_id": "praktyka_category"
+                    "next_id": "vaginal"
                 },
                 {
                     "label": "👅 Для орального",
@@ -1023,15 +1023,321 @@
                 },
                 {
                     "label": "🍑 Для анального",
-                    "next_id": "praktyka_category"
-                },
-                {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
+                    "next_id": "anal"
                 },
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "vaginal": {
+            "type": "question",
+            "q": "Чи будете ви використовувати презерватив?",
+            "options": [
+                {
+                    "label": "Так, з презервативом",
+                    "next_id": "with_condom"
+                },
+                {
+                    "label": "Без презервативу",
+                    "next_id": "without_condom"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "with_condom": {
+            "type": "question",
+            "q": "Виробники презервативів в усьому світі рекомендують використовувати лубрикант. 💦 Це зменшує тертя та ризик того, що презерватив прорветься. З презервативами сумісні лубриканти на будь-якій основі. Який вам порадити? 😊",
+            "options": [
+                {
+                    "label": "Яка різниця? 🤔",
+                    "next_id": "does_matter"
+                },
+                {
+                    "label": "На водній 💧",
+                    "next_id": "waterbased_lube"
+                },
+                {
+                    "label": "На силіконовій 💛",
+                    "next_id": "siliconebased_lube"
+                },
+                {
+                    "label": "На змішаній 🌪",
+                    "next_id": "mixbased_lube"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "does_matter": {
+            "type": "question",
+            "q": "Лубрикант на водній 💧 основі дозволяє забезпечити оптимальне зволоження і перешкоджає натиранню. Лубрикант на силіконовій 💛 дає більше ковзання. Лубрикант на змішаній 🌪 поєднує в собі найкращі властивості обох. Який бажаєте спробувати?",
+            "options": [
+                {
+                    "label": "На водній 💧",
+                    "next_id": "waterbased_lube"
+                },
+                {
+                    "label": "На силіконовій 💛",
+                    "next_id": "siliconebased_lube"
+                },
+                {
+                    "label": "На змішаній 🌪",
+                    "next_id": "mixbased_lube"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "waterbased_lube": {
+            "type": "question",
+            "q": "Лубрикант на водній 💧 основі дає більше зволоження та відчуття «вологого сексу». Хочеться лубрикант з ароматом чи без?",
+            "options": [
+                {
+                    "label": "З ароматом 👃",
+                    "next_id": "with_aroma"
+                },
+                {
+                    "label": "Без аромату 🚫",
+                    "next_id": "without_aroma"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "with_aroma": {
+            "type": "question",
+            "q": "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?",
+            "options": [
+                {
+                    "label": "Десерт 🍰",
+                    "next_id": "dessert"
+                },
+                {
+                    "label": "Фруктово-ягідні 🍓",
+                    "next_id": "fruit_berry"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "without_condom": {
+            "type": "question_link",
+            "q": [
+                "Секс без презерватива часто однаково потребує додаткових ефектів!",
+                "Тож сміливо можна спробувати поекспериментувати з лубрикантами на різних основах і з додатковим фішками (зігріваючі, охолоджуючі, з ефектом вібрації)"
+            ],
+            "links": [
+                {
+                    "name": "1️⃣ Класичний безгліцериновий лубрикант на водній основі, що підійде найчутливішим",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601"
+                },
+                {
+                    "name": "2️⃣ Лубрикант на силіконовій основі — просто масттрай для сексу! Легка текстура, тривале ковзання і відчуття доглянутої інтимної зони",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203"
+                },
+                {
+                    "name": "3️⃣ Гібридний лубрикант на водно-масляній основі — оптимальне поєднання ковзання і зволоженості",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-silicone-free-hybrid-original"
+                },
+                {
+                    "name": "4️⃣ Гібридний лубрикант на водно-силіконовій основі",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "siliconebased_lube": {
+            "type": "question_link",
+            "q": [
+                "Лубриканти на силіконовій 💛 основі дають класне ковзання і абсолютно гіпоалергенні.",
+                "Рекомендуємо спробувати ці 👇"
+            ],
+            "links": [
+                {
+                    "name": "1️⃣ Pjur Woman",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203"
+                },
+                {
+                    "name": "2️⃣ Sensuva Premium Silicone",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-silikonovoj-osnove-sensuva-premium-silicone"
+                },
+                {
+                    "name": "3️⃣ System JO Premium Original",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-premium-original#/390-ob_yem-30_ml"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "mixbased_lube": {
+            "type": "question_link",
+            "q": [
+                "Водно-силіконова основа особлива тим, що увібрала в себе переваги обох основ і поєднала їх",
+                "Водна — дає відчуття зволоженості, силіконова — забезпечує тривале ковзання",
+                "Рекомендуємо спробувати ці 👇"
+            ],
+            "links": [
+                {
+                    "name": "1️⃣ System JO Classic Hybrid",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-classic-hybrid"
+                },
+                {
+                    "name": "2️⃣ Водно-силіконова з легким ароматом для трьох видів сексу",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-hybrid-formula-blueberry-muffin"
+                },
+                {
+                    "name": "3️⃣ Густий кремоподібний лубрикант",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-ultra-thick-hybrid-formula"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "dessert": {
+            "type": "question_link",
+            "q": [
+                "Ммм...тоді рекомендуємо ось ці ☺️"
+            ],
+            "links": [
+                {
+                    "name": "1️⃣ Зі смаком солоної карамелі",
+                    "url": "https://lovespace.ua/uk/products/sedobnyj-lubrikant-system-jo-gelato-salted-caramel"
+                },
+                {
+                    "name": "2️⃣ Зі смаком чорничного мафіну",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-hybrid-formula-blueberry-muffin"
+                },
+                {
+                    "name": "3️⃣ З ароматом ванілі",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "fruit_berry": {
+            "type": "question_link",
+            "q": [
+                "Серед фруктово-ягідних є великий вибір, але ми пропонуємо зосередитись на 👇"
+            ],
+            "links": [
+                {
+                    "name": "1️⃣  Лубрикант для чутливої мікрофлори зі смаком полуниці",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-strawberry-fields"
+                },
+                {
+                    "name": "2️⃣  Зі смаком апельсинового морозива",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula-orange-creamsicle"
+                },
+                {
+                    "name": "3️⃣  Густий крем-лубрикант з ароматом полуниці. Він має кремову текстуру",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-strawberry"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "without_aroma": {
+            "type": "question_link",
+            "q": [
+                "Тоді можу порекомендувати 👇"
+            ],
+            "links": [
+                {
+                    "name": "1️⃣  Лубрикант на водній основі Pjur Woman Nude",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601"
+                },
+                {
+                    "name": "2️⃣  Лубрикант System JO Agape Original",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-original"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -1048,12 +1354,12 @@
                     "next_id": "oral.1.2"
                 },
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -1062,20 +1368,20 @@
             "q": "Подобається щоб смакувало як десерт? Чи більше фруктово-ягідні смаки?:",
             "options": [
                 {
-                    "label": "Десерт",
+                    "label": "Десерт 🍰",
                     "next_id": "oral.2.1"
                 },
                 {
-                    "label": "Фруктово-ягідні",
+                    "label": "Фруктово-ягідні 🍓",
                     "next_id": "oral.2.2"
-                },
-                {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
                 },
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -1098,12 +1404,12 @@
             ],
             "options": [
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -1126,32 +1432,750 @@
             ],
             "options": [
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
         "oral.1.2": {
-            "type": "link",
-            "label": "Спробувати набори",
-            "texts": [
+            "type": "question_link",
+            "q": [
+                "Рекомендуємо цей"
+            ],
+            "links": [
                 {
-                    "name": "Їстівні лубриканти на водній основі з фруктово-ягідними смаками",
+                    "name": "Їстівні лубриканти на водній основі з фруктово-ягідними смаками ",
                     "url": "https://lovespace.ua/uk/products/nabir-system-jo-tri-me-triple-pack-flavors"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "anal": {
+            "type": "question",
+            "q": "Варто зауважити, що безпечний анальний секс можливий тільки в презервативі. А перед зміною анального сексу на вагінальний, презерватив треба замінити",
+            "options": [
+                {
+                    "label": "Я знаю",
+                    "next_id": "i_know"
+                },
+                {
+                    "label": "Чому?",
+                    "next_id": "why"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "i_know": {
+            "type": "question_link",
+            "q": [
+                "Чудово! Тоді обирайте лубрикант, який подобається. Для анального сексу рекомендуємо спробувати такі лубриканти. Вони сумісні з усіма презервативами 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Анальний лубрикант Pjur Back Door Water",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml"
+                },
+                {
+                    "name": "2. Анальний лубрикант Pjur Back Door",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-back-door-glide-pjurbd-100"
+                },
+                {
+                    "name": "3. Лубрикант на гібридній основі YESforLOV Comfort Performance",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-gibridnoj-osnove-yesforlov"
+                },
+                {
+                    "name": "4. Густий лубрикант Sensuva Ultra-Thick Hybrid Formula Cotton Candy з ароматом солодкої вати",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-smeshannoj-osnove-sensuva-ultra-thick-hybrid-formula-cotton-candy"
+                },
+                {
+                    "name": "5. Лубрикант на силіконовій основі з маслом гвоздики",
+                    "url": "https://lovespace.ua/uk/products/analnyj-lubrikant-na-silikonovoj-osnove-swiss-navy"
                 }
             ],
             "options": [
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                }
+            ]
+        },
+        "why": {
+            "type": "question",
+            "q": "Тому що мікрофлора прямої кишки не повинна потрапляти у вагіну та уретру. Адже це може спричинити різноманітні порушення і хвороби",
+            "options": [
+                {
+                    "label": "Зрозуміло",
+                    "next_id": "i_know"
                 },
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "toys.1": {
+            "type": "question",
+            "q": "З якого матеріалу твоя іграшка? Цю інформацію ти можеш знайти в інструкції або на сайті у виробника",
+            "options": [
+                {
+                    "label": "Метал",
+                    "next_id": "materials.1"
+                },
+                {
+                    "label": "Скло",
+                    "next_id": "materials.2"
+                },
+                {
+                    "label": "Силікон",
+                    "next_id": "materials.3"
+                },
+                {
+                    "label": "ТПЕ",
+                    "next_id": "materials.4"
+                },
+                {
+                    "label": "ПВХ",
+                    "next_id": "materials.5"
+                },
+                {
+                    "label": "Не знаю",
+                    "next_id": "dont_know_material"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "dont_know_material": {
+            "type": "question",
+            "q": "Цю інформацію можна знайти на упаковці або на сайті",
+            "options": [
+                {
+                    "label": "Вже знаю",
+                    "next_id": "for_toy"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials.1": {
+            "type": "question",
+            "q": "З металом сумісні лубриканти на будь-якій основі! Але потрібно обрати, для якого сексу ви їх будете використовувати",
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "material_1.1": {
+            "type": "question_link",
+            "q": [
+                "Рекомендуємо ці 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Жіночий лубрикант Pjur Woman",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203"
+                },
+                {
+                    "name": "2. Лубрикант на водній основі Pjur Woman Nude",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601"
+                },
+                {
+                    "name": "3. Лубрикант System JO Agape Original",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-original"
+                },
+                {
+                    "name": "4. Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula"
+                },
+                {
+                    "name": "5. Гібриндий лубрикант на основі кокосової олії і води",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-silicone-free-hybrid-original"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Для анального",
+                    "next_id": "i_know"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "material_1.2": {
+            "type": "link",
+            "label": "Вагінал",
+            "texts": [
+                {
+                    "name": "Анальний лубрикант Pjur Back Door Water",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml?utm_source=t_bot"
+                },
+                {
+                    "name": "Анальний лубрикант Pjur Back Door ",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-back-door-glide-pjurbd-100?utm_source=t_bot"
+                },
+                {
+                    "name": "Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula#/504-ob_yem-125_ml?utm_source=t_bot"
+                },
+                {
+                    "name": "Густий лубрикант Sensuva Ultra-Thick Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-ultra-thick-hybrid-formula?utm_source=t_bot"
+                },
+                {
+                    "name": "Гібриндий лубрикант на основі кокосової олії і води ",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-silicone-free-hybrid-original"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials.2": {
+            "type": "question",
+            "q": "Скло гіпоалергенний і абсолютно не пористий матерал, що не вимагає особливого догляду. Тож під час вибору лубиканту орієнтуйся на власні вподобання. Але потрібно обрати, для якого сексу ви їх будете використовувати",
+            "options": [
+                {
+                    "label": "Для вагінального",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анального",
+                    "next_id": "material_1.2"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials.3": {
+            "type": "question",
+            "q": "З силіконом сумісні усі лубриканти на водній основі і деякі на гібридній. Але потрібно обрати, для якого сексу ви їх будете використовувати.",
+            "options": [
+                {
+                    "label": "Для вагінального",
+                    "next_id": "material_3.1"
+                },
+                {
+                    "label": "Анального",
+                    "next_id": "material_3.2"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "material_3.1": {
+            "type": "question_link",
+            "q": [
+                "Для вагінального сексу підійдуть 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Лубрикант на водній основі Pjur Woman Nude",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601"
+                },
+                {
+                    "name": "2. Лубрикант System JO Agape Original",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-original"
+                },
+                {
+                    "name": "3. Лубрикант на водній основі System JO Naturalove USDA Organic Personal",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-naturalove-usda-organic-personal"
+                },
+                {
+                    "name": "4. Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "material_3.2": {
+            "type": "question_link",
+            "q": [
+                "Для анального сексу підійдуть"
+            ],
+            "links": [
+                {
+                    "name": "1. Лубрикант на водній основі Pjur Analyse Me Comfort",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-analyse-me-comfort-water-ps1488"
+                },
+                {
+                    "name": "2. Анальний лубрикант Anal Gel",
+                    "url": "https://lovespace.ua/uk/products/analnij-lubrikant-anal-gel"
+                },
+                {
+                    "name": "3. Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Для вагінального",
+                    "next_id": "for_vaginal_sex_silicon"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials.4": {
+            "type": "question",
+            "q": "З ТПЕ сумісні усі лубриканти на водній основі і деякі на змішаній. Лубриканти на водній основі дають відчуття зволоженості, перешкоджають натиранню і мікротравмам геніталій під час використання іграшок. Також вони дозволять зберігати матеріал іграшки незмінним тривалий час (при правильній експлуатації) Отже, з правильним лубрикантом і геніталіям комфорнто і іграшка щоразу як щойно з коробки! Але потрібно обрати, для якого сексу ви їх будете використовувати 👇",
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "material_4.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "material_4.2"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "material_4.1": {
+            "type": "question_link",
+            "q": [
+                "Ми рекомендуємо спробувати такі лубриканти 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Лубрикант на водній основі для чутлиівої мікрофлори",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601"
+                },
+                {
+                    "name": "2. Розігріваючий лубрикант на водній основі для чутливої мікрофлори",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-warming"
+                },
+                {
+                    "name": "3. Густий лубрикант на змішаній основі",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "material_4.2": {
+            "type": "question_link",
+            "q": [
+                "Для анального сексу підійдуть"
+            ],
+            "links": [
+                {
+                    "name": "1. Лубрикант на водній основі Pjur Analyse Me Comfort",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-analyse-me-comfort-water-ps1488"
+                },
+                {
+                    "name": "2. Анальний лубрикант Anal Gel",
+                    "url": "https://lovespace.ua/uk/products/analnij-lubrikant-anal-gel"
+                },
+                {
+                    "name": "3. Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Для вагінального",
+                    "next_id": "for_vaginal_sex_silicon"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials.5": {
+            "type": "question",
+            "q": "З ПВХ сумісні лубриканти на будь-якій основі!Але потрібно обрати, для якого сексу ви їх будете використовувати.",
+            "options": [
+                {
+                    "label": "Вагінальний",
+                    "next_id": "material_1.1"
+                },
+                {
+                    "label": "Анальний",
+                    "next_id": "materials.5"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "materials_5.2": {
+            "type": "question_link",
+            "q": [
+                "Рекомендуємо спробувати ці 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Анальний лубрикант Pjur Back Door Water",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-backdoor-comfort-water-pj11760#/390-ob_yem-30_ml"
+                },
+                {
+                    "name": "2. Анальний лубрикант Pjur Back Door",
+                    "url": "https://lovespace.ua/uk/products/analny-lubrikant-pjur-back-door-glide-pjurbd-100"
+                },
+                {
+                    "name": "3. Лубрикант на змішаній основі Sensuva Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula#/504-ob_yem-125_ml"
+                },
+                {
+                    "name": "4. Густий крем-змазка Sensuva Ultra-Thick Hybrid Formula",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-ultra-thick-hybrid-formula"
+                },
+                {
+                    "name": "5. Масляний лубрикант Viamax Organic",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-viamax-organic-glide-51"
+                }
+            ],
+            "options": [
+                {
+                    "label": "Для вагінального",
+                    "next_id": "for_vaginal_sex"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "for_sensitive_microflora": {
+            "type": "question_link",
+            "q": [
+                "Для чутливої мікрофлори підійдуть такі лубриканти 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Лубрикант на водній основі Pjur Woman Nude",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601"
+                },
+                {
+                    "name": "2. Жіночий лубрикант Pjur Woman",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203"
+                },
+                {
+                    "name": "3. Лубрикант System JO Agape Original",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-original"
+                },
+                {
+                    "name": "4. Лубрикант з легким розігріваючим ефектом",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-system-jo-agape-warming"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "for_fisting": {
+            "type": "question_link",
+            "q": [
+                "Можу порекомендувати лубрикант для фістинга Pjur Power 👇"
+            ],
+            "links": [
+                {
+                    "name": "Лубрикант Pjur Power",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-dlya-fistinga-pjur-power-pjurpw-150"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "for_masturbation": {
+            "type": "question",
+            "q": "Вам потрібен лубрикант для чоловічої чи жіночої мастурбації? ",
+            "options": [
+                {
+                    "label": "Для чоловічої",
+                    "next_id": "for_man_masturbation"
+                },
+                {
+                    "label": "Для жіночої",
+                    "next_id": "for_woman_masturbation"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "for_man_masturbation": {
+            "type": "question",
+            "q": "Чи будете ви використовувати іграшки?",
+            "options": [
+                {
+                    "label": "Так",
+                    "next_id": "using_toys"
+                },
+                {
+                    "label": "Ні",
+                    "next_id": "dont_using_toys"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "using_toys": {
+            "type": "question_link",
+            "q": [
+                "Для мастурбації з мастурбатором рекомендуємо брендовані лубриканти від виробників мастурбаторів. Вони протестили їх і підібрали оптимальні властивості для мастурбації з іграшками"
+            ],
+            "links": [
+                {
+                    "name": "1. Лубрикант для мастурбаторів Fleshlube Water",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-dlya-masturbatorov-fleshlube-water"
+                },
+                {
+                    "name": "2. Лубрикант Tenga Hole Lotion Real",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-real"
+                },
+                {
+                    "name": "3. Лубрикант Tenga Hole Lotion Wild (з охолоджуючим ефектом)",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-wild"
+                },
+                {
+                    "name": "4. Лубрикант Tenga Hole Lotion Solid (супергустий)",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-tenga-hole-lotion-solid"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "dont_using_toys": {
+            "type": "question_link",
+            "q": [
+                "Крем для мастурбації чудово ковзає і зволожує, не залишає липкості і доглядає за шкірою геніталій. Можемо порекомендувати такі лубриканти 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Крем для мастурбації із запахом шкіри Bucked Smokey Wrangler",
+                    "url": "https://lovespace.ua/uk/products/krem-dlya-masturbacii-s-zapakhom-kozhi-system-jo-bucked-smokey-wrangler"
+                },
+                {
+                    "name": "2. Крем для мастурбації Swiss Navy Premium",
+                    "url": "https://lovespace.ua/uk/products/krem-dlya-masturbaciyi-swiss-navy-premium"
+                },
+                {
+                    "name": "3. Гель для мастрбації з різноманітними смаками",
+                    "url": "https://lovespace.ua/uk/877-kremy-i-geli-dlya-masturbacii/s-3/virobnik-sensuva"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "for_woman_masturbation": {
+            "type": "question",
+            "q": "Чи будете ви використовувати іграшки?",
+            "options": [
+                {
+                    "label": "Так",
+                    "next_id": "toys.1"
+                },
+                {
+                    "label": "Ні",
+                    "next_id": "woman_dont_using_toys"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
+                }
+            ]
+        },
+        "woman_dont_using_toys": {
+            "type": "question_link",
+            "q": [
+                "Тоді рекомендуємо спробувати ці лубриканти 👇"
+            ],
+            "links": [
+                {
+                    "name": "1. Класичний силіконовий лубрикант, ідеальний для мастурбації",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-bottle-ps7603203"
+                },
+                {
+                    "name": "2. Збуджуючий гель-лубрикант. Дозволяє отримувати подвійне задоволення, оскільки, має збуджувальну дію і посилює відчуття оргазму",
+                    "url": "https://lovespace.ua/uk/products/krem-viamax-warm-cream-50ml-1101-viamax"
+                },
+                {
+                    "name": "3. Класичний лубрикант на водній основі. Підійде для чутливої мікрофлори",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-pjur-woman-nude-ps7603601?search_query=nude&results=2"
+                },
+                {
+                    "name": "4. Лубрикант на змішаній основі",
+                    "url": "https://lovespace.ua/uk/products/lubrikant-na-zmishanij-osnovi-sensuva-hybrid-formula#/504-ob_yem-125_ml"
+                }
+            ],
+            "options": [
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -1191,12 +2215,12 @@
             ],
             "options": [
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         },
@@ -1239,12 +2263,12 @@
             ],
             "options": [
                 {
-                    "label": "Назад ↩️",
-                    "next_id": "back"
-                },
-                {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "Назад ↩️",
+                    "next_id": "back"
                 }
             ]
         }
