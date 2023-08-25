@@ -47,6 +47,29 @@ function showUserChoise(text) {
     contentBlock.appendChild(userAnswers);
 }
 
+function createButtons(obj){
+    var buttonsDiv = document.createElement("div");
+    buttonsDiv.className = "buttons";
+    // Loop through the options and create buttons
+    obj.options.forEach(function (option) {
+        var button = document.createElement("button");
+        button.id = option.next_id;
+        if (button.id == "manager"){
+            button.classList.add("button-manager", "button");
+            button.title = "Зв'язатись з менеджером";
+        }else if (button.id == "back"){
+            button.classList.add("button-prev", "button");
+        }else{
+            button.className = "button";
+        }
+        
+        button.textContent = option.label;
+
+        buttonsDiv.appendChild(button);
+    });
+    return buttonsDiv;
+}
+
 /**
 function findNextInfo(data, next_id) {
     console.log(data)//TODO testing
@@ -74,18 +97,8 @@ function createToDoButtons(obj) {
     fromBotDiv.appendChild(questionParagraph);
     sreviewsSection.appendChild(fromBotDiv);
 
-    var buttonsDiv = document.createElement("div");
-    buttonsDiv.className = "buttons";
 
-    // Loop through the options and create buttons
-    obj.options.forEach(function (option) {
-        var button = document.createElement("button");
-        button.id = option.next_id;
-        button.className = "button";
-        button.textContent = option.label;
-
-        buttonsDiv.appendChild(button);
-    });
+    buttonsDiv = createButtons(obj);
 
     toDoButtonsDiv.appendChild(sreviewsSection);
     toDoButtonsDiv.appendChild(buttonsDiv);
@@ -112,19 +125,9 @@ function createLinks(obj) {
         toDoButtonsDiv.appendChild(fromBotDiv)
     });
 
-    // Create buttons
-    var buttonsDiv = document.createElement("div");
-    buttonsDiv.className = "buttons";
-    obj.options.forEach(function (option) {
-        var button = document.createElement("button");
-        button.id = option.next_id;
-        button.className = "button";
-        button.textContent = option.label;
+    buttonsDiv = createButtons(obj);
 
-        buttonsDiv.appendChild(button);
-        toDoButtonsDiv.appendChild(buttonsDiv)
-    });
-
+    toDoButtonsDiv.appendChild(buttonsDiv);
     contentBlock.appendChild(toDoButtonsDiv);
 }
 
@@ -171,18 +174,8 @@ function createQuestionLink(obj){
         toDoButtonsDiv.appendChild(sreviewsSection)
     });
 
-    // Create buttons
-    var buttonsDiv = document.createElement("div");
-    buttonsDiv.className = "buttons";
-    obj.options.forEach(function (option) {
-        var button = document.createElement("button");
-        button.id = option.next_id;
-        button.className = "button";
-        button.textContent = option.label;
-
-        buttonsDiv.appendChild(button);
-        toDoButtonsDiv.appendChild(buttonsDiv)
-    });
+    buttonsDiv = createButtons(obj);
+    toDoButtonsDiv.appendChild(buttonsDiv)
 
     // Append result
     contentBlock.appendChild(toDoButtonsDiv);

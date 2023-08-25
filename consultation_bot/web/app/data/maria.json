@@ -71,6 +71,10 @@
                 {
                     "label": "Назад ↩️",
                     "next_id": "back"
+                },
+                {
+                    "label": "🙋",
+                    "next_id": "manager"
                 }
             ]
         },
