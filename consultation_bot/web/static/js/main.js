@@ -231,6 +231,8 @@ function navigateToChoice(choiceId) {
         scrollToBottomSmoothly(1000);
     }
 
+    console.log(data);
+
     const selectedChoice = data[choiceId];
 
     if (selectedChoice) {
