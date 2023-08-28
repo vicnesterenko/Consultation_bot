@@ -108,6 +108,9 @@ function createLinks(obj) {
 
     var i = 0;
     obj.texts.forEach(function (text) {
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+
         var linkElement = document.createElement("a");
         linkElement.setAttribute("class", "");
         linkElement.setAttribute("href", text["url"]);
@@ -116,7 +119,9 @@ function createLinks(obj) {
         fromBotDiv.setAttribute("class", "from-bot");
         fromBotDiv.appendChild(linkElement);
         i = i + 1;
-        toDoButtonsDiv.appendChild(fromBotDiv)
+
+        sreviewsSection.appendChild(fromBotDiv);
+        toDoButtonsDiv.appendChild(sreviewsSection);
     });
 
     if (obj.img){

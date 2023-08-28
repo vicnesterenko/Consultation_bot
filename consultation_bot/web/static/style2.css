@@ -348,7 +348,7 @@ a {
     list-style: none;
 }
 
-
+/* Tablets */
 @media screen and (max-width: 991px) {
 
     body,
@@ -424,7 +424,7 @@ a {
 
     .from-user {
         position: relative;
-        padding: 30px 24px;
+        padding: 10px;
         background: #BDE6F9;
         border-radius: 25px;
         color: #121212;
@@ -441,8 +441,8 @@ a {
         border: none;
         background: white;
         cursor: pointer;
-        width: 120px;
-        height: 120px;
+        width: 50px;
+        height: 50px;
         background-color: #D23076;
         border-radius: 50%;
     }
@@ -452,6 +452,7 @@ a {
     }
 }
 
+/* Phones */
 @media screen and (max-width: 767px) {
 
     .header {
@@ -477,6 +478,13 @@ a {
 
     }
 
+    .sreviews div {
+        max-width: 400px;
+        word-wrap: break-word;
+        margin-bottom: 12px;
+        line-height: 24px;
+    }
+
     .menu {
         height: 100%;
         width: 100%;
@@ -496,21 +504,36 @@ a {
 
 }
 
+/* Phones */
 @media screen and (max-width: 603px) {
 
     body,
     p {
         font-family: Roboto !important;
-        font-size: 40px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 38px;
+        line-height: 20px;
         letter-spacing: 0em;
         text-align: left;
+    }
 
+    .sreviews div {
+        max-width: 400px;
+        word-wrap: break-word;
+        margin-bottom: 12px;
+        line-height: 24px;
+    }
+
+    .from-bot, .from-user {
+        padding: 10px 15px;
     }
 
     .button {
-        font-size: 40px;
+        font-size: 15px;
+        width: auto;
+        height: 50px;
+        line-height: 16px;
+        padding: 10px;
     }
 
     .header {
@@ -518,7 +541,7 @@ a {
     }
 
     input::placeholder {
-        font-size: 45px;
+        font-size: 15px;
     }
 
     .input-img {
