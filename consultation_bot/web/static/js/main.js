@@ -293,16 +293,12 @@ function displayYouTubeVideoInfo() {
     fetchYouTubeVideoInfo().then(videoInfo => {
         if (videoInfo) {
             const contentBlock = document.querySelector('.modal-content');
-            const videoContainer = document.createElement('div');
-            videoContainer.id = 'video-container';
-            contentBlock.appendChild(videoContainer);
 
             // Create elements for video info (thumbnail, title, link)
             const videoDiv = document.createElement('div');
             const videoLink = document.createElement('a');
             const videoImage = document.createElement('img');
             const videoTitle = document.createElement('p');
-
 
             videoLink.href = `https://www.youtube.com/watch?v=${videoInfo.videoId}`;
             videoLink.target = '_blank';
@@ -316,12 +312,6 @@ function displayYouTubeVideoInfo() {
 
             // Clear existing content and add video info
             contentBlock.appendChild(videoDiv);
-            const player = new YT.Player('video-container', {
-                height: '360', // Set your desired height
-                width: '640',  // Set your desired width
-                videoId: videoInfo.videoId,
-            });
-
         }
     });
 }
@@ -344,11 +334,7 @@ function main() {
     //console.log("main choiceStack:"+choiceStack)//please don't delete, for testing
 
     const buttons = document.querySelectorAll(".button");
-    const playButton = document.querySelector('#play-button');
 
-    playButton.addEventListener('click', function () {
-        player.playVideo();
-    });
 
 
 
@@ -382,4 +368,4 @@ function main() {
 }
 
 
-main();
+main(); 
