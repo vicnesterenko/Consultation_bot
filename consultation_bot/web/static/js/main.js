@@ -43,13 +43,19 @@ function showUserChoise(text) {
     contentBlock.appendChild(userAnswers);
 }
 
-function createButtons(obj){
+function createButtons(obj, name){
+    console.log("Object from button: ");
+    console.log(obj);
+
     var buttonsDiv = document.createElement("div");
     buttonsDiv.className = "buttons";
     // Loop through the options and create buttons
     obj.options.forEach(function (option) {
         var button = document.createElement("button");
         button.id = option.next_id;
+        button.name = name;
+       
+        // button.classList.add(option.label)
         if (button.id == "manager"){
             button.classList.add("button-manager", "button");
             button.title = "Зв'язатись з менеджером";
@@ -68,7 +74,10 @@ function createButtons(obj){
     return buttonsDiv;
 }
 
-function createToDoButtons(obj) {
+function createToDoButtons(obj, choiceId) {
+    console.log("Object from Question:")
+    console.log(obj)
+
     var contentBlock = document.querySelector('.modal-content');
 
     var toDoButtonsDiv = document.createElement("div");
@@ -86,14 +95,24 @@ function createToDoButtons(obj) {
     fromBotDiv.appendChild(questionParagraph);
     sreviewsSection.appendChild(fromBotDiv);
 
-
-    buttonsDiv = createButtons(obj);
+    buttonsDiv = createButtons(obj, choiceId);
 
     if (obj.img){
         console.log(obj);
         var imageDiv = document.createElement("div");
+
+        // Create a new image element
+        var image = document.createElement("img");
+        src = "/static/"+obj.img+""
+        image.setAttribute("src", src);
+        image.setAttribute("width", "200px");
+        image.setAttribute("height", "200px");
+        image.setAttribute("title", "image 14");
+
+        imageDiv.appendChild(image);
+
         imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
+
         toDoButtonsDiv.appendChild(imageDiv);}
 
     toDoButtonsDiv.appendChild(sreviewsSection);
@@ -102,7 +121,7 @@ function createToDoButtons(obj) {
     contentBlock.appendChild(toDoButtonsDiv);
 }
 
-function createLinks(obj) {
+function createLinks(obj, choiceId) {
     var contentBlock = document.querySelector('.modal-content');
 
     var toDoButtonsDiv = document.createElement("div");
@@ -133,13 +152,16 @@ function createLinks(obj) {
         imageDiv.innerHTML = obj.img;
         toDoButtonsDiv.appendChild(imageDiv);}
 
-    buttonsDiv = createButtons(obj);
+    buttonsDiv = createButtons(obj, choiceId);
 
     toDoButtonsDiv.appendChild(buttonsDiv);
     contentBlock.appendChild(toDoButtonsDiv);
 }
 
-function createQuestionLink(obj){
+function createQuestionLink(obj, choiceId){
+    console.log("Object from QuestionLinks:")
+    console.log(obj)
+
     var contentBlock = document.querySelector('.modal-content');
 
     var toDoButtonsDiv = document.createElement("div");
@@ -162,12 +184,12 @@ function createQuestionLink(obj){
         toDoButtonsDiv.appendChild(sreviewsSection);
     });
     
-    if (obj.img){
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-        imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
-        toDoButtonsDiv.appendChild(imageDiv);}
+    // if (obj.img){
+    //     console.log(obj);
+    //     var imageDiv = document.createElement("div");
+    //     imageDiv.className = "img-div";
+    //     imageDiv.innerHTML = obj.img;
+    //     toDoButtonsDiv.appendChild(imageDiv);}
 
     // Create links
     obj.links.forEach(function (link) {
@@ -187,7 +209,7 @@ function createQuestionLink(obj){
         toDoButtonsDiv.appendChild(sreviewsSection)
     });
 
-    buttonsDiv = createButtons(obj);
+    buttonsDiv = createButtons(obj, choiceId);
     toDoButtonsDiv.appendChild(buttonsDiv)
 
     // Append result
@@ -238,17 +260,18 @@ function navigateToChoice(choiceId) {
         scrollToBottomSmoothly(1000);
     }
 
+    console.log("choiceId " + choiceId);
     console.log(data);
 
     const selectedChoice = data[choiceId];
 
     if (selectedChoice) {
         if (selectedChoice.type == "link") {
-            createLinks(selectedChoice);
+            createLinks(selectedChoice, choiceId);
         } else if (selectedChoice.type == "question") {
-            createToDoButtons(selectedChoice);
+            createToDoButtons(selectedChoice, choiceId);
         } else if (selectedChoice.type == "question_link"){
-            createQuestionLink(selectedChoice);
+            createQuestionLink(selectedChoice, choiceId);
         }
         //console.log(selectedChoice)//please don't delete, for testing
     }

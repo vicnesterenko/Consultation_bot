@@ -227,7 +227,7 @@ a {
 }
 
 .button-main {
-    background-color: #c3d7a0;
+    background-color: #b4bdce;
 }
 
 .button-manager {
@@ -236,6 +236,10 @@ a {
 
 .button-prev {
     background-color: #DEE2E3;
+}
+
+.button-main:hover {
+    background-color: #889bbd;
 }
 
 .button:hover {
@@ -250,6 +254,12 @@ a {
 .button-manager:hover {
     background-color: #90BBB7;
     color: #FDFCFC;
+}
+
+.uploaded-img {
+    visibility: hidden;
+    display: none;
+    
 }
 
 .products {
