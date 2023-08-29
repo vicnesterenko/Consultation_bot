@@ -12,8 +12,8 @@
     width: 100%;
     height: 860px;
     /* max-width: 1440px; */
-    background-image: url(./img/background4.jpg); 
-    background-size:cover;
+    background-image: url(./img/background4.jpg);
+    background-size: cover;
 }
 
 body,
@@ -45,9 +45,9 @@ a {
 }
 
 .header {
-    padding: 10px 0 0;
+    padding: 15px 0 0;
     text-align: center;
-    height: 7%;
+    height: 8%;
     background-color: #FFD6E7;
 }
 
@@ -114,7 +114,8 @@ a {
     clear: both;
 }
 
-.clear, .clear2 {
+.clear,
+.clear2 {
     clear: both
 }
 
@@ -524,7 +525,8 @@ a {
         line-height: 24px;
     }
 
-    .from-bot, .from-user {
+    .from-bot,
+    .from-user {
         padding: 10px 15px;
     }
 

@@ -96,7 +96,9 @@
                 </div>
         </div>
         </ul>
-        
+           
+
+
         <button class="hamburger">
             <i class="menuIcon material-icons"><img src="{% static 'img/icon-chat.png' %}"></i>
             <i class="closeIcon material-icons"><img src="{% static 'img/Close_round.png' %}"></i>
@@ -108,7 +110,9 @@
         // Pass the data from views.py context
         var data = ({{ data | safe }});
     </script>
-    <script src="{% static 'js/main.js'%}"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script id="external-js-script" src="{% static 'js/main.js' %}" data-static-url="{% static '' %}"></script>
+
 
 </body>
 

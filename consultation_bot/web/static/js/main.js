@@ -66,6 +66,9 @@ function createButtons(obj) {
     return buttonsDiv;
 }
 
+var scriptElement = document.getElementById("external-js-script");
+var staticBaseUrl = scriptElement.getAttribute("data-static-url");
+
 function createToDoButtons(obj) {
     var contentBlock = document.querySelector('.modal-content');
 
@@ -86,14 +89,26 @@ function createToDoButtons(obj) {
 
 
     buttonsDiv = createButtons(obj);
-
     if (obj.img) {
-        console.log(obj);
         var imageDiv = document.createElement("div");
         imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
+
+        // Create an image element and set the source attribute
+        var image = document.createElement("img");
+        image.src = staticBaseUrl + "img/stickers/" + obj.img;
+        image.alt = "Image Description";
+
+        imageDiv.appendChild(image);
         toDoButtonsDiv.appendChild(imageDiv);
     }
+    // MARIA TRY CODE
+    //if (obj.img) {
+    //    console.log(obj);
+    //    var imageDiv = document.createElement("div");
+    //    imageDiv.className = "img-div";
+    //    imageDiv.innerHTML = obj.img;
+    //    toDoButtonsDiv.appendChild(imageDiv);
+    //}
 
     toDoButtonsDiv.appendChild(sreviewsSection);
     toDoButtonsDiv.appendChild(buttonsDiv);
@@ -253,6 +268,7 @@ function navigateToChoice(choiceId) {
         }
     }
 }
+// VIDEO DISPLAY ADDING BY API YOUTUBE
 const jsonData = {
     "elements": [
         {
@@ -267,7 +283,7 @@ const jsonData = {
 // Function to fetch YouTube video information
 async function fetchYouTubeVideoInfo() {
     const apiKey = 'AIzaSyAsnWOIa_Qp_pWuAENqAi2AYCxtuwoIJcE'; // Use your API key
-    const channelId = 'UCfd6jqNdp8BIMRF8iru7oaw'; // Channel ID without "@" symbol
+    const channelId = 'UC7M-0zfJr5dsgiW7PGZno8A'; // Channel ID without "@" symbol
     const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&order=date&part=snippet&type=video&maxResults=10`;
 
     try {
@@ -297,6 +313,9 @@ async function fetchYouTubeVideoInfo() {
 }
 
 // Function to display video information in the chatbot
+// ... (Previous code)
+
+// Function to display video information in the chatbot
 function displayYouTubeVideoInfo() {
     fetchYouTubeVideoInfo().then(videoInfo => {
         if (videoInfo) {
@@ -307,6 +326,7 @@ function displayYouTubeVideoInfo() {
             const videoLink = document.createElement('a');
             const videoImage = document.createElement('img');
             const videoTitle = document.createElement('p');
+            const videoIframe = document.createElement('iframe'); // Add this line
 
             videoLink.href = `https://www.youtube.com/watch?v=${videoInfo.videoId}`;
             videoLink.target = '_blank';
@@ -314,15 +334,21 @@ function displayYouTubeVideoInfo() {
             videoImage.alt = videoInfo.videoTitle;
             videoTitle.textContent = videoInfo.videoTitle;
 
+            videoIframe.src = `https://www.youtube.com/embed/${videoInfo.videoId}`; // Set iframe src
+            videoIframe.width = '560'; // Set iframe width
+            videoIframe.height = '315'; // Set iframe height
+            videoIframe.allowfullscreen = true; // Allow fullscreen
+
             videoLink.appendChild(videoImage);
             videoDiv.appendChild(videoLink);
             videoDiv.appendChild(videoTitle);
+            videoDiv.appendChild(videoIframe); // Append the iframe to the videoDiv
 
-            // Clear existing content and add video info
             contentBlock.appendChild(videoDiv);
         }
     });
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     jsonData.elements.forEach(elementData => {
         const element = document.getElementById(elementData.id);
@@ -332,7 +358,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
 
 
 
@@ -372,6 +397,14 @@ function main() {
             main();
 
         });
+    });
+    const backToMainButton = document.getElementById("backToMainButton");
+
+    backToMainButton.addEventListener("click", function () {
+        currentIndex = -1;
+        choiceStack = [];
+        navigateToChoice("main_1");
+        scrollToBottomSmoothly(1000);
     });
 }
 
