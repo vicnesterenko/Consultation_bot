@@ -84,18 +84,44 @@ function createToDoButtons(obj, choiceId) {
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
 
-    var sreviewsSection = document.createElement("section");
-    sreviewsSection.className = "sreviews";
 
-    var fromBotDiv = document.createElement("div");
-    fromBotDiv.className = "from-bot";
 
-    var questionParagraph = document.createElement("p");
-    questionParagraph.textContent = obj.q;
+    // Check if q contatins '#'
+    if(obj.q.includes("#")){
+        splitedList = obj.q.split("#");
+        // console.log(x);
 
-    fromBotDiv.appendChild(questionParagraph);
-    sreviewsSection.appendChild(fromBotDiv);
+        splitedList.forEach(function (que) {
+            var sreviewsSection = document.createElement("section");
+            sreviewsSection.className = "sreviews";
 
+            var fromBotDiv1 = document.createElement("div");
+            fromBotDiv1.className = "from-bot";
+
+            var questionParagraph = document.createElement("p");
+            questionParagraph.textContent = `${que}`;
+            // console.log("que: "+que)//please don't delete, for testing
+
+            fromBotDiv1.appendChild(questionParagraph);
+            sreviewsSection.appendChild(fromBotDiv1);
+            toDoButtonsDiv.appendChild(sreviewsSection);
+        });
+    }else{
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+    
+        var fromBotDiv = document.createElement("div");
+        fromBotDiv.className = "from-bot";
+
+        var questionParagraph = document.createElement("p");
+        questionParagraph.textContent = obj.q;
+
+        fromBotDiv.appendChild(questionParagraph);
+        sreviewsSection.appendChild(fromBotDiv);
+        toDoButtonsDiv.appendChild(sreviewsSection);
+    }
+
+    // Generate buttons
     buttonsDiv = createButtons(obj, choiceId);
 
     if (obj.img){
@@ -116,7 +142,7 @@ function createToDoButtons(obj, choiceId) {
 
         toDoButtonsDiv.appendChild(imageDiv);}
 
-    toDoButtonsDiv.appendChild(sreviewsSection);
+    // toDoButtonsDiv.appendChild(sreviewsSection);
     toDoButtonsDiv.appendChild(buttonsDiv);
 
     contentBlock.appendChild(toDoButtonsDiv);
@@ -167,6 +193,7 @@ function createQuestionLink(obj, choiceId){
 
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
+
 
     // Create first message/messages
     obj.q.forEach(function (que){

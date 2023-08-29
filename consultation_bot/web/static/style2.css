@@ -259,7 +259,6 @@ a {
 .uploaded-img {
     visibility: hidden;
     display: none;
-    
 }
 
 .products {
@@ -459,6 +458,7 @@ a {
         height: 50px;
         background-color: #D23076;
         border-radius: 50%;
+        visibility: hidden;
     }
 
     .img-icon {
