@@ -190,12 +190,13 @@ function createQuestionLink(obj, choiceId) {
         toDoButtonsDiv.appendChild(sreviewsSection);
     });
 
-    // if (obj.img){
-    //     console.log(obj);
-    //     var imageDiv = document.createElement("div");
-    //     imageDiv.className = "img-div";
-    //     imageDiv.innerHTML = obj.img;
-    //     toDoButtonsDiv.appendChild(imageDiv);}
+    if (obj.img) {
+        console.log(obj);
+        var imageDiv = document.createElement("div");
+        imageDiv.className = "img-div";
+        imageDiv.innerHTML = obj.img;
+        toDoButtonsDiv.appendChild(imageDiv);
+    }
 
     // Create links
     obj.links.forEach(function (link) {
