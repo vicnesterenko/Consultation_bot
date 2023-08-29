@@ -26,7 +26,9 @@ SECRET_KEY = "django-insecure-c6vh40&0(!hwcus$pm=qm#c&hv11)nm(59*j)p-4$#r9^!qp9c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["maria555.pythonanywhere.com"]
+
+# ALLOWED_HOSTS = ["maria555.pythonanywhere.com"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -81,15 +83,15 @@ WSGI_APPLICATION = "web.wsgi.application"
 #     }
 # }
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "maria555$default",
-        "USER": "maria555",
-        "PASSWORD": "naughtyNerds555",
-        "HOST": "maria555.mysql.pythonanywhere-services.com",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "maria555$default",
+#         "USER": "maria555",
+#         "PASSWORD": "naughtyNerds555",
+#         "HOST": "maria555.mysql.pythonanywhere-services.com",
+#     }
+# }
 
 
 # Password validation
