@@ -55,6 +55,8 @@ function createButtons(obj){
             button.title = "Зв'язатись з менеджером";
         }else if (button.id == "back"){
             button.classList.add("button-prev", "button");
+        } else if (button.id == "main_1"){
+                button.classList.add("button-main", "button");
         }else{
             button.className = "button";
         }

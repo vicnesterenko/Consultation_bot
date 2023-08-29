@@ -76,6 +76,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -116,6 +120,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -160,6 +168,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -200,6 +212,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -1357,6 +1373,10 @@
                     "next_id": "oral.1.2"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "🙋",
                     "next_id": "manager"
                 },
@@ -1377,6 +1397,10 @@
                 {
                     "label": "Фруктово-ягідні 🍓",
                     "next_id": "oral.2.2"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "🙋",
@@ -1406,6 +1430,10 @@
                 }
             ],
             "options": [
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
                 {
                     "label": "🙋",
                     "next_id": "manager"

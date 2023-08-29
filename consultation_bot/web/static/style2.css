@@ -226,6 +226,10 @@ a {
     line-height: 1px;
 }
 
+.button-main {
+    background-color: #c3d7a0;
+}
+
 .button-manager {
     background-color: #C9E3E1;
 }
