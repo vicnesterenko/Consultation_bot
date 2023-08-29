@@ -18,3 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [path("admin/", admin.site.urls), path("app/", include("app.urls"))]
+
+# For admin
+from django.contrib import admin
+
+admin.autodiscover()
+admin.site.enable_nav_sidebar = False
