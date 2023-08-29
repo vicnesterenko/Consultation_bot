@@ -53,9 +53,9 @@ function createButtons(obj, name){
     obj.options.forEach(function (option) {
         var button = document.createElement("button");
         button.id = option.next_id;
-        button.name = name;
+        // button.name = name;
        
-        // button.classList.add(option.label)
+        button.classList.add(name)
         if (button.id == "manager"){
             button.classList.add("button-manager", "button");
             button.title = "Зв'язатись з менеджером";
