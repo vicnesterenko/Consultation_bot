@@ -52,10 +52,11 @@ function createButtons(obj, name) {
     // Loop through the options and create buttons
     obj.options.forEach(function (option) {
         var button = document.createElement("button");
+
         button.id = option.next_id;
         // button.name = name;
+        button.classList.add(name);
 
-        button.classList.add(name)
         if (button.id == "manager") {
             button.classList.add("button-manager", "button");
             button.title = "Зв'язатись з менеджером";
@@ -265,8 +266,9 @@ function navigateToChoice(choiceId) {
         scrollToBottomSmoothly(1000);
     }
 
-    console.log("choiceId " + choiceId);
-    console.log(data);
+
+    // console.log("choiceId " + choiceId);
+    // console.log(data);
 
     const selectedChoice = data[choiceId];
 
