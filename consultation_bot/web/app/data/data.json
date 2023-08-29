@@ -50,6 +50,7 @@
             ]
         },
         "gift": {
+            "name": "gift",
             "type": "question",
             "q": "На яку суму ви хочете підібрати подарунок?",
             "options": [
@@ -72,6 +73,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -116,6 +121,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -156,6 +165,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -200,6 +213,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -236,6 +253,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -280,6 +301,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -320,6 +345,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -368,6 +397,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -404,6 +437,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -448,6 +485,10 @@
                     "next_id": "manager"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "Назад ↩️",
                     "next_id": "back"
                 }
@@ -488,6 +529,10 @@
                 {
                     "label": "🙋",
                     "next_id": "manager"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "Назад ↩️",
@@ -689,7 +734,7 @@
             "type": "question",
             "q": "Ми здійснюємо повернення іграшок якщо вони не працюють. Що у тебе сталося? 🤔",
             "img": [
-                "<img src=\"{% static 'img/stickers/14.jpeg' %}\" width=\"200px\", height=\"200px\"  title=\"image 14\"/>"
+                "img/14.jpeg"
             ],
             "options": [
                 {
@@ -1355,6 +1400,10 @@
                     "next_id": "oral.1.2"
                 },
                 {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
+                {
                     "label": "🙋",
                     "next_id": "manager"
                 },
@@ -1375,6 +1424,10 @@
                 {
                     "label": "Фруктово-ягідні 🍓",
                     "next_id": "oral.2.2"
+                },
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
                 },
                 {
                     "label": "🙋",
@@ -1404,6 +1457,10 @@
                 }
             ],
             "options": [
+                {
+                    "label": "🔝",
+                    "next_id": "main_1"
+                },
                 {
                     "label": "🙋",
                     "next_id": "manager"

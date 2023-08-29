@@ -227,12 +227,20 @@ a {
     line-height: 1px;
 }
 
+.button-main {
+    background-color: #b4bdce;
+}
+
 .button-manager {
     background-color: #C9E3E1;
 }
 
 .button-prev {
     background-color: #DEE2E3;
+}
+
+.button-main:hover {
+    background-color: #889bbd;
 }
 
 .button:hover {
@@ -247,6 +255,12 @@ a {
 .button-manager:hover {
     background-color: #90BBB7;
     color: #FDFCFC;
+}
+
+.uploaded-img {
+    visibility: hidden;
+    display: none;
+    
 }
 
 .products {

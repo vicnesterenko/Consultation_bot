@@ -9,11 +9,13 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_ROOT = "/static/"
+STATIC_URL = "static/"
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,8 +27,9 @@ SECRET_KEY = "django-insecure-c6vh40&0(!hwcus$pm=qm#c&hv11)nm(59*j)p-4$#r9^!qp9c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+# ALLOWED_HOSTS = ["maria555.pythonanywhere.com"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -74,12 +77,22 @@ WSGI_APPLICATION = "web.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "maria555$default",
+#         "USER": "maria555",
+#         "PASSWORD": "naughtyNerds555",
+#         "HOST": "maria555.mysql.pythonanywhere-services.com",
+#     }
+# }
 
 
 # Password validation
