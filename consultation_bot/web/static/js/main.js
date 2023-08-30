@@ -43,6 +43,25 @@ function showUserChoise(text) {
     contentBlock.appendChild(userAnswers);
 }
 
+function showStickers(obj){
+    console.log(obj);
+        var imageDiv = document.createElement("div");
+
+        // Create a new image element
+        var image = document.createElement("img");
+        src = "/static/img/stickers/"+obj.img+""
+        image.setAttribute("src", src);
+        image.setAttribute("width", "200px");
+        image.setAttribute("height", "200px");
+        image.setAttribute("alt", obj.img);
+
+        imageDiv.appendChild(image);
+
+        imageDiv.className = "img-div";
+        return imageDiv;
+}
+
+
 function createButtons(obj, name){
     console.log("Object from button: ");
     console.log(obj);
@@ -85,7 +104,6 @@ function createToDoButtons(obj, choiceId) {
     toDoButtonsDiv.className = "to-do-buttons";
 
 
-
     // Check if q contatins '#'
     if(obj.q.includes("#")){
         splitedList = obj.q.split("#");
@@ -125,22 +143,9 @@ function createToDoButtons(obj, choiceId) {
     buttonsDiv = createButtons(obj, choiceId);
 
     if (obj.img){
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-
-        // Create a new image element
-        var image = document.createElement("img");
-        src = "/static/"+obj.img+""
-        image.setAttribute("src", src);
-        image.setAttribute("width", "200px");
-        image.setAttribute("height", "200px");
-        image.setAttribute("title", "image 14");
-
-        imageDiv.appendChild(image);
-
-        imageDiv.className = "img-div";
-
-        toDoButtonsDiv.appendChild(imageDiv);}
+        imageDiv = showStickers(obj);
+        toDoButtonsDiv.appendChild(imageDiv);
+    }
 
     // toDoButtonsDiv.appendChild(sreviewsSection);
     toDoButtonsDiv.appendChild(buttonsDiv);
@@ -173,11 +178,9 @@ function createLinks(obj, choiceId) {
     });
 
     if (obj.img){
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-        imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
-        toDoButtonsDiv.appendChild(imageDiv);}
+        imageDiv =showStickers(obj);
+        toDoButtonsDiv.appendChild(imageDiv);
+    }
 
     buttonsDiv = createButtons(obj, choiceId);
 
@@ -213,11 +216,9 @@ function createQuestionLink(obj, choiceId){
     });
     
     if (obj.img){
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-        imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
-        toDoButtonsDiv.appendChild(imageDiv);}
+        imageDiv = showStickers(obj);
+        toDoButtonsDiv.appendChild(imageDiv);
+    }
 
     // Create links
     obj.links.forEach(function (link) {
