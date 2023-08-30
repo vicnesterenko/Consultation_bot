@@ -224,7 +224,8 @@ a {
     background-color: #F6C1BB;
     border: none;
     border-radius: 3px;
-    height: 40px;
+    min-height: 40px;
+    width: max-content;
     line-height: 1px;
     font-size: 13px;
 }
@@ -547,8 +548,6 @@ a {
 
     .button {
         font-size: 15px;
-        width: auto;
-        height: 50px;
         line-height: 16px;
         padding: 10px;
     }
