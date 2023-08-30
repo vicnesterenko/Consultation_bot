@@ -74,17 +74,15 @@ function createButtons(obj, name){
 
         button.id = option.next_id;
         // button.name = name;
-        button.classList.add(name);
+        button.classList.add(name, "button");
 
         if (button.id == "manager"){
-            button.classList.add("button-manager", "button");
+            button.classList.add("button-manager");
             button.title = "Зв'язатись з менеджером";
         }else if (button.id == "back"){
-            button.classList.add("button-prev", "button");
+            button.classList.add("button-prev");
         } else if (button.id == "main_1"){
-                button.classList.add("button-main", "button");
-        }else{
-            button.className = "button";
+                button.classList.add("button-main");
         }
         
         button.textContent = option.label;
