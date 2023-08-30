@@ -12,8 +12,8 @@
     width: 100%;
     height: 860px;
     /* max-width: 1440px; */
-    background-image: url(./img/background4.jpg); 
-    background-size:cover;
+    background-image: url(./img/background4.jpg);
+    background-size: cover;
 }
 
 body,
@@ -47,7 +47,7 @@ a {
 .header {
     padding: 10px 0 0;
     text-align: center;
-    height: 7%;
+    height: 10%;
     background-color: #FFD6E7;
 }
 
@@ -114,7 +114,8 @@ a {
     clear: both;
 }
 
-.clear, .clear2 {
+.clear,
+.clear2 {
     clear: both
 }
 
@@ -299,11 +300,12 @@ a {
 }
 
 .chatting {
-    height: 8% !important;
+    height: 10% !important;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     display: flex;
+    left: 0px;
 }
 
 .chatting_input {
@@ -384,7 +386,7 @@ a {
     }
 
     .header {
-        height: 10%;
+        height: auto;
     }
 
     .wrapper_modal-content {
@@ -538,7 +540,8 @@ a {
         line-height: 24px;
     }
 
-    .from-bot, .from-user {
+    .from-bot,
+    .from-user {
         padding: 10px 15px;
     }
 
