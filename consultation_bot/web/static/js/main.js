@@ -16,7 +16,7 @@ function toggleMenu() {
     }
 }
 
-hamburger.addEventListener("click", toggleMenu);
+// hamburger.addEventListener("click", toggleMenu);
 
 menuItems.forEach(
     function (menuItem) {

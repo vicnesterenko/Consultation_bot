@@ -22,7 +22,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Roboto&display=swap" rel="stylesheet">
 
-    <img src="{% static 'img/14.jpeg' %}" class="uploaded-img">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -98,10 +97,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
         </div>
         </ul>
-        <button class="hamburger">
+        {% comment %} <button class="hamburger">
             <i class="menuIcon material-icons"><img src="{% static 'img/icon-chat.png' %}"></i>
             <i class="closeIcon material-icons"><img src="{% static 'img/Close_round.png' %}"></i>
         </button>
+        </div> {% endcomment %}
+        <div>
+            <img src="{% static 'img/stickers/14.jpeg' %}" class="uploaded-img">
+            <img src="{% static 'img/stickers/0.jpeg' %}" class="uploaded-img">
+            <img src="{% static 'img/stickers/1.jpeg' %}" class="uploaded-img">
+            <img src="{% static 'img/stickers/3.jpeg' %}" class="uploaded-img">
+            <img src="{% static 'img/stickers/5.jpeg' %}" class="uploaded-img">
         </div>
     </main>
     <script>
@@ -112,5 +118,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="{% static 'js/main.js'%}"></script>
 
 </body>
-
 </html>  
