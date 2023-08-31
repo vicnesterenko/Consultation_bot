@@ -457,7 +457,6 @@ iframe {
 
     .input-img {
         width: 17% !important;
-
     }
 
     .from-user {
@@ -478,7 +477,7 @@ iframe {
 @media screen and (max-width: 768px) {
 
     .header {
-        height: 10%;
+        height: 11%;
     }
 
     input::placeholder {
@@ -563,7 +562,7 @@ iframe {
     }
 
     .header {
-        height: 7%;
+        height: 10%;
     }
 
     input::placeholder {
