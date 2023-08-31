@@ -16,7 +16,7 @@ function toggleMenu() {
     }
 }
 
-hamburger.addEventListener("click", toggleMenu);
+// hamburger.addEventListener("click", toggleMenu);
 
 menuItems.forEach(
     function (menuItem) {
@@ -43,6 +43,25 @@ function showUserChoise(text) {
     contentBlock.appendChild(userAnswers);
 }
 
+function showStickers(obj) {
+    console.log(obj);
+    var imageDiv = document.createElement("div");
+
+    // Create a new image element
+    var image = document.createElement("img");
+    src = "/static/img/stickers/" + obj.img + ""
+    image.setAttribute("src", src);
+    image.setAttribute("width", "200px");
+    image.setAttribute("height", "200px");
+    image.setAttribute("alt", obj.img);
+
+    imageDiv.appendChild(image);
+
+    imageDiv.className = "img-div";
+    return imageDiv;
+}
+
+
 function createButtons(obj, name) {
     console.log("Object from button: ");
     console.log(obj);
@@ -55,17 +74,15 @@ function createButtons(obj, name) {
 
         button.id = option.next_id;
         // button.name = name;
-        button.classList.add(name);
+        button.classList.add(name, "button");
 
         if (button.id == "manager") {
-            button.classList.add("button-manager", "button");
+            button.classList.add("button-manager");
             button.title = "Зв'язатись з менеджером";
         } else if (button.id == "back") {
-            button.classList.add("button-prev", "button");
+            button.classList.add("button-prev");
         } else if (button.id == "main_1") {
-            button.classList.add("button-main", "button");
-        } else {
-            button.className = "button";
+            button.classList.add("button-main");
         }
 
         button.textContent = option.label;
@@ -87,40 +104,51 @@ function createToDoButtons(obj, choiceId) {
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
 
-    var sreviewsSection = document.createElement("section");
-    sreviewsSection.className = "sreviews";
 
-    var fromBotDiv = document.createElement("div");
-    fromBotDiv.className = "from-bot";
+    // Check if q contatins '#'
+    if (obj.q.includes("#")) {
+        splitedList = obj.q.split("#");
+        // console.log(x);
 
-    var questionParagraph = document.createElement("p");
-    questionParagraph.textContent = obj.q;
+        splitedList.forEach(function (que) {
+            var sreviewsSection = document.createElement("section");
+            sreviewsSection.className = "sreviews";
 
-    fromBotDiv.appendChild(questionParagraph);
-    sreviewsSection.appendChild(fromBotDiv);
+            var fromBotDiv1 = document.createElement("div");
+            fromBotDiv1.className = "from-bot";
 
+            var questionParagraph = document.createElement("p");
+            questionParagraph.textContent = `${que}`;
+            // console.log("que: "+que)//please don't delete, for testing
+
+            fromBotDiv1.appendChild(questionParagraph);
+            sreviewsSection.appendChild(fromBotDiv1);
+            toDoButtonsDiv.appendChild(sreviewsSection);
+        });
+    } else {
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+
+        var fromBotDiv = document.createElement("div");
+        fromBotDiv.className = "from-bot";
+
+        var questionParagraph = document.createElement("p");
+        questionParagraph.textContent = obj.q;
+
+        fromBotDiv.appendChild(questionParagraph);
+        sreviewsSection.appendChild(fromBotDiv);
+        toDoButtonsDiv.appendChild(sreviewsSection);
+    }
+
+    // Generate buttons
     buttonsDiv = createButtons(obj, choiceId);
 
     if (obj.img) {
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-
-        // Create a new image element
-        var image = document.createElement("img");
-        src = "/static/" + obj.img + ""
-        image.setAttribute("src", src);
-        image.setAttribute("width", "200px");
-        image.setAttribute("height", "200px");
-        image.setAttribute("title", "image 14");
-
-        imageDiv.appendChild(image);
-
-        imageDiv.className = "img-div";
-
+        imageDiv = showStickers(obj);
         toDoButtonsDiv.appendChild(imageDiv);
     }
 
-    toDoButtonsDiv.appendChild(sreviewsSection);
+    // toDoButtonsDiv.appendChild(sreviewsSection);
     toDoButtonsDiv.appendChild(buttonsDiv);
 
     contentBlock.appendChild(toDoButtonsDiv);
@@ -151,10 +179,7 @@ function createLinks(obj, choiceId) {
     });
 
     if (obj.img) {
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-        imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
+        imageDiv = showStickers(obj);
         toDoButtonsDiv.appendChild(imageDiv);
     }
 
@@ -208,6 +233,7 @@ function createQuestionLink(obj, choiceId) {
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
 
+
     // Create first message/messages
     obj.q.forEach(function (que) {
         var sreviewsSection = document.createElement("section");
@@ -226,11 +252,9 @@ function createQuestionLink(obj, choiceId) {
     });
 
     if (obj.img) {
-        console.log(obj);
-        var imageDiv = document.createElement("div");
-        imageDiv.className = "img-div";
-        imageDiv.innerHTML = obj.img;
+        imageDiv = showStickers(obj);
         toDoButtonsDiv.appendChild(imageDiv);
+
     }
 
     // Create links

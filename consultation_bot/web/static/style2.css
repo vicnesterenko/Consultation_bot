@@ -10,7 +10,7 @@
     margin: 0 auto;
     min-width: 367px;
     width: 100%;
-    height: 860px;
+    height: 2000px;
     /* max-width: 1440px; */
     background-image: url(./img/background4.jpg);
     background-size: cover;
@@ -19,7 +19,7 @@
 body,
 p {
     font-family: Roboto !important;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0em;
@@ -47,7 +47,7 @@ a {
 .header {
     padding: 15px 0 0;
     text-align: center;
-    height: 8%;
+    height: 7%;
     background-color: #FFD6E7;
 }
 
@@ -121,7 +121,7 @@ a {
 
 .from-bot {
     position: relative;
-    padding: 8px 12px;
+    padding: 10px 15px;
     background: #CFD8DC;
     border-radius: 25px;
     color: black;
@@ -177,7 +177,7 @@ a {
 
 .from-user {
     position: relative;
-    padding: 8px 12px;
+    padding: 10px 15px;
     background: #BDE6F9;
     border-radius: 25px;
     color: #121212;
@@ -218,13 +218,16 @@ a {
 }
 
 .button {
+    color: black;
     margin: 3px;
     padding: 10px;
     background-color: #F6C1BB;
     border: none;
     border-radius: 3px;
-    height: 40px;
+    min-height: 40px;
+    width: max-content;
     line-height: 1px;
+    font-size: 13px;
 }
 
 .button-main {
@@ -260,7 +263,6 @@ a {
 .uploaded-img {
     visibility: hidden;
     display: none;
-    
 }
 
 .products {
@@ -304,8 +306,9 @@ a {
     height: 8% !important;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     display: flex;
+    left: 0px;
 }
 
 .chatting_input {
@@ -369,16 +372,29 @@ a {
     body,
     p {
         font-family: Roboto !important;
-        font-size: 27px;
+        font-size: 20px;
         font-weight: 400;
-        line-height: 34px;
+        line-height: 25px;
         letter-spacing: 0em;
         text-align: left;
-
     }
 
     .menu {
-        width: 80%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .sreviews div {
+        max-width: 400px;
+        word-wrap: break-word;
+        margin-bottom: 12px;
+        line-height: 25px;
+    }
+
+    .from-bot,
+    .from-user {
+        padding: 25px;
+        border-radius: 25px;
     }
 
     .header_title {
@@ -386,25 +402,22 @@ a {
     }
 
     .header {
-        height: 10%;
+        height: auto;
     }
 
     .wrapper_modal-content {
         height: 80%;
     }
 
-    .from-bot {
-        padding: 30px 24px;
-    }
 
     .button {
-        font-size: 27px;
+        font-size: 20px;
         margin: 6px;
         padding: 26px 34px;
     }
 
     input::placeholder {
-        font-size: 27px;
+        font-size: 20px;
     }
 
     .buttons-products-wrap {
@@ -439,58 +452,47 @@ a {
 
     .from-user {
         position: relative;
-        padding: 10px;
         background: #BDE6F9;
         border-radius: 25px;
         color: #121212;
         float: right;
     }
 
-
-    .hamburger {
-        position: fixed;
-        z-index: 100;
-        top: 8%;
-        right: 8%;
-        padding: 4px;
-        border: none;
-        background: white;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        background-color: #D23076;
-        border-radius: 50%;
-    }
-
     .img-icon {
         width: 55%;
     }
+
 }
 
-/* Phones */
-@media screen and (max-width: 767px) {
+/* Big Mobile/ Small tablet */
+@media screen and (max-width: 768px) {
 
     .header {
         height: 10%;
     }
 
     input::placeholder {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .button {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     body,
     p {
         font-family: Roboto !important;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 400;
-        line-height: 38px;
+        line-height: 25px;
         letter-spacing: 0em;
         text-align: left;
 
+    }
+
+    .from-bot,
+    .from-user {
+        padding: 15px 15px;
     }
 
     .sreviews div {
@@ -546,8 +548,6 @@ a {
 
     .button {
         font-size: 15px;
-        width: auto;
-        height: 50px;
         line-height: 16px;
         padding: 10px;
     }
