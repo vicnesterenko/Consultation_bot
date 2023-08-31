@@ -163,6 +163,41 @@ function createLinks(obj, choiceId) {
     toDoButtonsDiv.appendChild(buttonsDiv);
     contentBlock.appendChild(toDoButtonsDiv);
 }
+async function createQuestionVideo(obj, choiceId) {
+    var contentBlock = document.querySelector('.modal-content');
+
+    var toDoButtonsDiv = document.createElement("div");
+    toDoButtonsDiv.className = "to-do-buttons";
+
+    // Create first message/messages
+    obj.q.forEach(function (que) {
+        var sreviewsSection = document.createElement("section");
+        sreviewsSection.className = "sreviews";
+
+        var fromBotDiv1 = document.createElement("div");
+        fromBotDiv1.className = "from-bot";
+
+        var questionParagraph = document.createElement("p");
+        questionParagraph.textContent = `${que}`;
+        // console.log("que: "+que)//please don't delete, for testing
+
+        fromBotDiv1.appendChild(questionParagraph);
+        sreviewsSection.appendChild(fromBotDiv1);
+        toDoButtonsDiv.appendChild(sreviewsSection);
+    });
+
+    videoDiv = await displayYouTubeVideoInfo();
+    debugger
+    buttonsDiv = createButtons(obj, choiceId);
+    toDoButtonsDiv.appendChild(videoDiv);
+
+    toDoButtonsDiv.appendChild(buttonsDiv);
+
+    // Append result
+    contentBlock.appendChild(toDoButtonsDiv);
+    main();
+
+}
 
 function createQuestionLink(obj, choiceId) {
     console.log("Object from QuestionLinks:")
@@ -280,20 +315,24 @@ function navigateToChoice(choiceId) {
             createToDoButtons(selectedChoice, choiceId);
         } else if (selectedChoice.type == "question_link") {
             createQuestionLink(selectedChoice, choiceId);
+        } else if (selectedChoice.type == "question_video") {
+            createQuestionVideo(selectedChoice, choiceId);
         }
     }
 }
 // VIDEO DISPLAY ADDING BY API YOUTUBE
+
 const jsonData = {
     "elements": [
         {
             "id": "praktyka_main",
             "eventType": "click",
-            "handler": "displayYouTubeVideoInfo"
+            // "handler": displayYouTubeVideoInfo,
         }
         // Add more elements as needed
     ]
 };
+
 
 // Function to fetch YouTube video information
 async function fetchYouTubeVideoInfo() {
@@ -327,12 +366,9 @@ async function fetchYouTubeVideoInfo() {
     }
 }
 
-// Function to display video information in the chatbot
-// ... (Previous code)
 
-// Function to display video information in the chatbot
-function displayYouTubeVideoInfo() {
-    fetchYouTubeVideoInfo().then(videoInfo => {
+async function displayYouTubeVideoInfo() {
+    return fetchYouTubeVideoInfo().then(videoInfo => {
         if (videoInfo) {
             const contentBlock = document.querySelector('.modal-content');
 
@@ -340,39 +376,39 @@ function displayYouTubeVideoInfo() {
             const videoDiv = document.createElement('div');
             const videoLink = document.createElement('a');
             const videoImage = document.createElement('img');
-            const videoTitle = document.createElement('p');
+            //const videoTitle = document.createElement('p');
             const videoIframe = document.createElement('iframe'); // Add this line
 
             videoLink.href = `https://www.youtube.com/watch?v=${videoInfo.videoId}`;
             videoLink.target = '_blank';
             videoImage.src = videoInfo.videoThumbnail;
             videoImage.alt = videoInfo.videoTitle;
-            videoTitle.textContent = videoInfo.videoTitle;
+            //videoTitle.textContent = videoInfo.videoTitle;
 
             videoIframe.src = `https://www.youtube.com/embed/${videoInfo.videoId}`; // Set iframe src
             videoIframe.width = '560'; // Set iframe width
             videoIframe.height = '315'; // Set iframe height
             videoIframe.allowfullscreen = true; // Allow fullscreen
 
-            videoLink.appendChild(videoImage);
+            //videoLink.appendChild(videoImage);
             videoDiv.appendChild(videoLink);
-            videoDiv.appendChild(videoTitle);
+            //videoDiv.appendChild(videoTitle);
             videoDiv.appendChild(videoIframe); // Append the iframe to the videoDiv
-
-            contentBlock.appendChild(videoDiv);
+            return videoDiv;
+            // contentBlock.appendChild(videoDiv);
         }
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    jsonData.elements.forEach(elementData => {
-        const element = document.getElementById(elementData.id);
+// document.addEventListener('DOMContentLoaded', function () {
+//     jsonData.elements.forEach(elementData => {
+//         const element = document.getElementById(elementData.id);
 
-        if (element) {
-            element.addEventListener(elementData.eventType, window[elementData.handler]);
-        }
-    });
-});
+//         if (element) {
+//             element.addEventListener(elementData.eventType, window[elementData.handler]);
+//         }
+//     });
+// });
 
 
 
@@ -412,14 +448,6 @@ function main() {
             main();
 
         });
-    });
-    const backToMainButton = document.getElementById("backToMainButton");
-
-    backToMainButton.addEventListener("click", function () {
-        currentIndex = -1;
-        choiceStack = [];
-        navigateToChoice("main_1");
-        scrollToBottomSmoothly(1000);
     });
 }
 
