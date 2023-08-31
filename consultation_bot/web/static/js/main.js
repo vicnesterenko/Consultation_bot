@@ -212,7 +212,7 @@ async function createQuestionVideo(obj, choiceId) {
     });
 
     videoDiv = await displayYouTubeVideoInfo();
-    debugger
+    // debugger
     buttonsDiv = createButtons(obj, choiceId);
     toDoButtonsDiv.appendChild(videoDiv);
 
