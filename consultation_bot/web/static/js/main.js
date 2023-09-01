@@ -63,8 +63,8 @@ function showStickers(obj) {
 
 
 function createButtons(obj, name) {
-    console.log("Object from button: ");
-    console.log(obj);
+    // console.log("Object from button: ");
+    // console.log(obj);
 
     var buttonsDiv = document.createElement("div");
     buttonsDiv.className = "buttons";
@@ -96,8 +96,8 @@ var scriptElement = document.getElementById("external-js-script");
 var staticBaseUrl = scriptElement.getAttribute("data-static-url");
 
 function createToDoButtons(obj, choiceId) {
-    console.log("Object from Question:")
-    console.log(obj)
+    // console.log("Object from Question:")
+    // console.log(obj)
 
     var contentBlock = document.querySelector('.modal-content');
 
@@ -225,8 +225,8 @@ async function createQuestionVideo(obj, choiceId) {
 }
 
 function createQuestionLink(obj, choiceId) {
-    console.log("Object from QuestionLinks:")
-    console.log(obj)
+    // console.log("Object from QuestionLinks:")
+    // console.log(obj)
 
     var contentBlock = document.querySelector('.modal-content');
 
@@ -435,16 +435,11 @@ async function displayYouTubeVideoInfo() {
 // });
 
 
+var buttonClassHistory = [];
 
 //// The main function ////
 function main() {
-    //console.log("main currentIndex: "+currentIndex)//please don't delete, for testing
-    //console.log("main choiceStack:"+choiceStack)//please don't delete, for testing
-
     const buttons = document.querySelectorAll(".button");
-
-
-
 
     buttons.forEach(function (button) {
         button.addEventListener("click", function () {
@@ -452,24 +447,42 @@ function main() {
 
             const choiceId = button.getAttribute("id");
 
-            if (choiceId != "back") {
-                // for every not back button
-                choiceStack = choiceStack.slice(0, currentIndex + 1);
-                currentIndex++;
-                choiceStack.push(choiceId);
+            var buttonClass = button.getAttribute("class").split(" ")[0];
+            // console.log("choiceHistory")
+            // console.log(choiceHistory)
+            // console.log("ChoiceId from main");
+            // console.log(choiceId);
+            // console.log("buttonClass");
+            // console.log(buttonClass);
+            // console.log("buttonClassHistory");
+            // console.log(buttonClassHistory);
 
-                showUserChoise(button.textContent);
-                navigateToChoice(choiceId)
-
+            if(buttonClass == buttonClassHistory[buttonClassHistory.length - 1]){
+                // console.log("ТА ЦЕ Ж БУЛО ВЖЕ!");
+                scrollToBottomSmoothly(1000);
+                main();
             }
-            else {
-                //for every button back
-                showUserChoise(button.textContent);
-                ButtonBack()
-            }
+            else{
+                buttonClassHistory.push(buttonClass)
 
-            scrollToBottomSmoothly(1000);
-            main();
+                if (choiceId != "back") {
+                    // for every not back button
+                    choiceStack = choiceStack.slice(0, currentIndex + 1);
+                    currentIndex++;
+                    choiceStack.push(choiceId);
+
+                    showUserChoise(button.textContent);
+                    navigateToChoice(choiceId);
+                }
+                else {
+                    //for every button back
+                    showUserChoise(button.textContent);
+                    ButtonBack();
+                }
+
+                scrollToBottomSmoothly(1000);
+                main();
+            }
 
         });
     });
