@@ -299,7 +299,7 @@ function scrollToBottomSmoothly(duration) {
         }
     }
 
-    requestAnimationFrame(scrollAnimation);
+    return requestAnimationFrame(scrollAnimation);
 }
 
 let choiceStack = [];
@@ -309,11 +309,11 @@ function ButtonBack() {
     if (currentIndex > 0) {
         currentIndex--;
         const prevChoice = choiceStack[currentIndex];
-        navigateToChoice(prevChoice);
+        return navigateToChoice(prevChoice);
     } else {
         currentIndex = -1;
         choiceStack = [];
-        navigateToChoice("main_1");
+        return navigateToChoice("main_1");
     }
 }
 
@@ -322,8 +322,8 @@ function navigateToChoice(choiceId) {
     //console.log("navigate choiceStack: "+choiceStack)//please don't delete, for testing
 
     if (choiceId === "back") {
-        ButtonBack();
         scrollToBottomSmoothly(1000);
+        return ButtonBack();
     }
 
 
@@ -334,13 +334,13 @@ function navigateToChoice(choiceId) {
 
     if (selectedChoice) {
         if (selectedChoice.type == "link") {
-            createLinks(selectedChoice, choiceId);
+            return createLinks(selectedChoice, choiceId);
         } else if (selectedChoice.type == "question") {
-            createToDoButtons(selectedChoice, choiceId);
+            return createToDoButtons(selectedChoice, choiceId);
         } else if (selectedChoice.type == "question_link") {
-            createQuestionLink(selectedChoice, choiceId);
+            return createQuestionLink(selectedChoice, choiceId);
         } else if (selectedChoice.type == "question_video") {
-            createQuestionVideo(selectedChoice, choiceId);
+            return createQuestionVideo(selectedChoice, choiceId);
         }
     }
 }
@@ -448,19 +448,19 @@ function main() {
             const choiceId = button.getAttribute("id");
 
             var buttonClass = button.getAttribute("class").split(" ")[0];
-            // console.log("choiceHistory")
-            // console.log(choiceHistory)
+
+            // console.log("buttonClassHistory")
+            // console.log(buttonClassHistory)
             // console.log("ChoiceId from main");
             // console.log(choiceId);
             // console.log("buttonClass");
             // console.log(buttonClass);
-            // console.log("buttonClassHistory");
-            // console.log(buttonClassHistory);
+
 
             if(buttonClass == buttonClassHistory[buttonClassHistory.length - 1]){
                 // console.log("ТА ЦЕ Ж БУЛО ВЖЕ!");
                 scrollToBottomSmoothly(1000);
-                main();
+                // return main();
             }
             else{
                 buttonClassHistory.push(buttonClass)
@@ -479,14 +479,12 @@ function main() {
                     showUserChoise(button.textContent);
                     ButtonBack();
                 }
-
                 scrollToBottomSmoothly(1000);
-                main();
+                return main();
             }
-
+            
         });
     });
 }
-
 
 main(); 
