@@ -259,7 +259,7 @@ async function createQuestionLink(obj, choiceId) {
 
     // Create links
     obj.links.forEach(function (link) {
-        if((choiceId == "praktyka_main")||(choiceId == "praktyka_category")){
+        if((choiceId == "praktyka_main")||(choiceId == "praktyka_category")||(choiceId == "health_watch_youtube")){
             // Create a new iframe element
             var iframe = document.createElement("iframe");
             // Set attributes for the iframe
