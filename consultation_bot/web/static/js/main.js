@@ -188,6 +188,7 @@ function createLinks(obj, choiceId) {
     toDoButtonsDiv.appendChild(buttonsDiv);
     contentBlock.appendChild(toDoButtonsDiv);
 }
+
 async function createQuestionVideo(obj, choiceId) {
     var contentBlock = document.querySelector('.modal-content');
 
@@ -224,15 +225,19 @@ async function createQuestionVideo(obj, choiceId) {
 
 }
 
-function createQuestionLink(obj, choiceId) {
-    // console.log("Object from QuestionLinks:")
-    // console.log(obj)
+async function createQuestionLink(obj, choiceId) {
+    console.log("Object from QuestionLinks:")
+    console.log(obj)
 
     var contentBlock = document.querySelector('.modal-content');
 
     var toDoButtonsDiv = document.createElement("div");
     toDoButtonsDiv.className = "to-do-buttons";
 
+    if (obj.img) {
+        imageDiv = showStickers(obj);
+        toDoButtonsDiv.appendChild(imageDiv);
+    }
 
     // Create first message/messages
     obj.q.forEach(function (que) {
@@ -251,28 +256,38 @@ function createQuestionLink(obj, choiceId) {
         toDoButtonsDiv.appendChild(sreviewsSection);
     });
 
-    if (obj.img) {
-        imageDiv = showStickers(obj);
-        toDoButtonsDiv.appendChild(imageDiv);
-
-    }
 
     // Create links
     obj.links.forEach(function (link) {
-        var sreviewsSection = document.createElement("section");
-        sreviewsSection.className = "sreviews";
+        if((choiceId == "praktyka_main")||(choiceId == "praktyka_category")){
+            // Create a new iframe element
+            var iframe = document.createElement("iframe");
+            // Set attributes for the iframe
+            iframe.width = "560";
+            iframe.height = "315";
+            iframe.src = link.url;
+            iframe.title = "YouTube video player";
+            iframe.frameborder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.allowfullscreen = false;
+    
+            toDoButtonsDiv.appendChild(iframe);
+        }else{
+            var sreviewsSection = document.createElement("section");
+            sreviewsSection.className = "sreviews";
 
-        var linkElement = document.createElement("a");
-        linkElement.setAttribute("class", "");
-        linkElement.setAttribute("href", link["url"]);
-        linkElement.textContent = `${link["name"]}`;
+            var linkElement = document.createElement("a");
+            linkElement.setAttribute("class", "");
+            linkElement.setAttribute("href", link["url"]);
+            linkElement.textContent = `${link["name"]}`;
 
-        const fromBotDiv = document.createElement("div");
-        fromBotDiv.setAttribute("class", "from-bot");
-        fromBotDiv.appendChild(linkElement);
+            const fromBotDiv = document.createElement("div");
+            fromBotDiv.setAttribute("class", "from-bot");
+            fromBotDiv.appendChild(linkElement);
 
-        sreviewsSection.appendChild(fromBotDiv);
-        toDoButtonsDiv.appendChild(sreviewsSection)
+            sreviewsSection.appendChild(fromBotDiv);
+            toDoButtonsDiv.appendChild(sreviewsSection)
+        }
     });
 
     buttonsDiv = createButtons(obj, choiceId);
@@ -298,7 +313,6 @@ function scrollToBottomSmoothly(duration) {
             element.scrollTop = scrollHeight;
         }
     }
-
     return requestAnimationFrame(scrollAnimation);
 }
 
@@ -325,7 +339,6 @@ function navigateToChoice(choiceId) {
         scrollToBottomSmoothly(1000);
         return ButtonBack();
     }
-
 
     // console.log("choiceId " + choiceId);
     // console.log(data);
@@ -482,7 +495,6 @@ function main() {
                 scrollToBottomSmoothly(1000);
                 return main();
             }
-            
         });
     });
 }

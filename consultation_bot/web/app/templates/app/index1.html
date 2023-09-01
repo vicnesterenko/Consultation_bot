@@ -86,11 +86,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                 <button id="{{option.next_id}}" class="main_1 {% if option.next_id == 'manager' %}button-manager{% elif option.next_id == 'back' %}button-prev{% elif option.next_id == 'main_1' %}button-main{% endif %} button">{{ option.label }}
                                                 </button>
                                             {% endfor %}
-                                            {% comment %} {% for option in data.main_1.options %}
-                                                <button id="{{option.next_id}}" class=" main_1 button">
-                                                {{ option.label }}
-                                                </button>
-                                            {% endfor %} {% endcomment %}
                                         </div>
                                     </div>                    
 
